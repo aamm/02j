@@ -23,15 +23,17 @@ Lesson 2 - Basic calculations
   []
   
 * Theory
-
+  
   Doing calculations in Java is straightforward. You just need to type them like:
-
+  
 +---
 System.out.println(1 + 2);
 +---
-
+  
   It is this simple. Yes, you will complete this lesson in a couple minutes, hopefully. We are actually still learning how to find our way on the environment.
-
+  
+  In this lesson you are going to do simple calculations using the variables <<<x>>> and <<<y>>> that already came declared. Therefore, you don't need to repeat the numbers in each calculation. Instead, use the variable names.
+  
 ===
 
 Bring home lessons
@@ -39,6 +41,8 @@ Bring home lessons
   * How to express simple calculations in Java
 
   * How to complete a lesson without detailed instructions
+  
+  * How to make references to variables
   
   []
   
