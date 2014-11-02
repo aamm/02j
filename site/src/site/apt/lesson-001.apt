@@ -1,0 +1,435 @@
+Lesson 1 - Hello world!
+
+  Time for the first lesson. This one is extremely simple and serves only to present the basic concepts. Without further ado, let's get to work.
+
+* What you are going to learn
+
+  [[1]] How lessons work.
+  
+  [[1]] How to run Maven.
+  
+  [[1]] How to write your first Java program.
+  
+  [[1]] The programming process: test, code, test, code, until all tests pass.
+  
+  [[1]] How to print things on the console using Java.
+  
+* Step 1 - copy lesson1.zip to the JavaClasses directory
+
+* Step 2 - unpack it - You will see a new folder called lesson1
+
+* Step 3 - start the VM
+
++---
+user@host:~/JavaClasses$ vagrant up
++---
+
+* Step 4 - log in to the VM
+
++---
+user@host:~/JavaClasses$ vagrant ssh
+vagrant@vagrant-ubuntu-trusty-32:~$
++---
+
+  From now on we will work only in the VM.
+
+* Step 5 - Go to the /vagrant directory
+
++---
+vagrant@vagrant-ubuntu-trusty-32:~$ cd /vagrant
+vagrant@vagrant-ubuntu-trusty-32:/vagrant$
++---
+
+* Step 6 - Take a look at this directory
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant$ ls
+lesson1
++---
+
+  The console is telling you that you have only one directory called lesson1. Whatever is on /vagrant on the VM is on the JavaClasses directory on the host machine. Now let's see what is inside of lesson1. First we need to cd:
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant$ cd lesson1
++---
+
+  Then we invoke the tree command to list the structure under lesson1:
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ tree
+.
+|-- pom.xml
+`-- src
+    |-- main
+    |   `-- java
+    |       `-- org
+    |           `-- aamm
+    |               `-- z2java
+    |                   `-- lesson1
+    |                       `-- App.java
+    `-- test
+        `-- java
+            `-- org
+                `-- aamm
+                    `-- z2java
+                        `-- lesson1
+                            |-- GuidanceTest.java
+                            `-- MockPrintStream.java
+
+13 directories, 4 files
++---
+
+  You don't need to fully understand what each part does. What you need to know is that:
+
+  * <<pom.xml>> - The configuration file for Maven. It tells Maven what to do. We will run Maven in a couple of minutes, so you will see it in action.
+
+  * <<src/main/java>> - Here is where the main source code should be placed. When we program, what we try to create are the main source code. Our job is to create files inside of such a directory. We will discuss the meaning of org/aamm/z2java/lesson1 later.
+  
+  * <<src/test/java>> - Here is where tests are placed. When we program it is a good practice to create tests that check if our program is working properly. On these lessons, tests are already provided. So all you need to do is to make them pass.
+
+* Step 7 - Run Maven for the first time
+
+  You simply need to run mvn and all the magic will happen before your eyes.
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn
+(...)
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.aamm.z2java.lesson1.GuidanceTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.196 sec <<< FAILURE!
+
+Results :
+
+Failed tests: 
+  test(org.aamm.z2java.lesson1.GuidanceTest): The main method should call the method System.out.println(String) to print "Hello World"
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.935s
+[INFO] Finished at: Sat Oct 25 20:35:27 BRST 2014
+[INFO] Final Memory: 9M/125M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.7.2:test (default-test) on project lesson1: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/akira/.svnworkspace/Documents/pessoal/projects/zeroToJavaWorkspace/lesson1/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
++---
+
+  As you can see, something is wrong. We wanted to see that! It means there is a test that did not pass. Let's take a look at the failure message:
+
++---
+The main method should call the method System.out.println(String) to print "Hello World"
++---
+
+  This message is telling us what went wrong. We can write tests so that they print those messages to hint for failure causes.
+
+  There is something else to notice. Let's check the directory contents once again:
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ ls
+pom.xml  src  target
++---
+
+  Maven created a new directory called target. This is where Maven puts all compiled files. We did not have to manually compile anything, nor run any test. Maven did all the hard work for us.
+
+* Step 8 - Let's program!
+
+  Time to program for real. Open the file src/main/java/org/aamm/z2java/lesson1/App.java with any editor. If you don't know any Linux editor, simply use pico (but I recommend learning the editor called vim, which is quite powerful but a bit hard to learn):
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ pico src/main/java/org/aamm/z2java/lesson1/App.java
++---
+
+  You will see the source code:
+
++---
+package org.aamm.z2java.lesson1;
+
+/**
+ * Your class should write the message "Hello World" in the console using System.out.println.
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        // TODO Write here a command that prints "Hello World".
+    }
+}
++---
+
+  If you are using pico, you will be happy to know that the words on the bottom of the screen are available commands. The character ^ means the "Control" key. So Control+X is the command to exit the editor.
+
+  Go ahead and replace the line // TODO ... so that the file becomes:
+
++---
+package org.aamm.z2java.lesson1;
+
+/**
+ * Your class should write the message "Hello World" in the console using System.out.println.
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println("bla bla bla");
+    }
+}
++----
+
+  Then press Control+X to save the file. pico will ask you to confirm saving the file. Just press Y to confirm.
+
+* Step 9 - Run Maven again
+
+  The process that all programmers follow is:
+
+  * write source code
+  
+  * compile
+  
+  * run the program
+  
+  * search for errors
+  
+  * if there is anything wrong, go back to 1. If you found no errors, you are done!
+  
+  []
+  
+  Programmers love to do steps 1 and 4, but hate 2 and 3 because they are repetitive and boring. That is why Maven does 2 and 3 for us. So let's run Maven again:
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn
+(...)
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.aamm.z2java.lesson1.GuidanceTest
+bla bla bla
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.075 sec <<< FAILURE!
+
+Results :
+
+Failed tests: 
+  test(org.aamm.z2java.lesson1.GuidanceTest): The message you printed was not "Hello World". Take care about the differences between print and println. expected:<[Hello World]
+> but was:<[bla bla bla]
+>
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.270s
+[INFO] Finished at: Sat Oct 25 21:03:40 BRST 2014
+[INFO] Final Memory: 9M/125M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.7.2:test (default-test) on project lesson1: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/akira/.svnworkspace/Documents/pessoal/projects/zeroToJavaWorkspace/trash/lesson1/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
++---
+
+  Ouch! We failed again! Don't panic! Programmers fail all the time! In fact, programming is about making things work. If everything is working, you are not programming. Programming is the process of finding things to improve and to create new things.
+  
+  Let's see what happened this time! The new error message is:
+  
++---
+expected:<[Hello World]
+> but was:<[bla bla bla]
+>
++---
+
+  The message you printed was not "Hello World". Take care about the differences between print and println.
+
+
+  How silly we were. Instead of printing "<<<Hello World>>>" like the TODO line asked us to do, we wrote "<<<bla bla bla>>>" instead. It looks like we can't easily trick Java.
+
+* Step 10 - Correct mistakes
+
+  Let's go back to pico and change the file again:
+
++---
+package org.aamm.z2java.lesson1;
+
+/**
+ * Your class should write the message "Hello World" in the console using System.out.println.
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+        System.out.println("Hello world");
+    }
+}
++---
+
+  It looks perfect this time! Save your file (Control+X if you are running pico). Let's run Maven again!
+
+* Step 11 - Running Maven again
+
+  We have to keep running Maven a thousand times. Now we understand why it is only three letters "mvn", so we can type it fast and not waste time:
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn
+(...)
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.aamm.z2java.lesson1.GuidanceTest
+Hello world
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec <<< FAILURE!
+
+Results :
+
+Failed tests: 
+  test(org.aamm.z2java.lesson1.GuidanceTest): The message you printed was not "Hello World". Take care about the differences between print and println. expected:<Hello [W]orld
+> but was:<Hello [w]orld
+>
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.019s
+[INFO] Finished at: Sat Oct 25 21:11:52 BRST 2014
+[INFO] Final Memory: 9M/125M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.7.2:test (default-test) on project lesson1: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/akira/.svnworkspace/Documents/pessoal/projects/zeroToJavaWorkspace/trash/lesson1/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
++---
+
+  Not again! What can possibly be wrong this time? Now the message says:
+
++---
+expected:<Hello [W]orld
+> but was:<Hello [w]orld
++---
+
+  So Java is telling us that we printed lowercase w instead of capital W. Let's change that again!
+  
+* Step 12 - Change it again
+  
+  This will be the third time we run pico (or your favorite editor). So the text editor is extremely important to a programmer. It is like the guitar for a guitar player. To be a good programmer you need to know a good editor in depth. For Java, among the best ones are Eclipse, InteliJ Idea, and Netbeans.
+  
+  But for beginners, pico, vim or emacs are very decent ones.
+  
+  By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type <enter> to run the command again.
+  
+  Let's run pico again, and this time pay attention to all details:
+
++---
+package org.aamm.z2java.lesson1;
+
+/**
+ * Your class should write the message "Hello World" in the console using System.out.println.
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+        System.out.println("Hello World");
+    }
+}
++---
+
+* Step 13 - We are the champions
+
+  Let's run Maven again and see how much we rock:
+
++---
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.aamm.z2java.lesson1.GuidanceTest
+Hello World
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.151 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.875s
+[INFO] Finished at: Sat Oct 25 21:19:45 BRST 2014
+[INFO] Final Memory: 9M/125M
+[INFO] ------------------------------------------------------------------------
++----
+
+  No failures! BUILD SUCCESS! Our job is done! 
+
+* Going the extra mile!
+
+  So far we saw how to have our program tested. All it does is to print a single message: "Hello World". But I can see much more than that on the terminal.
+Maven is adding a lot of obscure messages, and I really want to see only my program running. If my program is printing "Hello Word", I wanna see just that. How can I do that?
+
+  Maven will help us again:
+
++---
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn compile exec:java --quiet -Dexec.mainClass=org.aamm.z2java.lesson1.App
+Hello World
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ 
++---
+
+  So what just happened? We just called maven passing 4 arguments:
+
+  * <<compile>> - Tells Maven to compile your class.
+  * <<exec:java>> - Tells Maven to execute a Java program
+  * <<--quiet>> - Tells Maven to be quiet. So Maven does not print those obscure messages.
+  * <<-Dexec.mainClass=org.aamm.z2java.lesson1.App>> - Tells Maven to execute the class called org.aamm.z2java.lesson1.App . This is our program.
+
+  So what exactly is a class? For now, all you need to know is that App is the name of our class and org.aamm.z2java.lesson1 is the package where the class is located.
+
+  A typical Java system may have thousands of classes. So we need to tell Maven which class is our main class. In other words, which class is the entry point, or the one that runs first and will call all the others.
+  
+  For now such concept may look abstract and contrived since we only have one class, but those ideas will become more clear as we advance.
+
+* Have fun
+
+  Now that you finished this lesson, you can change the App class the way you want. Sure, by now the only thing you know how to do is to print messages in the console, but you can add more lines to print other things. Even some ASCII art!
+
++---
+package org.aamm.z2java.lesson1;
+
+/**
+ * Your class should write the message "Hello World" in the console using System.out.println.
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+        System.out.println("+---------------+");
+        System.out.println("| JAVA IS GREAT |");
+        System.out.println("+---------------+");
+   }
+}
++---
+
+===
+

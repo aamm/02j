@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+  <properties>
+    <title>Zero to Java Changes Log</title>
+    <author email="keitai.1948@gmail.com">Akira</author>
+  </properties>
+  <body>
+    <release version="0.1" description="Current work version">
+      <action dev="Akira" type="add">Creation of web site.</action>
+      <action dev="Akira" type="add">Basic features of hyphenType.</action>
+    </release>
+    <release version="current" description="Current work version">
+      <action dev="Akira" type="fix">Changed package from org.hyphenType to com.github.aamm.hyphenType</action>
+      <action dev="Akira" type="update">Changed package from org.hyphenType to com.github.aamm.hyphenType</action>
+      <action dev="Akira" type="remove">Changed pom.xml to have the group ID: com.github.aamm</action>
+    </release>
+    <!-- Example for future references... 
+	 <release version="0.01" date="2005-11-18" description="Release fix">
+	   <action dev="Akira" type="add">Added a cool feature.</action>
+	   <action dev="Akira" type="fix" issue="1254">Fixed a nasty bug.</action>
+	   <action dev="Akira" type="delete">Removed a feature that nobody liked.</action>
+	 </release>
+	 -->
+  </body>
+</document>

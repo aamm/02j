@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd"
+	 name="ZeroToJava">
+
+  <skin>
+    <groupId>lt.velykis.maven.skins</groupId>
+    <artifactId>reflow-maven-skin</artifactId>
+    <version>1.1.1</version>
+  </skin>
+
+  <body>
+    <menu name="Navigation">
+      <item name="Home" href="index.html" />
+      <item name="Getting started" collapse="true">
+	<item name="i. Introduction" href="i-introduction.html" />
+	<item name="ii. Course Material" href="ii-course-material.html" />
+	<item name="iii. Setting up the Environment" href="iii-setting-up-the-environment.html" />
+	<item name="iv. Vagrant - Mini Tutorial" href="iv-vagrant-mini-tutorial.html" />
+      </item>
+      <item name="Lessons" collapse="true">
+	<item name="1. Hello World!" href="lesson-001.html" />
+      </item>
+      <!--
+      <item name="Basics" href="basics.html" collapse="true">
+	<item name="Options Interfaces" href="options_interfaces.html" />
+	<item name="Anatomy of a Main Class" href="anatomy_main_class.html" />
+	<item name="Using Dcumentation Formatters" href="using_doc_formatters.html" />
+	<item name="Configuration from resource bundles" href="resource_bundles.html"/>
+	<item name="Validators" href="validators.html" />
+	<item name="Exit Status Codes" href="exit.html" collapse="true">
+	  <item name="Documentation" href="exit_documenting.html"/>
+	  <item name="Exceptions" href="exit_exceptions.html"/>
+	</item>
+	<item name="Unit Testing" href="unit_testing.html" />
+	<item name="Debugging" href="debugging.html" />
+      </item>
+      <item name="Tips" href="tips.html" collapse="true">
+	<item name="Welcome Message" href="tips_welcome_message.html" />
+      </item>
+      -->
+      <item name="FAQ" href="faq.html" />
+    </menu>
+    <menu ref="reports" />
+    <menu ref="modules" />
+  </body>
+  
+  <custom>
+    <reflowSkin>
+      <theme>bootswatch-readable</theme>
+      <toc>sidebar</toc>
+      <!-- Global layout -->
+      <sections>
+        <body />
+        <sidebar />
+        <columns>3</columns>
+      </sections>
+      <pages>
+	<!-- Layout for individual pages -->
+      </pages>
+    </reflowSkin>
+  </custom>
+
+</project>

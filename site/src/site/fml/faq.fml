@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs title="Frequently Asked Questions">
+  <part id="Problems">
+    <title>Help! Problems and solutions</title>
+    <faq id="my-problem-is-really-complex">
+      <question>I need to parse command lines that are really complex. It seems that hyphenType can only help me on simple situations.</question>
+      <answer>
+        <p>
+          As with any tool, there are limitations. hyphenType can only parse command line
+          strings that fit to its simple model. We've tried to make the model as expandable
+          as possible, but this effort would lead us to ultimately create a complete parsing tool.<br/>
+          Let's consider an complex example to understand what we mean. Suppose we
+          want to create a command line application that will receive any sentence in English
+          and answer to questions.
+        </p>
+        <source>java ai.hall9000.PsychoTherapist What is the meaning of life?</source>
+        <p>
+          In the example above, hyphenType cannot do anything useful, since the difficulty
+          relies solely on processing the text and making sense of it.<br/>
+          Naturally, we would need to be able to recognize verbs, nouns and other elements
+          in the sentence. This is clearly a huge problem, AFAIK not completely solved yet.
+          What hypenType can do is simply to group the elements of your command line to let
+          you do the rest:
+        </p>
+        <source>java ai.hall9000.PsychoTherapist --question What is the meaning of life? --expect-answer=false</source>
+        <p>
+          Here the situation is different since hyphenType has something to contribute. It
+          can give you the question ("What is...") and the flag (false) as separated structures.
+          Each one available through its own getter method.<br/>
+          Obviously, hyphenType cannot check grammar mistakes in English, but it can check if
+          "false" is a valid value for a boolean or not.<br/>  
+          Think of hyphenType as just a thin presentation layer for a stand alone application.
+          The same way you can't expect HTML to sort a list, you can't expect hyphenType to
+          do complex parsing.
+        </p>
+      </answer>
+    </faq>
+  </part>
+  <part id="About">
+    <title>About the project</title>
+    <faq id="contribute">
+      <question>I love hyphenType and I want to contribute. What should I do?</question>
+      <answer>
+        <p>
+          We will love to receive a message from you. Please check our <a href="mail-lists.html">mailing lists</a>.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>
