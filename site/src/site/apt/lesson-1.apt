@@ -14,17 +14,16 @@ Lesson 1 - Hello world!
   
   [[1]] How to print things on the console using Java.
   
-* Step 1 - copy lesson1.zip to the JavaClasses directory
-
-* Step 2 - unpack it - You will see a new folder called lesson1
-
-* Step 3 - start the VM
-
+* Step - start the VM
+  
+  Remember that you have to be in the JavaClasses directory when you bring the VM up.
+  
 +---
+user@host:~$ cd JavaClasses
 user@host:~/JavaClasses$ vagrant up
 +---
-
-* Step 4 - log in to the VM
+  
+* Step - log in to the VM
 
 +---
 user@host:~/JavaClasses$ vagrant ssh
@@ -33,90 +32,107 @@ vagrant@vagrant-ubuntu-trusty-32:~$
 
   From now on we will work only in the VM.
 
-* Step 5 - Go to the /vagrant directory
-
+* Step - Obtain lesson files
+  
+  During the setup preparation we installed a script called <<<02j-get-lesson>>>. Running this script with the lesson number will automatically download the lesson to the virtual machine:
+  
 +---
-vagrant@vagrant-ubuntu-trusty-32:~$ cd /vagrant
-vagrant@vagrant-ubuntu-trusty-32:/vagrant$
-+---
-
-* Step 6 - Take a look at this directory
-
-+---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant$ ls
-lesson1
+vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 1
 +---
 
-  The console is telling you that you have only one directory called lesson1. Whatever is on /vagrant on the VM is on the JavaClasses directory on the host machine. Now let's see what is inside of lesson1. First we need to cd:
+* Step - Go to the lesson directory
+
+  Then go to the lesson directory using the <<<cd>>> command. You can also invoke the tree command to list the structure under lesson1:
 
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant$ cd lesson1
-+---
-
-  Then we invoke the tree command to list the structure under lesson1:
-
-+---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ tree
+vagrant@vagrant-ubuntu-trusty-32:~$ cd lesson-1
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ tree
 .
-|-- pom.xml
-`-- src
-    |-- main
-    |   `-- java
-    |       `-- org
-    |           `-- aamm
-    |               `-- z2java
-    |                   `-- lesson1
-    |                       `-- App.java
-    `-- test
-        `-- java
-            `-- org
-                `-- aamm
-                    `-- z2java
-                        `-- lesson1
-                            |-- GuidanceTest.java
-                            `-- MockPrintStream.java
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── org
+    │           └── aamm
+    │               └── z2java
+    │                   └── lesson1
+    │                       └── App.java
+    └── test
+        └── java
+            └── org
+                └── aamm
+                    └── z2java
+                        └── lesson1
+                            ├── GuidanceTest.java
+                            └── MockPrintStream.java
 
 13 directories, 4 files
 +---
-
+  
   You don't need to fully understand what each part does. What you need to know is that:
-
+  
   * <<pom.xml>> - The configuration file for Maven. It tells Maven what to do. We will run Maven in a couple of minutes, so you will see it in action.
-
+  
   * <<src/main/java>> - Here is where the main source code should be placed. When we program, what we try to create are the main source code. Our job is to create files inside of such a directory. We will discuss the meaning of org/aamm/z2java/lesson1 later.
   
   * <<src/test/java>> - Here is where tests are placed. When we program it is a good practice to create tests that check if our program is working properly. On these lessons, tests are already provided. So all you need to do is to make them pass.
 
-* Step 7 - Run Maven for the first time
-
-  You simply need to run mvn and all the magic will happen before your eyes.
-
+* Step - Run Maven for the first time
+  
+  You simply need to run the <<<mvn>>> command and all the magic will happen before your eyes.
+  
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn
-(...)
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lesson1 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ lesson1 ---
+[INFO] Deleting /home/vagrant/lesson-1/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ lesson1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/vagrant/lesson-1/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ lesson1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/vagrant/lesson-1/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:testResources (default-testResources) @ lesson1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/vagrant/lesson-1/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ lesson1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/vagrant/lesson-1/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ lesson1 ---
+[INFO] Surefire report directory: /home/vagrant/lesson-1/target/surefire-reports
+
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
 Running org.aamm.z2java.lesson1.GuidanceTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.196 sec <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec <<< FAILURE!
 
 Results :
 
-Failed tests: 
-  test(org.aamm.z2java.lesson1.GuidanceTest): The main method should call the method System.out.println(String) to print "Hello World"
+Failed tests:   test(org.aamm.z2java.lesson1.GuidanceTest): The main method should call the method System.out.println(String) to print "Hello World"
 
 Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 4.935s
-[INFO] Finished at: Sat Oct 25 20:35:27 BRST 2014
-[INFO] Final Memory: 9M/125M
+[INFO] Total time: 1.935s
+[INFO] Finished at: Sun Nov 02 15:08:53 UTC 2014
+[INFO] Final Memory: 9M/22M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.7.2:test (default-test) on project lesson1: There are test failures.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test (default-test) on project lesson1: There are test failures.
 [ERROR] 
-[ERROR] Please refer to /home/akira/.svnworkspace/Documents/pessoal/projects/zeroToJavaWorkspace/lesson1/target/surefire-reports for the individual test results.
+[ERROR] Please refer to /home/vagrant/lesson-1/target/surefire-reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
@@ -125,34 +141,34 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 +---
-
+  
   As you can see, something is wrong. We wanted to see that! It means there is a test that did not pass. Let's take a look at the failure message:
-
+  
 +---
 The main method should call the method System.out.println(String) to print "Hello World"
 +---
-
+  
   This message is telling us what went wrong. We can write tests so that they print those messages to hint for failure causes.
-
+  
   There is something else to notice. Let's check the directory contents once again:
-
+  
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ ls
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ ls
 pom.xml  src  target
 +---
-
+  
   Maven created a new directory called target. This is where Maven puts all compiled files. We did not have to manually compile anything, nor run any test. Maven did all the hard work for us.
-
-* Step 8 - Let's program!
-
+  
+* Step - Let's program!
+  
   Time to program for real. Open the file src/main/java/org/aamm/z2java/lesson1/App.java with any editor. If you don't know any Linux editor, simply use pico (but I recommend learning the editor called vim, which is quite powerful but a bit hard to learn):
-
+  
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ pico src/main/java/org/aamm/z2java/lesson1/App.java
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ pico src/main/java/org/aamm/z2java/lesson1/App.java
 +---
-
+  
   You will see the source code:
-
+  
 +---
 package org.aamm.z2java.lesson1;
 
@@ -167,11 +183,11 @@ public class App
     }
 }
 +---
-
+  
   If you are using pico, you will be happy to know that the words on the bottom of the screen are available commands. The character ^ means the "Control" key. So Control+X is the command to exit the editor.
-
+  
   Go ahead and replace the line // TODO ... so that the file becomes:
-
+  
 +---
 package org.aamm.z2java.lesson1;
 
@@ -186,13 +202,13 @@ public class App
     }
 }
 +----
-
-  Then press Control+X to save the file. pico will ask you to confirm saving the file. Just press Y to confirm.
-
-* Step 9 - Run Maven again
-
+  
+  Then press Control+X to save the file. pico will ask you to confirm saving the file. Just press Y to confirm and then hit ENTER to confirm again.
+  
+* Step - Run Maven again
+  
   The process that all programmers follow is:
-
+  
   * write source code
   
   * compile
@@ -208,34 +224,58 @@ public class App
   Programmers love to do steps 1 and 4, but hate 2 and 3 because they are repetitive and boring. That is why Maven does 2 and 3 for us. So let's run Maven again:
 
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn
-(...)
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lesson1 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ lesson1 ---
+[INFO] Deleting /home/vagrant/lesson-1/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ lesson1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/vagrant/lesson-1/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ lesson1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/vagrant/lesson-1/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:testResources (default-testResources) @ lesson1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/vagrant/lesson-1/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ lesson1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/vagrant/lesson-1/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ lesson1 ---
+[INFO] Surefire report directory: /home/vagrant/lesson-1/target/surefire-reports
+
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
 Running org.aamm.z2java.lesson1.GuidanceTest
 bla bla bla
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.075 sec <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec <<< FAILURE!
 
 Results :
 
-Failed tests: 
-  test(org.aamm.z2java.lesson1.GuidanceTest): The message you printed was not "Hello World". Take care about the differences between print and println. expected:<[Hello World]
-> but was:<[bla bla bla]
->
+Failed tests:   test(org.aamm.z2java.lesson1.GuidanceTest): The message you printed was not "Hello World". Take care about the differences between print and println. expected:<[Hello World]
 
 Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 6.270s
-[INFO] Finished at: Sat Oct 25 21:03:40 BRST 2014
-[INFO] Final Memory: 9M/125M
+[INFO] Total time: 1.947s
+[INFO] Finished at: Sun Nov 02 15:47:39 UTC 2014
+[INFO] Final Memory: 9M/24M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.7.2:test (default-test) on project lesson1: There are test failures.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test (default-test) on project lesson1: There are test failures.
 [ERROR] 
-[ERROR] Please refer to /home/akira/.svnworkspace/Documents/pessoal/projects/zeroToJavaWorkspace/trash/lesson1/target/surefire-reports for the individual test results.
+[ERROR] Please refer to /home/vagrant/lesson-1/target/surefire-reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
@@ -251,16 +291,11 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
   
 +---
 expected:<[Hello World]
-> but was:<[bla bla bla]
->
 +---
-
-  The message you printed was not "Hello World". Take care about the differences between print and println.
-
 
   How silly we were. Instead of printing "<<<Hello World>>>" like the TODO line asked us to do, we wrote "<<<bla bla bla>>>" instead. It looks like we can't easily trick Java.
 
-* Step 10 - Correct mistakes
+* Step - Correct mistakes
 
   Let's go back to pico and change the file again:
 
@@ -281,12 +316,12 @@ public class App
 
   It looks perfect this time! Save your file (Control+X if you are running pico). Let's run Maven again!
 
-* Step 11 - Running Maven again
+* Step - Running Maven again
 
   We have to keep running Maven a thousand times. Now we understand why it is only three letters "mvn", so we can type it fast and not waste time:
 
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
 (...)
 -------------------------------------------------------
  T E S T S
@@ -332,7 +367,7 @@ expected:<Hello [W]orld
 
   So Java is telling us that we printed lowercase w instead of capital W. Let's change that again!
   
-* Step 12 - Change it again
+* Step - Change it again
   
   This will be the third time we run pico (or your favorite editor). So the text editor is extremely important to a programmer. It is like the guitar for a guitar player. To be a good programmer you need to know a good editor in depth. For Java, among the best ones are Eclipse, InteliJ Idea, and Netbeans.
   
@@ -357,11 +392,13 @@ public class App
 }
 +---
 
-* Step 13 - We are the champions
+* Step - We are the champions
 
   Let's run Maven again and see how much we rock:
 
 +---
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
+(...)
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -392,18 +429,23 @@ Maven is adding a lot of obscure messages, and I really want to see only my prog
   Maven will help us again:
 
 +---
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ mvn compile exec:java --quiet -Dexec.mainClass=org.aamm.z2java.lesson1.App
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn compile exec:java --quiet -Dexec.mainClass=org.aamm.z2java.lesson1.App
 Hello World
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson1$ 
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$
 +---
 
   So what just happened? We just called maven passing 4 arguments:
 
   * <<compile>> - Tells Maven to compile your class.
+  
   * <<exec:java>> - Tells Maven to execute a Java program
+  
   * <<--quiet>> - Tells Maven to be quiet. So Maven does not print those obscure messages.
+  
   * <<-Dexec.mainClass=org.aamm.z2java.lesson1.App>> - Tells Maven to execute the class called org.aamm.z2java.lesson1.App . This is our program.
-
+  
+  []
+  
   So what exactly is a class? For now, all you need to know is that App is the name of our class and org.aamm.z2java.lesson1 is the package where the class is located.
 
   A typical Java system may have thousands of classes. So we need to tell Maven which class is our main class. In other words, which class is the entry point, or the one that runs first and will call all the others.
@@ -433,3 +475,10 @@ public class App
 
 ===
 
+Bring home lessons
+
+  * Call <<<02j-get-lesson n>>> to retrieve lesson n.
+  
+  * Call <<<mvn>>> to build and test your code.
+  
+  * Try many times until there are no errors.

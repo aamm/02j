@@ -1,37 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faqs title="Frequently Asked Questions">
-  <part id="Problems">
-    <title>Help! Problems and solutions</title>
-    <faq id="my-problem-is-really-complex">
-      <question>I need to parse command lines that are really complex. It seems that hyphenType can only help me on simple situations.</question>
+  <part id="programing-environment">
+    <title>Programming environment</title>
+    <faq id="eclipse">
+      <question>Do I need to use Maven if I use Eclipse?</question>
       <answer>
         <p>
-          As with any tool, there are limitations. hyphenType can only parse command line
-          strings that fit to its simple model. We've tried to make the model as expandable
-          as possible, but this effort would lead us to ultimately create a complete parsing tool.<br/>
-          Let's consider an complex example to understand what we mean. Suppose we
-          want to create a command line application that will receive any sentence in English
-          and answer to questions.
+          If you use Eclipse to program Java you will find buttons to run your program and test it. Our test were written using JUnit, which Eclipse also understands. So in principle you would not need Maven to run anything if you use Eclipse.
         </p>
-        <source>java ai.hall9000.PsychoTherapist What is the meaning of life?</source>
         <p>
-          In the example above, hyphenType cannot do anything useful, since the difficulty
-          relies solely on processing the text and making sense of it.<br/>
-          Naturally, we would need to be able to recognize verbs, nouns and other elements
-          in the sentence. This is clearly a huge problem, AFAIK not completely solved yet.
-          What hypenType can do is simply to group the elements of your command line to let
-          you do the rest:
+          Then why do I suggest you should run Maven instead? There is a number of reasons. The first one is that Maven is probably the de facto standard to compile, test, and run Java. You will need to learn Maven sooner or later. Maven does much more than simply running Java. One of the main advantages of using Maven is that it manages dependencies for you, which out-of-the-box Eclipse does not.
         </p>
-        <source>java ai.hall9000.PsychoTherapist --question What is the meaning of life? --expect-answer=false</source>
         <p>
-          Here the situation is different since hyphenType has something to contribute. It
-          can give you the question ("What is...") and the flag (false) as separated structures.
-          Each one available through its own getter method.<br/>
-          Obviously, hyphenType cannot check grammar mistakes in English, but it can check if
-          "false" is a valid value for a boolean or not.<br/>  
-          Think of hyphenType as just a thin presentation layer for a stand alone application.
-          The same way you can't expect HTML to sort a list, you can't expect hyphenType to
-          do complex parsing.
+          In fact, the best of both words can be reached if you import your project in Eclipse as a Maven project. So Eclipse will use Maven behind the scenes to manage dependencies and build everything for you.
         </p>
       </answer>
     </faq>
@@ -39,10 +20,13 @@
   <part id="About">
     <title>About the project</title>
     <faq id="contribute">
-      <question>I love hyphenType and I want to contribute. What should I do?</question>
+      <question>I love this project and I want to contribute. What should I do?</question>
       <answer>
         <p>
-          We will love to receive a message from you. Please check our <a href="mail-lists.html">mailing lists</a>.
+	  There are several ways to contribute.
+        </p>
+        <p>
+          The easiest way is to create a GitHub account and create an issue for us to fix: <a href="https://github.com/aamm/02j/issues">https://github.com/aamm/02j/issues</a>
         </p>
       </answer>
     </faq>
