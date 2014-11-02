@@ -14,7 +14,7 @@ Lesson 1 - Hello world!
   
   [[1]] How to print things on the console using Java.
   
-* Step - start the VM
+* Step 1 - start the VM
   
   Remember that you have to be in the JavaClasses directory when you bring the VM up.
   
@@ -23,7 +23,7 @@ user@host:~$ cd JavaClasses
 user@host:~/JavaClasses$ vagrant up
 +---
   
-* Step - log in to the VM
+* Step 2 - log in to the VM
 
 +---
 user@host:~/JavaClasses$ vagrant ssh
@@ -32,7 +32,7 @@ vagrant@vagrant-ubuntu-trusty-32:~$
 
   From now on we will work only in the VM.
 
-* Step - Obtain lesson files
+* Step 3 - Obtain lesson files
   
   During the setup preparation we installed a script called <<<02j-get-lesson>>>. Running this script with the lesson number will automatically download the lesson to the virtual machine:
   
@@ -40,7 +40,7 @@ vagrant@vagrant-ubuntu-trusty-32:~$
 vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 1
 +---
 
-* Step - Go to the lesson directory
+* Step 4 - Go to the lesson directory
 
   Then go to the lesson directory using the <<<cd>>> command. You can also invoke the tree command to list the structure under lesson1:
 
@@ -77,7 +77,7 @@ vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ tree
   
   * <<src/test/java>> - Here is where tests are placed. When we program it is a good practice to create tests that check if our program is working properly. On these lessons, tests are already provided. So all you need to do is to make them pass.
 
-* Step - Run Maven for the first time
+* Step 5 - Run Maven for the first time
   
   You simply need to run the <<<mvn>>> command and all the magic will happen before your eyes.
   
@@ -159,7 +159,7 @@ pom.xml  src  target
   
   Maven created a new directory called target. This is where Maven puts all compiled files. We did not have to manually compile anything, nor run any test. Maven did all the hard work for us.
   
-* Step - Let's program!
+* Step 6 - Let's program!
   
   Time to program for real. Open the file src/main/java/org/aamm/z2java/lesson1/App.java with any editor. If you don't know any Linux editor, simply use pico (but I recommend learning the editor called vim, which is quite powerful but a bit hard to learn):
   
@@ -205,7 +205,7 @@ public class App
   
   Then press Control+X to save the file. pico will ask you to confirm saving the file. Just press Y to confirm and then hit ENTER to confirm again.
   
-* Step - Run Maven again
+* Step 7 - Run Maven again
   
   The process that all programmers follow is:
   
@@ -295,7 +295,7 @@ expected:<[Hello World]
 
   How silly we were. Instead of printing "<<<Hello World>>>" like the TODO line asked us to do, we wrote "<<<bla bla bla>>>" instead. It looks like we can't easily trick Java.
 
-* Step - Correct mistakes
+* Step 8 - Correct mistakes
 
   Let's go back to pico and change the file again:
 
@@ -316,7 +316,7 @@ public class App
 
   It looks perfect this time! Save your file (Control+X if you are running pico). Let's run Maven again!
 
-* Step - Running Maven again
+* Step 9 - Running Maven again
 
   We have to keep running Maven a thousand times. Now we understand why it is only three letters "mvn", so we can type it fast and not waste time:
 
@@ -367,7 +367,7 @@ expected:<Hello [W]orld
 
   So Java is telling us that we printed lowercase w instead of capital W. Let's change that again!
   
-* Step - Change it again
+* Step 10 - Change it again
   
   This will be the third time we run pico (or your favorite editor). So the text editor is extremely important to a programmer. It is like the guitar for a guitar player. To be a good programmer you need to know a good editor in depth. For Java, among the best ones are Eclipse, InteliJ Idea, and Netbeans.
   
@@ -392,7 +392,7 @@ public class App
 }
 +---
 
-* Step - We are the champions
+* Step 11 - We are the champions
 
   Let's run Maven again and see how much we rock:
 
