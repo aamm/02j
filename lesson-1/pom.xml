@@ -15,7 +15,7 @@
 	</properties>
 
 	<build>
-		<defaultGoal>clean test</defaultGoal>
+		<defaultGoal>test</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
