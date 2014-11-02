@@ -38,7 +38,7 @@ i. Introduction
 
   Don't be fooled. No programmer programs in just one language. Even programmers that are specialized in Java and only create systems that are based on Java need to know some sort of SQL, which is a language to interface with a database.
 
-Programming in Java for real requires a solid knowledge of object-orientation design
+* Programming in Java for real requires a solid knowledge of object-orientation design
 
   Don't think you will be able to build decent Java programs without knowing what OOP (Object-Oriented Programming) is.
 
