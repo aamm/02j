@@ -22,6 +22,7 @@
       </item>
       <item name="Lessons" collapse="true">
         <item name="1. Hello World!" href="lesson-1.html" />
+        <item name="2. Simple calculations" href="lesson-2.html" />
       </item>
       <item name="FAQ" href="faq.html" />
     </menu>
