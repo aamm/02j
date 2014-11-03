@@ -2,20 +2,20 @@
 
 echo "Installing the environment"
 
-sudo apt-get update
+apt-get update
 
 # Java development environment
 
-sudo apt-get -y install openjdk-7-jdk
-sudo apt-get -y install maven
+apt-get -y install openjdk-7-jdk
+apt-get -y install maven
 
 # Distributed version control system
 
-sudo apt-get -y install git
+apt-get -y install git
 
 # Utilities
 
-sudo apt-get -y install tree
+apt-get -y install tree
 
 # Our own scripts
 
@@ -37,10 +37,10 @@ chmod o+x /usr/bin/02j-get-lesson
 # So Maven will download the most commonly used dependencies
 # before the user takes the "clean" snapshot.
 
-02j-get-lesson 1
-mvn --file /home/vagrant/lesson-1/pom.xml
-mvn --file /home/vagrant/lesson-1/pom.xml compile exec:java -Dexec.mainClass=org.aamm.z2java.lesson1.App
-rm -rf lesson-1
+sudo --set-home --user vagrant 02j-get-lesson 1
+sudo --set-home --user vagrant mvn --file /home/vagrant/lesson-1/pom.xml
+sudo --set-home --user vagrant mvn --file /home/vagrant/lesson-1/pom.xml compile exec:java -Dexec.mainClass=org.aamm.z2java.lesson1.App
+sudo --set-home --user vagrant rm -rf lesson-1
 
 echo "Done!!"
 
