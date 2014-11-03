@@ -38,10 +38,8 @@ chmod o+x /usr/bin/02j-get-lesson
 # before the user takes the "clean" snapshot.
 
 02j-get-lesson 1
-cd lesson-1
-mvn
-mvn compile exec:java -Dexec.mainClass=org.aamm.z2java.lesson1.App
-cd ..
+mvn --file /home/vagrant/lesson-1/pom.xml
+mvn --file /home/vagrant/lesson-1/pom.xml compile exec:java -Dexec.mainClass=org.aamm.z2java.lesson1.App
 rm -rf lesson-1
 
 echo "Done!!"
