@@ -5,7 +5,7 @@
     <author email=".">Akira</author>
   </properties>
   <body>
-    <release version="0.1" description="Current work version">
+    <release version="0.1" description="Current work version" date="2014-11-02">
       <action dev="Akira" type="update">Migrating website to GitHub</action>
       <action dev="Akira" type="fix">Reviewing environment setup</action>
       <action dev="Akira" type="fix">Reviewing install.sh - Adding an "apt-get update" before "apt-get install"</action>
