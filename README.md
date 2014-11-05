@@ -1,5 +1,5 @@
-02j
-===
+02j - From Zero to Java
+=======================
 
 Java lessons for beginners
 
