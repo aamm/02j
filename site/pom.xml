@@ -106,6 +106,10 @@
 		  </reports>
 		</reportSet>
 	      </reportSets>
+	      <configuration>
+		<feedType>rss_2.0</feedType>
+		<addActionDate>true</addActionDate>
+	      </configuration>
 	    </plugin>
 	  </reportPlugins>
 	</configuration>

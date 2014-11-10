@@ -6,13 +6,14 @@
   </properties>
   <body>
     <release version="0.1" description="Current work version" date="2014-11-02">
-      <action dev="Akira" type="update">Migrating website to GitHub</action>
-      <action dev="Akira" type="fix">Reviewing environment setup</action>
-      <action dev="Akira" type="fix">Reviewing install.sh - Adding an "apt-get update" before "apt-get install"</action>
-      <action dev="Akira" type="add">New script to download lessons directly from Git</action>
-      <action dev="Akira" type="remove">No more contact us form. Maven site does not have such a thing. We need to rely on GitHub from now on.</action>
-      <action dev="Akira" type="add">Added lesson 2</action>
-      <action dev="Akira" type="add">Maven call in install.sh corrected.</action>
+      <action dev="Akira" date="2014-11-02" type="update">Migrating website to GitHub</action>
+      <action dev="Akira" date="2014-11-02" type="fix">Reviewing environment setup</action>
+      <action dev="Akira" date="2014-11-02" type="fix">Reviewing install.sh - Adding an "apt-get update" before "apt-get install"</action>
+      <action dev="Akira" date="2014-11-02" type="add">New script to download lessons directly from Git</action>
+      <action dev="Akira" date="2014-11-02" type="remove">No more contact us form. Maven site does not have such a thing. We need to rely on GitHub from now on.</action>
+      <action dev="Akira" date="2014-11-02" type="add">Added lesson 2</action>
+      <action dev="Akira" date="2014-11-02" type="add">Maven call in install.sh corrected.</action>
+      <action dev="Akira" date="2014-11-10" type="update">Rephrasing in index.apt</action>
     </release>
     <release version="backlog" description="Future actions">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
