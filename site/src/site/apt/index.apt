@@ -6,13 +6,21 @@ From Zero to Java
   
   Also, classic methods to teach programming languages usually accustom the student with what is now considered bad programming practice. We, the programming community, are working hard to ban those practices, so why should we teach them to new programmers? Here are some of them:
   
-  Write code without tests. Before starting to program, a programmer should always have both a clear idea about what he/she needs to do and automated tests. If you don't have a formal test to check your progress, how can you tell if you finished your job?
+* Bad practice #1: Write code without tests.
   
-  Code without automated build. The build, the process to create a software product from source code, should be ready before code writing begins.
+  Before starting to program, a programmer should always have both a clear idea about what he/she needs to do and automated tests. If you don't have a formal test to check your progress, how can you tell if you finished your job?
   
-  Code in an environment full of interfering factors. Programming is becoming a collective task. If you are not prepared to share your source code, you are not prepared to program. The programming environment should be such that another programmer can easily reproduce it. This is important because, during source code writing you will want to be able to pinpoint where your code is defective and your programming mates should be able to see the same defect on the same spot.
+* Bad practice #2: Code without automated build.
   
-  In this course I address the above mentioned problems by applying modern programming tools, which are usually hidden from the beginners but that, in my opinion, should be familiar to all Java programmers from the very start:
+  The build, the process to create a software product from source code, should be ready before code writing begins.
+  
+* Bad practice #3: Code in an environment full of interfering factors.
+  
+  Programming is becoming a collective task. If you are not prepared to share your source code, you are not prepared to program. The programming environment should be such that another programmer can easily reproduce it. This is important because, during source code writing you will want to be able to pinpoint where your code is defective and your programming mates should be able to see the same defect on the same spot.
+
+* My solution
+  
+  In this course I address the above mentioned problems by applying modern programming tools, which are usually hidden from the beginners but that, in my opinion, should be familiar to all Java programmers from the very begin:
   
   * JUnit - I write the unit tests, you find a way to make the tests pass.
   
