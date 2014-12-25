@@ -1,9 +1,26 @@
-iii. Settting up the environment
+iii. Settting up the environment - Linux
 
+* For the impatient
+
+  If you are in a hurry, here is what you need to type to install the study environment on your Linux machine:
+
+---------------------------------------------------------------------
+user@host:~$ sudo apt-get install virtualbox
+user@host:~$ sudo apt-get install vagrant
+user@host:~$ mkdir JavaClasses
+user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$ vagrant plugin install vagrant-vbox-snapshot
+user@host:~/JavaClasses$ vagrant up
+user@host:~/JavaClasses$ vagrant halt
+user@host:~/JavaClasses$ vagrant snapshot take clean
+---------------------------------------------------------------------
+  
+  If you want to understand the commands above, keep reading...
+  
 * Introduction
-
-  This page explains the process to create your environment. Everything we do in this course is on a virtual machine. So you need to install support for virtual machines, then create one and configure it.
-
+  
+  This page explains the process to create your environment if you have Linux on your computer. Everything we do in this course is on a virtual machine. So you need to install support for virtual machines, then create one and configure it.
+  
   Why do we need a virtual machine? Why can't I run everything directly on my machine?
 
   The answer is because we want to avoid "but it works on my machine" at any cost. Take a look:

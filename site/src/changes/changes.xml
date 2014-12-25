@@ -15,6 +15,7 @@
       <action dev="Akira" date="2014-11-02" type="add">Maven call in install.sh corrected.</action>
       <action dev="Akira" date="2014-11-10" type="update">Rephrasing in index.apt</action>
       <action dev="Akira" date="2014-12-23" type="update">Updated Vagrant box location</action>
+      <action dev="Akira" date="2014-12-25" type="update">Added environment installation for Windows users</action>
     </release>
     <release version="backlog" description="Future actions">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
