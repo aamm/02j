@@ -5,11 +5,25 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-
+  
+  # The virtual machine box name
   config.vm.box = "ubuntu/trusty32"
-
+  
+  # The virtual machine box URL. Vagrant will download the virtual machine image from this address.
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty32/versions/14.04/providers/virtualbox.box"
   
+  # The following line configures how Vagrant provisions the virtual machine. In other words, what
+  # Vagrant does in order to complete the virtual machine installation. Here we are telling Vagrant
+  # to run the script called "install.sh" on the virtual machine console.
   config.vm.provision "shell", path: "install.sh"
+  
+  # Configures the virtual machine provider (also known as the hypervisor).
+  config.vm.provider "virtualbox" do |v|
+    # Starts the provider using a graphical window. Comment the following line if you don't want to
+    # use a graphical user interface and you prefer to use the command line instead.
+    v.gui = true
+    # The VM name.
+    v.name = "JavaClasses-02j"
+  end
   
 end
