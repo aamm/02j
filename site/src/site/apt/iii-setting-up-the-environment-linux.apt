@@ -178,7 +178,7 @@ Hello World!
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ exit
-user@host:~/JavaClasses$ vagrant snapshot clean
+user@host:~/JavaClasses$ vagrant snapshot go clean
 vagrant@vagrant-ubuntu-trusty-32:~$
 ----
 
