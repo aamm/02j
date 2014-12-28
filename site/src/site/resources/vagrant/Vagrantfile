@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "install.sh"
   
   # Sets the VM name for Vagrant
-  config.vm.define "ZeroToJava" do |ZeroToJava|
+  config.vm.define "zeroToJava" do |zeroToJava|
   end
   
   # Configures the virtual machine provider (also known as the hypervisor).
@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # use a graphical user interface and you prefer to use the command line instead.
     v.gui = true
     # The VM name for VirtualBox
-    v.name = "ZeroToJava"
+    v.name = "zeroToJava"
   end
   
 end
