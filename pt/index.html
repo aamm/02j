@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>hyphenType - From Zero to Java</title>
+		<title>ZeroToJava - From Zero to Java</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="pt" />
@@ -46,9 +46,26 @@
 					<div class="nav-collapse collapse" id="top-nav-collapse">
 						<ul class="nav pull-right">
 							<li class="dropdown active">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Navegação <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="active"><a href="" title="Home">Home</a></li>
+									<li class="active"><a href="" title="Início">Início</a></li>
+									<li class="dropdown-submenu disabled">
+										<a title="Getting started">Getting started</a>
+										<ul class="dropdown-menu">
+											<li ><a href="i-introduction.html" title="i. Introduction">i. Introduction</a></li>
+											<li ><a href="ii-course-material.html" title="ii. Course Material">ii. Course Material</a></li>
+											<li ><a href="iii-setting-up-the-environment-linux.html" title="iii. Setting up the Environment - Linux">iii. Setting up the Environment - Linux</a></li>
+											<li ><a href="iii-setting-up-the-environment-windows.html" title="iii. Setting up the Environment - Windows">iii. Setting up the Environment - Windows</a></li>
+											<li ><a href="iv-vagrant-mini-tutorial.html" title="iv. Vagrant - Mini Tutorial">iv. Vagrant - Mini Tutorial</a></li>
+										</ul>
+									</li>
+									<li class="dropdown-submenu disabled">
+										<a title="Lessons">Lessons</a>
+										<ul class="dropdown-menu">
+											<li ><a href="lesson-1.html" title="1. Hello World!">1. Hello World!</a></li>
+											<li ><a href="lesson-2.html" title="2. Simple calculations">2. Simple calculations</a></li>
+										</ul>
+									</li>
 									<li ><a href="faq.html" title="FAQ">FAQ</a></li>
 								</ul>
 							</li>
@@ -86,9 +103,9 @@
 
 	<div class="main-body">
 	<div class="row">
-		<div class="span12">
+		<div class="span8">
 			<div class="body-content">
-<div class="section"> 
+				<div class="section"> 
  <div class="page-header">
   <h2 id="From_Zero_to_Java">From Zero to Java</h2>
  </div> 
@@ -96,15 +113,15 @@
  <p>Eu criei este site para ensinar Java para qualquer pessoa que queira aprender essa linguagem. Como programador, eu sempre achei frustrante que as linguagens de programa&ccedil;&atilde;o tivessem uma curva de aprendizagem t&atilde;o &aacute;rdua. Quando voc&ecirc; come&ccedil;a a estudar uma linguagem de programa&ccedil;&atilde;o, &eacute; necess&aacute;rio dominar muitos conceitos ao mesmo tempo, isso faz com que o processo de aprendizagem se torne um pouco tedioso.</p> 
  <p>Al&eacute;m disso, os m&eacute;todos cl&aacute;ssicos para aprender linguagens de programa&ccedil;&atilde;o geralmente acostumam o estudante com m&aacute;s pr&aacute;ticas de programa&ccedil;&atilde;o. N&oacute;s, a comunidade de programadores, trabalhamos arduamente para banir essas pr&aacute;ticas, ent&atilde;o por que n&oacute;s dever&iacute;amos ensin&aacute;-las aos novos programadores? Estas s&atilde;o algumas das m&aacute;s pr&aacute;ticas:</p> 
  <div class="section"> 
-  <h3 id="M_prtica_1:_Escrever_cdigo_sem_testes">M&aacute; pr&aacute;tica #1: Escrever c&oacute;digo sem testes</h3> 
+  <h3 id="M_prtica_1_Escrever_cdigo_sem_testes">M&aacute; pr&aacute;tica #1: Escrever c&oacute;digo sem testes</h3> 
   <p>Antes de come&ccedil;ar a programar, um(a) programador(a) deve sempre ter uma ideia clara sobre o que ele/ela precisa fazer e sobre testes automatizados. Afinal, se voc&ecirc; n&atilde;o tem um teste formal para verificar seu progresso, como voc&ecirc; pode dizer que voc&ecirc; finalizou seu trabalho?</p> 
  </div> 
  <div class="section"> 
-  <h3 id="M_prtica_2:_Cdigo_sem_build_automatizado">M&aacute; pr&aacute;tica #2: C&oacute;digo sem build automatizado</h3> 
+  <h3 id="M_prtica_2_Cdigo_sem_build_automatizado">M&aacute; pr&aacute;tica #2: C&oacute;digo sem build automatizado</h3> 
   <p>O build, o processo de criar um produto de software a partir de um c&oacute;digo fonte, deve estar pronto antes de se come&ccedil;ar a escrever o c&oacute;digo. Todos os programadores profissionais usam algum tipo de sistema para transformar um c&oacute;digo fonte em um produto. Seu trabalho n&atilde;o est&aacute; finalizado at&eacute; que seu software esteja pronto para ser usado por algu&eacute;m.</p> 
  </div> 
  <div class="section"> 
-  <h3 id="M_prtica_3:_Resultados_no_reproduzveis">M&aacute; pr&aacute;tica #3: Resultados n&atilde;o reproduz&iacute;veis</h3> 
+  <h3 id="M_prtica_3_Resultados_no_reproduzveis">M&aacute; pr&aacute;tica #3: Resultados n&atilde;o reproduz&iacute;veis</h3> 
   <p>A programa&ccedil;&atilde;o est&aacute; se tornando cada vez mais uma tarefa coletiva. Se voc&ecirc; n&atilde;o est&aacute; preparado para partilhar seu c&oacute;digo fonte, voc&ecirc; n&atilde;o est&aacute; preparado para programar. O ambiente de programa&ccedil;&atilde;o deve ser estabelecido de tal forma que outro programador possa facilmente reproduzi-lo. Isso &eacute; importante porque, durante a escrita do c&oacute;digo fonte, voc&ecirc; dever&aacute; ser capaz de detectar quando o seu c&oacute;digo tiver algum problema, e seus colegas de programa&ccedil;&atilde;o dever&atilde;o ser capazes de ver o mesmo problema sob o mesmo &acirc;ngulo.</p> 
  </div> 
  <div class="section"> 
@@ -132,20 +149,39 @@
    <li>Pico text editor</li> 
    <li>Vi text editor</li> 
   </ul> 
-  <hr /> 
  </div> 
-</div> 
-<div class="section"> 
- <h2 id="Quick_access">Quick access</h2> 
- <ul> 
-  <li>Home page: <p><a class="externalLink" href="http://aamm.github.io/02j/">http://aamm.github.io/02j/</a></p></li> 
-  <li>GitHub page: <p><a class="externalLink" href="https://github.com/aamm/02j">https://github.com/aamm/02j</a></p></li> 
-  <li>i. Introduction: <p><a href="./i-introduction.html">i-introduction.html</a></p></li> 
-  <li>Lesson 1: <p><a href="./lesson-1.html">lesson-1.html</a></p></li> 
-  <li>FAQ: <p><a href="./faq.html">faq.html</a></p></li> 
-  <li>Changes Log: <p><a href="./changes-report.html">changes-report.html</a></p></li> 
- </ul> 
 </div>
+			</div>
+		</div>
+		<div class="span4">
+			<div id="toc-sidebar">
+				<div class="well">
+					<ul class="nav nav-list">
+						<li class="nav-header">Table of Contents</li>
+		<li class="dropdown"><a href="#From_Zero_to_Java" title="From Zero to Java">From Zero to Java <b class="caret"></b></a>
+			<ul class="nav nav-list">
+		<li><a href="#M_prtica_1_Escrever_cdigo_sem_testes" title="Má prática #1: Escrever código sem testes">Má prática #1: Escrever código sem testes</a>
+		<li><a href="#M_prtica_2_Cdigo_sem_build_automatizado" title="Má prática #2: Código sem build automatizado">Má prática #2: Código sem build automatizado</a>
+		<li><a href="#M_prtica_3_Resultados_no_reproduzveis" title="Má prática #3: Resultados não reproduzíveis">Má prática #3: Resultados não reproduzíveis</a>
+		<li><a href="#Minha_soluo" title="Minha solução">Minha solução</a>
+		<li><a href="#Projetos_que_ns_apoiamos" title="Projetos que nós apoiamos">Projetos que nós apoiamos</a>
+				<li class="divider"></li>
+			</ul>
+		</li>
+		<li><a href="#Acesso_rpido" title="Acesso rápido">Acesso rápido</a>
+					</ul>
+				</div>
+			</div>
+			<div class="well sidebar">
+	<h2 id="Acesso_rpido">Acesso r&aacute;pido</h2>
+<ul> 
+ <li>Home page: <p><a class="externalLink" href="http://aamm.github.io/02j/">http://aamm.github.io/02j/</a></p></li> 
+ <li>GitHub page: <p><a class="externalLink" href="https://github.com/aamm/02j">https://github.com/aamm/02j</a></p></li> 
+ <li>i. Introduction: <p><a href="./i-introduction.html">i-introduction.html</a></p></li> 
+ <li>Lesson 1: <p><a href="./lesson-1.html">lesson-1.html</a></p></li> 
+ <li>FAQ: <p><a href="./faq.html">faq.html</a></p></li> 
+ <li>Changes Log: <p><a href="./changes-report.html">changes-report.html</a></p></li> 
+</ul>
 			</div>
 		</div>
 	</div>
@@ -160,9 +196,15 @@
 			<div class="row">
 				<div class="span9 bottom-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Overview</li>
+						<li class="nav-header">Navegação</li>
 						<li class="active">
-							<a href="#" title="Home">Home</a>
+							<a href="#" title="Início">Início</a>
+						</li>
+						<li >
+							<a title="Getting started">Getting started <i class="icon-chevron-right"></i></a>
+						</li>
+						<li >
+							<a title="Lessons">Lessons <i class="icon-chevron-right"></i></a>
 						</li>
 						<li >
 							<a href="faq.html" title="FAQ">FAQ</a>
