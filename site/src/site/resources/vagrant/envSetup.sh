@@ -9,7 +9,7 @@ sudo apt-get -y install virtualbox
 # Installs Vagrant
 sudo apt-get -y install vagrant
 
-# Creats the JavaClasses directory
+# Creates the JavaClasses directory
 mkdir JavaClasses
 
 # Enters the JavaClasses directory
