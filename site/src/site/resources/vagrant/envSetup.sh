@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Updates apt-get
+sudo apt-get update
+
 # Installs VirtualBox
 sudo apt-get -y install virtualbox
 
