@@ -248,6 +248,14 @@ clean</pre>
    <pre>user@host:~/JavaClasses$ vagrant go clean</pre> 
   </div> 
  </div> 
+ <div class="section"> 
+  <h3 id="Sharing_your_Vagrant_box">Sharing your Vagrant box</h3> 
+  <p>Once you have configured your virtual machine box, you can use Vagrant to share such a box by typing the following:</p> 
+  <div> 
+   <pre>vagrant package --base zeroToJava</pre> 
+  </div> 
+  <p>This command will create a file called package.box, which can be used to create copies of the same virtual machine on another computer.</p> 
+ </div> 
 </div>
 			</div>
 		</div>
@@ -268,6 +276,7 @@ clean</pre>
 		<li><a href="#Listing_snapshots" title="Listing snapshots">Listing snapshots</a>
 		<li><a href="#Removing_a_snapshot" title="Removing a snapshot">Removing a snapshot</a>
 		<li><a href="#Rule_of_thumb" title="Rule of thumb">Rule of thumb</a>
+		<li><a href="#Sharing_your_Vagrant_box" title="Sharing your Vagrant box">Sharing your Vagrant box</a>
 				<li class="divider"></li>
 			</ul>
 		</li>

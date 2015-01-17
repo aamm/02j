@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>ZeroToJava - iii. Settting up the environment - Linux</title>
+		<title>ZeroToJava - iii. Preparando o ambiente – Linux</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="pt" />
@@ -107,96 +107,96 @@
 			<div class="body-content">
 				<div class="section"> 
  <div class="page-header">
-  <h2 id="iii_Settting_up_the_environment_-_Linux">iii. Settting up the environment - Linux</h2>
+  <h2 id="iii_Preparando_o_ambiente__Linux">iii. Preparando o ambiente – Linux</h2>
  </div> 
  <div class="section"> 
-  <h3 id="For_the_extremely_impatient">For the extremely impatient</h3> 
-  <p>If you only have time to type a single in the command line, here it is. But before you run it, make sure you trust the contents of <a class="externalLink" href="http://aamm.github.io/02j/vagrant/envSetup.sh">envSetup.sh</a>. The line bellow is asking your computer to download such script and execute it. If the script contains anything that can harm your computer, do not run it.</p> 
+  <h3 id="Para_os_extremamente_impacientes">Para os extremamente impacientes</h3> 
+  <p>Se voc&ecirc; s&oacute; tiver tempo para digitar uma simples linha de comando, aqui est&aacute;. Mas antes de rod&aacute;-la, verifique se voc&ecirc; confia nos conte&uacute;dos de <a class="externalLink" href="http://aamm.github.io/02j/vagrant/envSetup.sh">envSetup.sh</a>. A linha abaixo est&aacute; pedindo ao computador para baixar tal script e execut&aacute;-lo. Se o script cont&eacute;m qualquer coisa que pode danificar seu computador, n&atilde;o o execute.</p> 
   <div> 
    <pre>wget -q -O - http://aamm.github.io/02j/vagrant/envSetup.sh | bash</pre> 
   </div> 
-  <p>If you want to understand the script above (which I strongly recommend), keep reading...</p> 
+  <p>Se voc&ecirc; quer entender o script acima (o que eu fortemente recomendo), continue lendo...</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Introduction">Introduction</h3> 
-  <p>This page explains the process to create your environment if you have Linux on your computer. Everything we do in this course is on a virtual machine. So you need to install support for virtual machines, then create one and configure it.</p> 
-  <p>Why do we need a virtual machine? Why can't I run everything directly on my machine?</p> 
-  <p>The answer is because we want to avoid &quot;but it works on my machine&quot; at any cost. Take a look:</p> 
+  <h3 id="Introduo">Introdu&ccedil;&atilde;o</h3> 
+  <p>Essa p&aacute;gina explica o processo de criar seu ambiente se voc&ecirc; tem Linux no seu computador. Tudo o que fazemos nesse curso &eacute; em uma m&aacute;quina virtual. Por isso voc&ecirc; precisa instalar o suporte para m&aacute;quinas virtuais, para ent&atilde;o criar uma e configur&aacute;-la.</p> 
+  <p>Por que n&oacute;s precisamos de m&aacute;quina virtual? Por que n&atilde;o podemos rodar tudo diretamente na nossa m&aacute;quina?</p> 
+  <p>A resposta &eacute;: Porque n&oacute;s queremos evitar a qualquer custo a frase “mas ele funciona na minha m&aacute;quina”. D&ecirc; uma olhada:</p> 
   <p><a class="externalLink" href="http://www.cafepress.com/+but-it-works-on-my-machine+hats-caps">http://www.cafepress.com/+but-it-works-on-my-machine+hats-caps</a></p> 
-  <p>This is so recurring in the IT field that it even became an inside joke. When you write your programs you will have the environment influencing the way your programs work. Perhaps your machine has just the right version of Java. Perhaps your machine has just the right amount of memory. etc etc. So when you share your program with other programmers you start to see that things do not run exactly the same way on other platforms.</p> 
-  <p>We cannot waste precious time trying to check every single thing that can influence program execution. If we all run our programs on the same virtual machine we can almost eliminate such effect. So a solution for an exercise will run precisely the same way on everyone's computer no matter the actual operating system that this computer has.</p> 
-  <p>In order to run a virtual machine you need what is called a hypervisor. In a virtualization, you have one computer running inside of another computer. The hypervisor is what makes such a thing possible.</p> 
-  <p>The hypervisor we will use is called Virtual Box, which works pretty well for our needs on this course. The problem about Virtual Box is that it takes time to get started with it. All the boring details about Virtual Box are made much more simple by Vagrant.</p> 
-  <p>Vagrant is then a set of procedures to make it easy to use Virtual Box, among other hypervisors. With Vagrant you can type a command like &quot;create a virtual machine with Linux flavor X&quot; and after a couple of minutes you magically have a virtual machine for you to use. It is that simple.</p> 
-  <p>On this guide you will need to use both the guest and the host machines, which are roles in a virtualization. Let us define them:</p> 
+  <p>Isso &eacute; t&atilde;o recorrente na &aacute;erea de TI, que at&eacute; se tornou uma piada da &aacute;rea. Quando voc&ecirc; escreve seus programas voc&ecirc; ter&aacute; o ambiente influenciando a forma como seu programa funciona. Talvez sua m&aacute;quina virtual tenha exatamente a vers&atilde;o correta do Java. Talvez sua m&aacute;quina tenha a quantidade correta de mem&oacute;ria etc. Ent&atilde;o, quando voc&ecirc; partilha seu programa com outros programadores voc&ecirc; come&ccedil;a a ver que as coisas n&atilde;o rodam exatamente da mesma forma em outras plataformas.</p> 
+  <p>N&oacute;s n&atilde;o podemos perder um tempo precioso tentando verificar cada pequena coisa que pode influenciar a execu&ccedil;&atilde;o do programa. Se todos n&oacute;s rodarmos nossos programas na mesma m&aacute;quina virtual n&oacute;s podemos quase eliminar efeito. Assim, uma solu&ccedil;&atilde;o para um exerc&iacute;cio rodar&aacute; exatamente da mesma forma em qualquer computador n&atilde;o importa qual o sistema operacional real deste computador.</p> 
+  <p>Para rodar uma m&aacute;quina virtual voc&ecirc; precisa de algo que se chama hypervisor. Em uma virtualiza&ccedil;&atilde;o, voc&ecirc; tem um computador rodando dentro de um outro computador. O hypervisor &eacute; o que torna isso poss&iacute;vel.</p> 
+  <p>O hypervisor que n&oacute;s usamos se chama Virtual Box, que funciona perfeitamente bem para todas as necessidades deste curso. O problema sobre o Virtual Box &eacute; que ele demora para iniciar. Todos os detalhes chatos sobre Virtual Box s&atilde;o simplicados pelo Vagrant.</p> 
+  <p>O Vagrant &eacute; ent&atilde;o um conjunto de procedimentos que facilitam o uso do Virtual Box, entre outros hypervisors. Com o Vagrant voc&ecirc; pode digitar um comando como “criar uma m&aacute;quina virtual com o Linux flavor X” e, depois de poucos minutos, voc&ecirc; magicamente ter&aacute; uma m&aacute;quina virtual para usar. &Eacute; realmente simples.</p> 
+  <p>Nesse guia voc&ecirc; precisar&aacute; usar tanto a m&aacute;quina guest quanto quanto a m&aacute;quina host, que s&atilde;o pap&eacute;is em uma virtualiza&ccedil;&atilde;o. Vamos defini-las:</p> 
   <ul> 
-   <li>host - The real machine. This is the operating system that runs the virtualization program, aka. hypervisor.</li> 
-   <li>guest - The virtual machine. This is the virtual operating system that runs on top of the hypervisor.</li> 
+   <li>host - Ou hospedeiro. A m&aacute;quina real. Esse &eacute; o sistema operacional que roda no programa de virtualiza&ccedil;&atilde;o, tamb&eacute;m conhecido como hypervisor.</li> 
+   <li>guest - Ou convidado. A m&aacute;quina virtual. Esse &eacute; o sistema operacional que roda em cima do hypervisor.</li> 
   </ul> 
-  <p>There are two sorts of command lines you will need to use: one on the host machine and another on the virtual machine.</p> 
-  <p>What we will run on the host are just the commands we need to create and connect to the virtual machine. Your command line will most likely be different from this one, especially if you use Windows, but I hope you got the gist.</p> 
+  <p>H&aacute; dois tipos de linhas de comando que voc&ecirc; precisar&aacute; usar: uma na m&aacute;quina host e outra na m&aacute;quina virtual.</p> 
+  <p>O que n&oacute;s rodaremos no host s&atilde;o exatamente os comandos que n&oacute;s precisamos para criar e conectar uma m&aacute;quina virtual. Sua linha de comando provavelmente ser&aacute; diferente desta, especialmente se voc&ecirc; usar Windows, mas eu espero que voc&ecirc; tenha entendido a ess&ecirc;ncia.</p> 
   <div> 
    <pre>user@host:~$</pre> 
   </div> 
-  <p>Here is how the command line will look like on the virtual machine:</p> 
+  <p>Aqui est&aacute; como a linha de comando aparecer&aacute; na m&aacute;quina virtual:</p> 
   <div> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~$</pre> 
   </div> 
-  <p>Once we have set the virtual machine, we will only use the guest terminal.</p> 
+  <p>Uma vez que n&oacute;s preparamos a m&aacute;quina virtual, n&oacute;s somente usaremos o terminal guest.</p> 
  </div> 
  <div class="section"> 
   <h3 id="VirtualBox">VirtualBox</h3> 
-  <p>The first thing you need to do is to make sure you have VirtualBox installed. On Ubuntu/Debian, you only need to type:</p> 
+  <p>A primeira coisa que voc&ecirc; deve fazer &eacute; se certificar de que o VirtualBox est&aacute; instalado. No Ubuntu/Debian voc&ecirc; precisar&aacute; somente digitar:</p> 
   <div> 
    <pre>user@host:~$ sudo apt-get install virtualbox</pre> 
   </div> 
  </div> 
  <div class="section"> 
   <h3 id="Vagrant">Vagrant</h3> 
-  <p>After VirtualBox, you need to install Vagrant, which, as we said, makes it simpler to use virtualization.</p> 
-  <p>If you are running Ubuntu or Debian Linux, you need to run:</p> 
+  <p>Depois do VirtualBox, voc&ecirc; precisa instalar Vagrant, que, como dissemos, torna mais simples usar virtualiza&ccedil;&atilde;o.</p> 
+  <p>Se voc&ecirc; est&aacute; rodando Ubuntu ou Debian Linux, voc&ecirc; necessita rodar:</p> 
   <div> 
    <pre>user@host:~$ sudo apt-get install vagrant
 user@host:~$ mkdir JavaClasses
 user@host:~$ cd JavaClasses
 user@host:~/JavaClasses$</pre> 
   </div> 
-  <p>Before we continue, we need to introduce a few Linux commands:</p> 
+  <p>Antes de continuarmos, precisamos introduzir alguns comando do Linux:</p> 
   <ul> 
-   <li><tt>mkdir</tt> - to make a directory on Linux.</li> 
-   <li><tt>ls</tt> - to list the contents of the current directory.</li> 
-   <li><tt>cd</tt> - to change the current directory.</li> 
+   <li><tt>mkdir</tt> - para criar um diret&oacute;rio no Linux.</li> 
+   <li><tt>ls</tt> - para listar os conte&uacute;dos do presente diret&oacute;rio no Linux.</li> 
+   <li><tt>cd</tt> - para mudar o diret&oacute;rio atual.</li> 
   </ul> 
-  <p>Now copy the following files to the JavaClasses directory:</p> 
+  <p>Agora copie os seguintes arquivos para o diret&oacute;rio JavaClasses:</p> 
   <ul> 
    <li><a href="./vagrant/Vagrantfile">Vagrantfile</a></li> 
    <li><a href="./vagrant/install.sh">install.sh</a></li> 
   </ul> 
-  <p>After copying those files to JavaClasses, run the following to install a plugin that allows you to control Vagrant snapshots. You can see more details about virtual machine snapshots on the next lesson: <a href="#iv-vagrant-mini-tutorial.html">iv. Vagrant mini tutorial</a>.</p> 
+  <p>Depois de copiar esses arquivos para o JavaClasses, rode o seguinte comando para instalar um plugin que permite que voc&ecirc; controle os snapshots do Vagrant. Voc&ecirc; pode ver mais detalhes sobre snapshots de m&aacute;quina virtual na pr&oacute;xima aula: <a href="./iv-vagrant-mini-tutorial.html">iv. Vagrant mini tutorial</a>.</p> 
   <div> 
    <pre>user@host:~/JavaClasses$ vagrant plugin install vagrant-vbox-snapshot</pre> 
   </div> 
-  <p>Next, start the virtual machine using the following command:</p> 
+  <p>A seguir, inicie a m&aacute;quina virtual usando o seguinte comando:</p> 
   <div> 
    <pre>user@host:~/JavaClasses$ vagrant up</pre> 
   </div> 
-  <p>This last command will take some time and download a lot of files from the Internet. But, don't worry, if you correctly manage Vagrant you will never need to download all that again. We will take a snapshot called &quot;clean&quot;. A snapshot is a virtual machine state. We take a snapshot because we want to go back to that state later.</p> 
-  <p>Now that we have installed everything it is time to take our main snapshot:</p> 
+  <p>Esse &uacute;ltimo comando tomar&aacute; um pouco de tempo e baixar&aacute; alguns arquivos da Internet. Mas, n&atilde;o se preocupe, se voc&ecirc; administrar o Vagrant, voc&ecirc; nunca mais precisar&aacute; baixar todos eles novamente. N&oacute;s usaremos um snapshot chamado &quot;clean&quot;. Um snapshot &eacute; um estado de m&aacute;quina virtual. N&oacute;s usaremos um snapshot porque mais tarde n&oacute;s voltaremos para aquele estado.</p> 
+  <p>Agora que n&oacute;s instalamos tudo, &eacute; hora de usar nosso snapshot principal:</p> 
   <div> 
    <pre>user@host:~/JavaClasses$ vagrant halt
 user@host:~/JavaClasses$ vagrant snapshot take clean</pre> 
   </div> 
-  <p>That is it. At this point you should have everything you need to start the lessons. But it is worth checking if everything is working fine. So if there was any glitch on the installation you can try to fix it.</p> 
+  <p>&Eacute; isso. Neste ponto voc&ecirc; deve ter tudo que precisa para come&ccedil;ar as aulas. Mas vale a pena verificar se tudo est&aacute; funcionando bem. Ent&atilde;o se houver qualquer erro na instala&ccedil;&atilde;o, voc&ecirc; pode tentar consert&aacute;-lo.</p> 
  </div> 
 </div> 
 <div class="section"> 
- <h2 id="Checking_the_installation">Checking the installation</h2> 
- <p>Next we will bring the virtual machine up again and connect to the its console:</p> 
+ <h2 id="Verificando_a_instalao">Verificando a instala&ccedil;&atilde;o</h2> 
+ <p>A seguir, n&oacute;s chamaremos a m&aacute;quina virtual novamente e conectaremos ao seu console:</p> 
  <div> 
   <pre>user@host:~/JavaClasses$ vagrant up
 user@host:~/JavaClasses$ vagrant ssh</pre> 
  </div> 
- <p>Depending on your platform, Vagrant will complain on the first command that the virtual machine was already running, but such complaint is harmless. After the second command you will see the following:</p> 
+ <p>Dependendo da sua plataforma, o Vagrant reclamar&aacute; do primeiro comando que a m&aacute;quina virtual estiver rodando, mas tal reclama&ccedil;&atilde;o &eacute; inofensiva. Depois do segundo comando voc&ecirc; ver&aacute; a seguinte mensagem:</p> 
  <div> 
   <pre>Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic i686)
 
@@ -221,29 +221,29 @@ user@host:~/JavaClasses$ vagrant ssh</pre>
 
 vagrant@vagrant-ubuntu-trusty-32:~$ </pre> 
  </div> 
- <p>This means you have successfully installed a new virtual machine and Vagrant is working fine.</p> 
+ <p>Isso significa que voc&ecirc; instalou corretamente a nova m&aacute;quina virtual e que o Vagrant est&aacute; funcionando bem.</p> 
 </div> 
 <div class="section"> 
- <h2 id="Your_first_Java_program">Your first Java program</h2> 
- <p>Type the following on the terminal:</p> 
+ <h2 id="Seu_primeiro_programa_em_Java">Seu primeiro programa em Java</h2> 
+ <p>Digite a mensagem a seguir no seu terminal:</p> 
  <div> 
   <pre>vagrant@vagrant-ubuntu-trusty-32:~$ echo 'class A { public static void main(String[] args) { System.out.println(&quot;Hello World!&quot;); }}' &gt; A.java
 vagrant@vagrant-ubuntu-trusty-32:~$ javac A.java
 vagrant@vagrant-ubuntu-trusty-32:~$ java A</pre> 
  </div> 
- <p>You will see </p> 
+ <p>Voc&ecirc; ver&aacute;:</p> 
  <div> 
   <pre>Hello World!</pre> 
  </div> 
- <p>Congratulations! You just created your first Java program, compiled it, and executed it!</p> 
- <p>Don't worry about the details. We will see later what each of those commands mean.</p> 
- <p>Now let's clean everything so you can start anew:</p> 
+ <p>Parab&eacute;ns! Voc&ecirc; acabou de criar seu primeiro programa Java, compilou-o e executou-o!</p> 
+ <p>N&atilde;o se preocupe sobre os detalhes. Voc&ecirc; ver&aacute; mais tarde o que cada um desses comandos significa.</p> 
+ <p>Agora vamos limpar tudo para que voc&ecirc; possa come&ccedil;ar com tudo limpinho:</p> 
  <div> 
   <pre>vagrant@vagrant-ubuntu-trusty-32:~$ exit
 user@host:~/JavaClasses$ vagrant snapshot go clean
 vagrant@vagrant-ubuntu-trusty-32:~$</pre> 
  </div> 
- <p>The following section will introduce the basic concepts of Vagrant. So these commands will start to make more sense.</p> 
+ <p>A pr&oacute;xima sess&atilde;o introduzir&aacute; os conceitos b&aacute;sicos do Vagrant. Ent&atilde;o esses comandos come&ccedil;ar&atilde;o a fazer mais sentido.</p> 
 </div>
 			</div>
 		</div>
@@ -252,23 +252,23 @@ vagrant@vagrant-ubuntu-trusty-32:~$</pre>
 				<div class="well">
 					<ul class="nav nav-list">
 						<li class="nav-header">Table of Contents</li>
-		<li class="dropdown"><a href="#iii_Settting_up_the_environment_-_Linux" title="iii. Settting up the environment - Linux">iii. Settting up the environment - Linux <b class="caret"></b></a>
+		<li class="dropdown"><a href="#iii_Preparando_o_ambiente__Linux" title="iii. Preparando o ambiente – Linux">iii. Preparando o ambiente – Linux <b class="caret"></b></a>
 			<ul class="nav nav-list">
-		<li><a href="#For_the_extremely_impatient" title="For the extremely impatient">For the extremely impatient</a>
-		<li><a href="#Introduction" title="Introduction">Introduction</a>
+		<li><a href="#Para_os_extremamente_impacientes" title="Para os extremamente impacientes">Para os extremamente impacientes</a>
+		<li><a href="#Introduo" title="Introdução">Introdução</a>
 		<li><a href="#VirtualBox" title="VirtualBox">VirtualBox</a>
 		<li><a href="#Vagrant" title="Vagrant">Vagrant</a>
 				<li class="divider"></li>
 			</ul>
 		</li>
-		<li><a href="#Checking_the_installation" title="Checking the installation">Checking the installation</a>
-		<li><a href="#Your_first_Java_program" title="Your first Java program">Your first Java program</a>
-		<li><a href="#References" title="References">References</a>
+		<li><a href="#Verificando_a_instalao" title="Verificando a instalação">Verificando a instalação</a>
+		<li><a href="#Seu_primeiro_programa_em_Java" title="Seu primeiro programa em Java">Seu primeiro programa em Java</a>
+		<li><a href="#Referncias" title="Referências">Referências</a>
 					</ul>
 				</div>
 			</div>
 			<div class="well sidebar">
-	<h2 id="References">References</h2>
+	<h2 id="Referncias">Refer&ecirc;ncias</h2>
 <p>VirtualBox: <a class="externalLink" href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></p>
 <p>Vagrant: <a class="externalLink" href="https://www.vagrantup.com/">https://www.vagrantup.com/</a></p>
 <p>Java: <a class="externalLink" href="http://www.oracle.com/technetwork/java/index.html">http://www.oracle.com/technetwork/java/index.html</a></p>
