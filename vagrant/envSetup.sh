@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Updates apt-get
+sudo apt-get update
+
 # Installs VirtualBox
-sudo apt-get install virtualbox
+sudo apt-get -y install virtualbox
 
 # Installs Vagrant
-sudo apt-get install vagrant
+sudo apt-get -y install vagrant
 
-# Creats the JavaClasses directory
+# Creates the JavaClasses directory
 mkdir JavaClasses
 
 # Enters the JavaClasses directory
