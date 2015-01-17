@@ -1,16 +1,16 @@
-i. Introduction
+i. Introdução
 
-* Java is...
+* Java é....
 
-  Right, this website does not intent to be self contained. But it does not hurt if we define what is Java. In other words, what are we planning to study. So here we go:
+  Certo, nosso site não pretende ser autossuficiente. Mas não faz mal se definirmos o que é Java. Em outras palavras, o que nós planejamos estudar. Então aí vai:
 
-  Java is a programming language. There are thousands of ways to label a programming languages. Here are some that apply to Java:
+  Java é uma linguagem de programação. Há milhares de formas de definir uma linguagem de programação. A seguir temos algumas formas que se aplicam ao Java:
 
-  Java is object-oriented - object-oriented programming (OOP) is a somewhat abstract concept for the beginner, but in simple terms we can say that an object is a bunch of data organized in a way that allow us to use classifiers. Think of a classifier as a set. For instance, if we think about a set called "countries", the elements of countries will be objects. Each object will have certain properties such as the name of the capital and the area. OOP allow us to organize data in such a way.
+  Java é uma linguagem de programação orientada a objeto (a siglas em inglês é OOP que significa Object-oriented programming). Este é um conceito um pouco abstrato para um iniciante, mas de forma simples nós podemos dizer que um objeto é um grupo de dados organizados de forma que permite usar classificadores. Pense em um classificador como um conjunto. Por exemplo, se nós pensarmos sobre um conjunto chamado “países”, os elementos dos países serão objetos. Cada objeto terá certas propriedades tais como nome da capital e a área. OOP nos permite organizar os dados dessa forma.
 
-  Java is general purpose - we can do anything with Java. From a webpage, to a computer game, to a mobile phone application. Certain languages were not designed to be general purpose. For instance, query languages such as SQL were designed originally to allow us to search and organize data in a database. Such a language is just not fit to create other things.
+  Java é uma linguagem com propósito geral – nós podemos fazer qualquer coisa em Java. De uma página web, a um jogo de computador, a uma aplicação de celular. Certas linguagens foram desenhadas para ter propósito geral. Por exemplo, linguagens query como SQL foram desenhadas originalmente para nos permitir buscar e organizar dados em bancos de dados. Tal linguagem não é desenhada para criar outras coisas.
 
-  Java is based on a virtual machine - First, what is a virtual machine? We all know that programs are executed by something. While the classic way to execute a program is having a hardware executing the program, we can also have the hardware executing a program that executes another program. Sounds crazy at first, but there is a number of advantages on doing so. The main one is that the intermediate program, the virtual machine, can insulate the Java program from the hardware. So the same Java program can run on multiple kinds of hardware, as long as there is a virtual machine for the hardware.
+  Java é baseada em uma máquina virtual. Primeiramente, o que é uma máquina virtual? Nós todos sabemos que programas são executados por alguma coisa. Enquanto a forma clássica de executar um programa é ter um hardware executando um programa, nós também podemos ter um hardware executando um programa que executa outro programa. Isso soa uma pouco estranho a princípio, mas há um número de vantagens em fazer isso. A principal vantagem é que o programa intermediário, a máquina virtual, pode isolar o pprograma Java do hardware. Então o mesmo programa Java pode rodar em vários tipos de hardware, desde que haja uma máquina virtual para o hardware.
 
   Java is an imperative programming language - In other words, when you write a program in Java you are telling the computer to do this, and to do that. Non-imperative programming languages can simply declare what you want and let the computer figure out how to get that done.
 
