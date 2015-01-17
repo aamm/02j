@@ -12,13 +12,13 @@ i. Introduction
 
   Java is based on a virtual machine - First, what is a virtual machine? We all know that programs are executed by something. While the classic way to execute a program is having a hardware executing the program, we can also have the hardware executing a program that executes another program. Sounds crazy at first, but there is a number of advantages on doing so. The main one is that the intermediate program, the virtual machine, can insulate the Java program from the hardware. So the same Java program can run on multiple kinds of hardware, as long as there is a virtual machine for the hardware.
 
-  Java is an imperative programming language - In other words, when you write a program in Java you are telling the computer to do this, and to do that. Non-imperative programming languages can simply declare what you want and let the computer figure out how to get that done.
+  Java is an imperative programming language - In other words, when you write a program in Java you are telling the computer to do this, and to do that. When you use non-imperative programming languages, you can simply declare what you want and let the computer figure out how to get that done.
 
 * Simple Facts About Java
 
   Before we begin, there are simple things you need to know about Java. There are a few facts about Java you need to know from the very beginning:
 
-  Java is not Javascript and vice-versa - Several people confuse the two programming languages because of their names. So here are the differences:
+  Java is not Javascript and vice-versa - Several people confuse these two programming languages because of their names. So here are the differences:
 
 *-----------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------- --------------------------------------------------------------------+
 |                 | Java                                                                                                                           | Javascript                                                                                     |

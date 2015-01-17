@@ -12,47 +12,48 @@ i. Introdução
 
   Java é baseada em uma máquina virtual. Primeiramente, o que é uma máquina virtual? Nós todos sabemos que programas são executados por alguma coisa. Enquanto a forma clássica de executar um programa é ter um hardware executando um programa, nós também podemos ter um hardware executando um programa que executa outro programa. Isso soa uma pouco estranho a princípio, mas há um número de vantagens em fazer isso. A principal vantagem é que o programa intermediário, a máquina virtual, pode isolar o pprograma Java do hardware. Então o mesmo programa Java pode rodar em vários tipos de hardware, desde que haja uma máquina virtual para o hardware.
 
-  Java is an imperative programming language - In other words, when you write a program in Java you are telling the computer to do this, and to do that. Non-imperative programming languages can simply declare what you want and let the computer figure out how to get that done.
+  Java é uma linguagem de programação imperativa. Em outras palavras, quando você escreve um programa em Java, você está dizendo ao computador para fazer isto e não aquilo. Quando você usa linguagens de programação não-imperativas você pode simplesmente declara o que você quer e deixar o computador determinar como aquilo será feito.
 
-* Simple Facts About Java
+* Fatos simples sobre Java
 
-  Before we begin, there are simple things you need to know about Java. There are a few facts about Java you need to know from the very beginning:
+  Antes de começarmos, há algumas coisas que você precisa saber sobre Java. Há alguns fatos sobre Java que você precisa saber bem do começo:
 
-  Java is not Javascript and vice-versa - Several people confuse the two programming languages because of their names. So here are the differences:
+  Java não é JavaScript e vice-versa. Muitas pessoas confundem que duas linguagens de programação (corrigir em inglês tem um the na frente do two) por causa de seus nomes. Então aqui estão as diferenças:
 
-*-----------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------- --------------------------------------------------------------------+
-|                 | Java                                                                                                                           | Javascript                                                                                     |
-*-----------------+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
-| purpose         | General purpose                                                                                                                | Designed to be used in web browsers                                                                      |
-*-----------------+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
-| execution model | First you have to compile the source code and generate an executable, then you execute the executable using a virtual machine. | You execute the scripts written in Javascript directly in the browser without any compilation. |
-*-----------------+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------------- ------------------------------------------------------------------------+
+|                    | Java                                                                                                                            | Javascript                                                                                         |
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+| Propósito          | Propósito geral                                                                                                                 | Desenhada para ser usada em navegadores web.                                                       |
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+| Modelo de execução | Primeiro você tem que compilar o código fonte e gerar um executável, então você executa o executável usando uma máquina virtual | Você executa os scripts escritos no JavaScript diretamente em um navegador sem nenhuma compilação. |
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 
-* Java is not the fastest language
+* Java não é a linguagem mais rápida
 
-  Applications written in Java can get close to the performance of applications written in C, for example, but in general the kind of optimization to high performance in C cannot be reproduced in Java.
+  Aplicações escritas em Java podem se aproximar da performance de aplicações escritas em C, por exemplo; mas, em geral, o tipo de optimização para performance alta em C não pode ser reproduzida em Java.
 
-  Nevertheless, Java is in large use in high performance computing, meaning the language offers important advantages to the solution of problems that require fast processing.
+  Entretanto, Java é amplamente utilizada em computação de alta performance, ou seja, a linguagem oferece vantagens importantes para solucionar problemas que requerem processamento rápido.
 
-* Java is not the last language you will learn
+* Java não é a última linguagem que você vai aprender
 
-  Don't be fooled. No programmer programs in just one language. Even programmers that are specialized in Java and only create systems that are based on Java need to know some sort of SQL, which is a language to interface with a database.
+  Não se engane. Nenhum programador programa em apenas uma linguagem. Mesmo programadores que são especializados em Java, e somente criam sistemas que são baseados em Java, precisam conhecer algum tipo de SQL, que é uma linguagem de interface com um banco de dados.
 
-* Programming in Java for real requires a solid knowledge of object-orientation design
+* Programar em Java de verdade requer sólidos conhecimentos de orientação a objetos
 
-  Don't think you will be able to build decent Java programs without knowing what OOP (Object-Oriented Programming) is.
+  Não pense que você será capaz de construir programas decentes em Java sem conhecer o que é OOP.
 
-* Java is not finished
+* Java não está finalizado
 
-  New versions of Java are released once in a while to correct bugs, compatibility problems and even to change the way programmers should create their programs.
+  Novas versões de Java são lançadas de vez em quando para corrigir bugs, problemas de compatibilidade e mesmo para mudar a forma como os programadores criam seus programas.
 
 ===
 
 JDK vs JRE
 
-  What is the differences between a JDK and a JRE?
+  Quais são as diferenças entre uma JDK e uma JRE?
 
-  JRE - Java Runtime Environment - a collection of pieces of software that allows for applications written in Java to be executed. Any user who wants to execute Java programs should have a JRE installed.
+  JRE - Java Runtime Environment - uma coleção de programas que permite que aplicações escritas em Java sejam executadas. Qualquer usuário que deseje executar programas em Java precisa ter uma JRE instalada.
 
-  JDK - Java Development Kit - is a collection of basic tools the developers need to program in Java. The JDK contains a JRE, since programmers need to execute their applications to test them. Typically, only application developers will need to have a JDK installed.
+  JDK - Java Development Kit - é uma coleção de ferramentas básicas que desenvolvedores precisam para programar em Java. A JDK contém uma JRE, uma vez que programadores precisam executar suas aplicações para testá-las. Tipicamente, somente desenvolvedores de aplicações precisam ter uma JDK instalada.
+
 
