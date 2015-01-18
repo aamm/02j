@@ -6,73 +6,73 @@ iii. Preparando o ambiente – Windows
 
   As telas abaixo foram uma contribuição de Priscila.
   
-* Install VirtualBox
+* Instalar o VirtualBox
 
-[./images/VirtualBox0.png]
-
-  \ 
-
-[./images/VirtualBox1.png]
+[./../images/VirtualBox0.png]
 
   \ 
 
-[./images/VirtualBox2.png]
+[./../images/VirtualBox1.png]
 
   \ 
 
-[./images/VirtualBox3.png]
+[./../images/VirtualBox2.png]
 
   \ 
 
-[./images/VirtualBox4.png]
+[./../images/VirtualBox3.png]
 
   \ 
 
-[./images/VirtualBox5.png]
+[./../images/VirtualBox4.png]
 
   \ 
 
-[./images/VirtualBox6.png]
+[./../images/VirtualBox5.png]
 
   \ 
 
-[./images/VirtualBox7.png]
-
-* Install Vagrant
-
-[./images/Vagrant0.png]
+[./../images/VirtualBox6.png]
 
   \ 
 
-[./images/Vagrant1.png]
+[./../images/VirtualBox7.png]
+
+* Instalar o Vagrant
+
+[./../images/Vagrant0.png]
 
   \ 
 
-[./images/Vagrant2.png]
+[./../images/Vagrant1.png]
 
   \ 
 
-[./images/Vagrant3.png]
+[./../images/Vagrant2.png]
 
   \ 
 
-[./images/Vagrant4.png]
+[./../images/Vagrant3.png]
 
   \ 
 
-[./images/Vagrant5.png]
+[./../images/Vagrant4.png]
 
   \ 
 
-[./images/Vagrant6.png]
+[./../images/Vagrant5.png]
 
-* Faça o download do Putty
+  \ 
+
+[./../images/Vagrant6.png]
+
+* Fazer o download do Putty
 
   Na verdade, não há instalação. Você precisa simplesmente copiar o endereço no seu computador e rodá-lo no seu PC.
 
   {{http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html}}
 
-* Criar seu Máquina Virtual
+* Criar sua Máquina Virtual
 
   No DOS ou no PowerShell, digite o seguinte:
 
@@ -91,7 +91,7 @@ vagrant snapshot take clean
   
 ===
 
-References
+Referências
 
   VirtualBox: {{https://www.virtualbox.org/}}
   

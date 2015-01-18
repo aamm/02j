@@ -18,7 +18,7 @@ From Zero to Java
   
   A programação está se tornando cada vez mais uma tarefa coletiva. Se você não está preparado para partilhar seu código fonte, você não está preparado para programar. O ambiente de programação deve ser estabelecido de tal forma que outro programador possa facilmente reproduzi-lo. Isso é importante porque, durante a escrita do código fonte, você deverá ser capaz de detectar quando o seu código tiver algum problema, e seus colegas de programação deverão ser capazes de ver o mesmo problema sob o mesmo ângulo.
 
-* Minha solução
+* Nossa solução
   
   Neste curso, nós abordamos os problemas citados acima a partir da aplicação de ferramentas de programação, que são normalmente ocultadas aos iniciantes, mas com as quais, na nossa opinião, os programadores de Java deveriam estar familiarizados desde o começo:
   
@@ -30,9 +30,9 @@ From Zero to Java
   
   []
   
-  Por fim, mas não menos importante, todos os conteúdos desse site são software livre, licenciados sobre a Gnu General Public License (GPL), que garante seu direito de usá-lo plenamente sem pagar e, o que é especialmente importante para estudantes, ter acesso ao código fonte de absolutamente tudo. Mesmo o código fonte desta página que você está lendo está disponível gratuitamente aqui: https://github.com/aamm/02j/blob/master/site/src/site/apt/index.apt.
+  Por fim, mas não menos importante, todos os conteúdos desse site são software livre, licenciados sobre a  {{{http://www.gnu.org/copyleft/gpl.html}Gnu General Public License}} (GPL), que garante seu direito de usá-lo plenamente sem pagar e, o que é especialmente importante para estudantes, ter acesso ao código fonte de absolutamente tudo. Mesmo o código fonte desta página que você está lendo está disponível gratuitamente aqui: {{{https://github.com/aamm/02j/blob/master/site/src/site/apt/index.apt}https://github.com/aamm/02j/blob/master/site/src/site/apt/index.apt}}.
   
-  Você pode ver as fontes do projeto na nossa página do GitHub: https://github.com/aamm/02j/.
+  Você pode ver as fontes do projeto na nossa página do GitHub: {{{https://github.com/aamm/02j/}https://github.com/aamm/02j/}}.
   
   Sejam bem vindos ao mundo Java! Nós esperamos que você se divirta!
   
@@ -40,21 +40,23 @@ From Zero to Java
   
   Esse website só se tornou possível graças a muitos projetos de software livre aos quais nós agradecemos. Aqui está uma pequena lista de tais projetos:
   
-  * Linux
+  * {{{http://www.linux.com/}Linux}}
   
-  * The Free Software Foundation
+  * {{{http://www.fsf.org/}The Free Software Foundation}}
   
-  * OpenJDK
+  * {{{http://openjdk.java.net/}OpenJDK}}
   
-  * Apache Maven
+  * {{{http://junit.org/}JUnit}}
   
-  * JUnit
+  * {{{https://www.vagrantup.com/}Vagrant}}
   
-  * Vagrant
-  
-  * Pico text editor
+  * {{{http://www.washington.edu/pine/}Pico text editor}}
 
-  * Vi text editor
+  * {{{http://www.vim.org/}Vi text editor}}
+  
+  * {{{http://maven.apache.org/}Apache Maven}}
+  
+  * {{{http://andriusvelykis.github.io/reflow-maven-skin/}Reflow Maven Skin}}
   
   [] 
   
@@ -62,19 +64,19 @@ From Zero to Java
 
 Acesso rápido
   
-  * Home page:
+  * Página inicial:
   
     {{{http://aamm.github.io/02j/}http://aamm.github.io/02j/}}
   
-  * GitHub page:
+  * Página no GitHub:
   
     {{{https://github.com/aamm/02j}https://github.com/aamm/02j}}
   
-  * i. Introduction:
+  * i. Introdução:
   
     {{{./i-introduction.html}i-introduction.html}}
   
-  * Lesson 1:
+  * Lição 1:
   
     {{{./lesson-1.html}lesson-1.html}}
   
@@ -82,7 +84,7 @@ Acesso rápido
   
     {{{./faq.html}faq.html}}
   
-  * Changes Log:
+  * Log de mudanças:
   
     {{{./changes-report.html}changes-report.html}}
 

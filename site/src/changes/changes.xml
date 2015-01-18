@@ -25,6 +25,8 @@
     <release version="0.1" description="Third release - translation to Portuguese" date="2015-01-17">
       <action dev="Jana" date="2015-01-17" type="add">Added translation to Portuguese</action>
       <action dev="Akira" date="2015-01-17" type="add">Minor improvements in enviroment installation scripts</action>
+      <action dev="Akira" date="2015-01-18" type="fix">Layout improvements</action>
+      <action dev="Akira" date="2015-01-18" type="add">Added About and License information.</action>
     </release>
     <release version="backlog" description="Future actions">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>

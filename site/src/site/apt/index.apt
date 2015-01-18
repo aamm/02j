@@ -18,7 +18,7 @@ From Zero to Java
   
   Programming is becoming a collective task. If you are not prepared to share your source code, you are not prepared to program. The programming environment should be such that another programmer can easily reproduce it. This is important because, during source code writing you will want to be able to pinpoint where your code is defective and your programming mates should be able to see the same defect on the same spot.
 
-* My solution
+* Our solution
   
   In this course I address the above mentioned problems by applying modern programming tools, which are usually hidden from the beginners but that, in my opinion, should be familiar to all Java programmers from the very begin:
   
@@ -40,21 +40,23 @@ From Zero to Java
   
   This website was only made possible due to many free software projects which I thank. Here is a small list of such projects:
   
-  * Linux
+  * {{{http://www.linux.com/}Linux}}
   
-  * The Free Software Foundation
+  * {{{http://www.fsf.org/}The Free Software Foundation}}
   
-  * OpenJDK
+  * {{{http://openjdk.java.net/}OpenJDK}}
   
-  * Apache Maven
+  * {{{http://junit.org/}JUnit}}
   
-  * JUnit
+  * {{{https://www.vagrantup.com/}Vagrant}}
   
-  * Vagrant
-  
-  * Pico text editor
+  * {{{http://www.washington.edu/pine/}Pico text editor}}
 
-  * Vi text editor
+  * {{{http://www.vim.org/}Vi text editor}}
+  
+  * {{{http://maven.apache.org/}Apache Maven}}
+  
+  * {{{http://andriusvelykis.github.io/reflow-maven-skin/}Reflow Maven Skin}}
   
   [] 
   

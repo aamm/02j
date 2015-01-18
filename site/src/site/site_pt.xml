@@ -33,12 +33,39 @@
     </menu>
     <menu ref="reports" />
     <menu ref="modules" />
+    <menu name="Sobre">
+      <item name="Sobre este site" href="about.html" />
+      <item name="Licença" href="license.html" />
+    </menu>
   </body>
   
   <custom>
     <reflowSkin>
       <theme>bootswatch-readable</theme>
+      <highlightJs>true</highlightJs>
+      <brand>
+      <!-- Brand text in top-left part of the site -->
+        <name>
+          <![CDATA[
+            <span class="titleTop">From Zero to Java</span>
+          ]]>
+        </name>
+        <href>http://aamm.github.io/02j/</href>
+      </brand>
+      <slogan>Java classes for the absolute beginner</slogan>
+      <titleTemplate>%2$s | %1$s</titleTemplate>
       <toc>sidebar</toc>
+      <bottomDescription>
+       <![CDATA[
+       <span class="color-highlight">FromZeroToJava</span> é um curso de Java
+       para aqueles que não sabem nada de programação. Nosso método é baseado em
+       processos e ferramentas com comprovação prática. Junto com a linguagem
+       Java, nós também apresentamos as melhores ferramentas de Software Livre
+       com as quais todos os programadores Java deveriam estar familiarizados.
+       ]]>
+      </bottomDescription>
+      <skinAttribution>false</skinAttribution>
+      <navbarInverse>true</navbarInverse>
       <!-- Global layout -->
       <sections>
         <body />
