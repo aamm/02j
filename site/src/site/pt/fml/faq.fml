@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs title="Frequently Asked Questions">
+  <part id="programing-environment">
+    <title>Ambiente de programação</title>
+    <faq id="eclipse">
+      <question>Eu preciso usar o Maven se eu uso o Eclipse?</question>
+      <answer>
+        <p>
+          Se você usa o Eclipse para programar em Java você precisará encontrar os botões para rodar seu programa e testá-lo. Nossos testes foram escritos usando JUnit, o qual o Eclipse também entende. Então a princípio você não precisaria do Maven para rodar alguma coisa, se você usar o Eclipse. 
+        </p>
+        <p>
+          Então, por que nós sugerimos que você use o Maven? Há algumas razões. A primeira é que o Maven é provavelmente o padrão de fato para compilar, testar e rodar Java. Você precisará aprender Maven mais cedo ou mais tarde. O Maven faz muito mais do que simplesmente rodar Java. Uma das principais vantagens de usá-lo é que ele gerencia dependências para você, o que o Eclipe não faz na sua configuração padrão.
+        </p>
+        <p>
+          De fato, o melhor é quando você importa seu projeto no Eclipse como um projeto Maven. Então o Eclipe usará o Maven nos bastidores para gerenciar as dependências e executar o build para você.
+        </p>
+      </answer>
+    </faq>
+  </part>
+  <part id="About">
+    <title>Sobre o projeto</title>
+    <faq id="contribute">
+      <question>Eu adoro esse projeto e eu quero contribuir com ele. Como eu posso fazer?</question>
+      <answer>
+        <p>
+	  Há muitas formas de contribuir.
+        </p>
+        <p>
+          A forma mais fácil é criar uma conta no GitHub e criar uma questão (issue) para resolvermos: <a href="https://github.com/aamm/02j/issues">https://github.com/aamm/02j/issues</a>
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>
