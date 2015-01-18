@@ -1,48 +1,48 @@
-Lesson 1 - Hello world!
+Aula 1 – Olá, mundo!
 
-  Time for the first lesson. This one is extremely simple and serves only to present the basic concepts. Without further ado, let's get to work.
+  Tempo para a primeira aula. Essa aula é extremamente simples e serve somente para apresentar os conceitos básicos. Sem mais preâmbulos, vamos trabalhar.
 
-* What you are going to learn
+* O que você vai aprender
 
-  [[1]] How lessons work.
+  [[1]] Como as aulas funcionam.
   
-  [[1]] How to run Maven.
+  [[1]] Como rodar o Maven.
   
-  [[1]] How to write your first Java program.
+  [[1]] Como escrever seu primeiro programa Java.
   
-  [[1]] The programming process: test, code, test, code, until all tests pass.
+  [[1]] O processo de programar: teste, código, teste, código, até todos os testes passarem.
   
-  [[1]] How to print things on the console using Java.
+  [[1]] Como imprimir coisas no console usando Java.
   
-* Step 1 - start the VM
+* Passo 1 – Iniciar uma Máquina Virtual
   
-  Remember that you have to be in the JavaClasses directory when you bring the VM up.
+  Lembre que você tem que estar em um diretório JavaClasses quando você chamar a máquina virtual.
   
 +---
 user@host:~$ cd JavaClasses
 user@host:~/JavaClasses$ vagrant up
 +---
   
-* Step 2 - log in to the VM
+* Passo 2 – Logar em uma máquina virtual
 
 +---
 user@host:~/JavaClasses$ vagrant ssh
 vagrant@vagrant-ubuntu-trusty-32:~$
 +---
 
-  From now on we will work only in the VM.
+  A partir de agora nós trabalharemos somente na máquina virtual.
 
-* Step 3 - Obtain lesson files
+* Passo 3 – Obter os arquivos das aulas
   
-  During the setup preparation we installed a script called <<<02j-get-lesson>>>. Running this script with the lesson number will automatically download the lesson to the virtual machine:
-  
+  Durante a preparação do setup nós instalaremos um script chamado <<<02j-get-lesson>>>. Rodando esse script com o número da aula você automaticamente baixará a aula na máquina virtual:
+
 +---
 vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 1
 +---
 
-* Step 4 - Go to the lesson directory
+* Passo 4 – Ir para o diretório da aula
 
-  Then go to the lesson directory using the <<<cd>>> command. You can also invoke the tree command to list the structure under lesson1:
+  Então vá para o diretório da aula usando o comando <<<cd>>>. Você também pode invocar os três comandos para listar a estrutura do diretório lesson1:
 
 +---
 vagrant@vagrant-ubuntu-trusty-32:~$ cd lesson-1
@@ -69,17 +69,17 @@ vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ tree
 13 directories, 4 files
 +---
   
-  You don't need to fully understand what each part does. What you need to know is that:
+  Você não precisa entender completamente o que cada parte faz. O que você precisa saber é que:
   
-  * <<pom.xml>> - The configuration file for Maven. It tells Maven what to do. We will run Maven in a couple of minutes, so you will see it in action.
+  * <<pom.xml>> - O arquivo de configuração para Maven. Isso diz ao Maven o que fazer. Nós rodaremos o Maven em pouco minutos, então você o verá em ação.
   
-  * <<src/main/java>> - Here is where the main source code should be placed. When we program, what we try to create are the main source code. Our job is to create files inside of such a directory. We will discuss the meaning of org/aamm/z2java/lesson1 later.
+  * <<src/main/java>> - Aqui é onde o principal código fonte deve ser armazenado. Quando nós programamos, o que tentamos criar é o código fonte principal. Nosso trabalho é criar arquivos dentro de cada diretório. Mais tarde, nós abordaremos o significado de org/aamm/z2java/lesson1.
   
-  * <<src/test/java>> - Here is where tests are placed. When we program it is a good practice to create tests that check if our program is working properly. On these lessons, tests are already provided. So all you need to do is to make them pass.
+  * <<src/test/java>> - Aqui é onde os testes são armazenados. Quando nós programamos, é uma boa prática criar testes que verifiquem se nosso programa está funcionando adequadamente. Nessas aulas, os testes são fornecidos, então tudo o que você precisa fazer é fazê-los passar.
 
-* Step 5 - Run Maven for the first time
+* Passo 5 – Rodar o Maven pela primeira vez
   
-  You simply need to run the <<<mvn>>> command and all the magic will happen before your eyes.
+  Você precisa simplesmente rodar o comando <<<mvn>>> e toda a mágica acontecerá diante de seus olhos.
   
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
@@ -142,32 +142,33 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 +---
   
-  As you can see, something is wrong. We wanted to see that! It means there is a test that did not pass. Let's take a look at the failure message:
+  Como você pode ver, algo está errado. Nós precisamos ver isso! Isso significa que há um teste que não passou. Vamos dar uma olhada na mensagem de erro:
   
 +---
 The main method should call the method System.out.println(String) to print "Hello World"
 +---
   
-  This message is telling us what went wrong. We can write tests so that they print those messages to hint for failure causes.
+  Essa mensagem está nos dizendo que algo deu errado. Nós podemos escrever testes, assim eles imprimem essas mensagens para sugerir a causa do erro.
   
-  There is something else to notice. Let's check the directory contents once again:
+  Há algo mais a ser notado. Vamos verificar os conteúdos do diretório mais uma vez:
   
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ ls
 pom.xml  src  target
 +---
   
-  Maven created a new directory called target. This is where Maven puts all compiled files. We did not have to manually compile anything, nor run any test. Maven did all the hard work for us.
+  Maven criou um novo diretório chamado target. Foi neste diretório que o Maven colocou todos os arquivos compilados. Nós não tivemos que compilar nada manualmente, nem rodar nenhum teste. Maven fez todo o trabalho duro para nós.
   
-* Step 6 - Let's program!
+* Passo 6 – Vamos programar!
   
-  Time to program for real. Open the file src/main/java/org/aamm/z2java/lesson1/App.java with any editor. If you don't know any Linux editor, simply use pico (but I recommend learning the editor called vim, which is quite powerful but a bit hard to learn):
+  É hora de programar de verdade. Abra o arquivo src/main/java/org/aamm/z2java/lesson1/App.java com qualquer editor.
+Se você não conhece nenhum editor do Linux, simplesmente use pico (mas nós recomendamos que você aprenda o editor chamado vim, que é muito poderoso, embora um pouco difícil de aprender):
   
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ pico src/main/java/org/aamm/z2java/lesson1/App.java
 +---
   
-  You will see the source code:
+  Você verá o código fonte:
   
 +---
 package org.aamm.z2java.lesson1;
@@ -184,9 +185,9 @@ public class App
 }
 +---
   
-  If you are using pico, you will be happy to know that the words on the bottom of the screen are available commands. The character ^ means the "Control" key. So Control+X is the command to exit the editor.
+  Se você está usando pico, você ficará feliz em saber que as palavras na parte inferior da tela são comandos disponíveis. O caractere ^ significa a tecla "Control". Assim, Control+X é o comando para sair do editor.
   
-  Go ahead and replace the line // TODO ... so that the file becomes:
+  Vá adiante e substitua a linha // TODO ... assim o arquivo se transforma em:
   
 +---
 package org.aamm.z2java.lesson1;
@@ -203,25 +204,25 @@ public class App
 }
 +----
   
-  Then press Control+X to save the file. pico will ask you to confirm saving the file. Just press Y to confirm and then hit ENTER to confirm again.
+  Então pressione Control+X para salvar o arquivo. O pico pedirá confirmação para salvar o arquivo. Simplesmente pressione Y para confirmar e então aperte ENTER para confirmar novamente.
   
-* Step 7 - Run Maven again
+* Passo 7 – Rodar Maven novamente
   
-  The process that all programmers follow is:
+  O processo que todos os programadores seguem é:
   
-  * write source code
+  [[A]] escrever código fonte;
   
-  * compile
+  [[A]] compilar;
   
-  * run the program
+  [[A]] rodar o programa;
   
-  * search for errors
+  [[A]] procurar erros;
   
-  * if there is anything wrong, go back to 1. If you found no errors, you are done!
+  [[A]] se houver algo errado, vá para A. Se você não encontrou nenhum erro, você terminou!
   
   []
   
-  Programmers love to do steps 1 and 4, but hate 2 and 3 because they are repetitive and boring. That is why Maven does 2 and 3 for us. So let's run Maven again:
+  Programadores adoram fazer A e D, mas odeiam B e C porque eles são repetitivos e chatos. Esse é o motivo pelo qual o Maven faz os B e C para nós. Então vamos rodar o Maven de novo:
 
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
@@ -285,19 +286,19 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 +---
 
-  Ouch! We failed again! Don't panic! Programmers fail all the time! In fact, programming is about making things work. If everything is working, you are not programming. Programming is the process of finding things to improve and to create new things.
+  Putz! Nós falhamos novamente! Não entre em pânico! Programadores falham o tempo todo! De fato, programar é fazer as coisas funcionarem. Se tudo está funcionando, você não está trabalhando. Programar é o processo de achar coisas para melhorar e, assim, criar novas coisas.
   
-  Let's see what happened this time! The new error message is:
+  Vamos ver o que aconteceu dessa vez! A nova mensagem de erro é:
   
 +---
 expected:<[Hello World]
 +---
 
-  How silly we were. Instead of printing "<<<Hello World>>>" like the TODO line asked us to do, we wrote "<<<bla bla bla>>>" instead. It looks like we can't easily trick Java.
+  Como somos ingênuos! Em vez de imprimir "<<<Hello World>>>" como a linha do TODO pede para fazer, nós escrevemos "bla bla bla". Parece que não conseguimos enganar o Java tão facilmente.
 
-* Step 8 - Correct mistakes
+* Passo 8 – Corrigir erros
 
-  Let's go back to pico and change the file again:
+  Vamos voltar para o pico e mudar o arquivo novamente:
 
 +---
 package org.aamm.z2java.lesson1;
@@ -314,11 +315,11 @@ public class App
 }
 +---
 
-  It looks perfect this time! Save your file (Control+X if you are running pico). Let's run Maven again!
+  Agora parece que está perfeito! Salve seu arquivo (Control+X se você estiver rodando pico). Vamos rodar o Maven novamente!
 
-* Step 9 - Running Maven again
+* Passo 9 – Rodar o Maven novamente
 
-  We have to keep running Maven a thousand times. Now we understand why it is only three letters "mvn", so we can type it fast and not waste time:
+  Nós temos que continuar rodando o Maven milhares de vezes. Agora nós entendemos porque são apenas três letras "mvn", pois, dessa forma, nós podemos digitar rápido e não perder tempo:
 
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
@@ -358,24 +359,24 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 +---
 
-  Not again! What can possibly be wrong this time? Now the message says:
+  De novo não! O que pode ter dado errado dessa vez? Agora a mensagem diz:
 
 +---
 expected:<Hello [W]orld
 > but was:<Hello [w]orld
 +---
 
-  So Java is telling us that we printed lowercase w instead of capital W. Let's change that again!
+  Então o Java está nos dizendo que nós imprimimos o w com letra minúscular em vez de usarmos letra maiúscula. Vamos mudar isso novamente!
   
-* Step 10 - Change it again
+* Passo 10 – Mudar de novo
   
-  This will be the third time we run pico (or your favorite editor). So the text editor is extremely important to a programmer. It is like the guitar for a guitar player. To be a good programmer you need to know a good editor in depth. For Java, among the best ones are Eclipse, InteliJ Idea, and Netbeans.
+  Essa será a terceira vez que nós rodamos pico (ou seu editor favorito). Então o editor de texto é extremamente importante para o programador. É como uma guitarra para o guitarrista. Para ser um bom programador você precisa conhecer profundamente um bom editor. Para o Java, entre os melhores editores estão o Eclipse, o InteliJ Idea e o Netbeans.
   
-  But for beginners, pico, vim or emacs are very decent ones.
+  Para iniciantes, o pico, o vim ou o emacs são bem razoáveis.
   
-  By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type <enter> to run the command again.
+  A propósito, você pode rodar o mesmo comando de novo no Linux pressionando a seta para cima várias vezes. E então apertar ENTER para rodar o comando de novo.
   
-  Let's run pico again, and this time pay attention to all details:
+  Vamos rodar o pico novamente, e desta vez preste atenção a todos os detalhes.
 
 +---
 package org.aamm.z2java.lesson1;
@@ -392,9 +393,9 @@ public class App
 }
 +---
 
-* Step 11 - We are the champions
+* Passo 11 – Nós somos os campeões
 
-  Let's run Maven again and see how much we rock:
+  Vamos rodar o Maven novamente e ver como mandamos bem:
 
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
@@ -419,14 +420,13 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 +----
 
-  No failures! BUILD SUCCESS! Our job is done! 
+  Nenhuma falha! BUILD SUCCESS! Nosso trabalho está terminado!
 
-* Going the extra mile!
+* Indo além!
 
-  So far we saw how to have our program tested. All it does is to print a single message: "Hello World". But I can see much more than that on the terminal.
-Maven is adding a lot of obscure messages, and I really want to see only my program running. If my program is printing "Hello Word", I wanna see just that. How can I do that?
+  Por enquanto nós vimos como testar nosso programa. Tudo o que ele faz é imprimir a mensagem: "Hello World". Mas nós podemos ver muito mais do que isso no terminal. Maven está adicionando um monte de mensagens obscuras, e nós realmente queremos ver somente nosso programa rodando. Se nosso programa está imprimindo "Hello World", nós queremos ver exatamente isso. Como podemos fazer?
 
-  Maven will help us again:
+  Maven nos ajudará novamente:
 
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn compile exec:java --quiet -Dexec.mainClass=org.aamm.z2java.lesson1.App
@@ -434,27 +434,27 @@ Hello World
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$
 +---
 
-  So what just happened? We just called maven passing 4 arguments:
+  Então, o que aconteceu? Nós simplesmente chamamos o Maven passando 4 argumentos:
 
-  * <<compile>> - Tells Maven to compile your class.
+  * <<compile>> - Pede ao Maven que compile sua classe.
   
-  * <<exec:java>> - Tells Maven to execute a Java program
+  * <<exec:java>> - Pede ao Maven que execute um programa Java.
   
-  * <<--quiet>> - Tells Maven to be quiet. So Maven does not print those obscure messages.
+  * <<--quiet>> - Pede ao Mavem que fique quieto. Assim o Mavem não imprime aquelas mensagens obscuras.
   
-  * <<-Dexec.mainClass=org.aamm.z2java.lesson1.App>> - Tells Maven to execute the class called org.aamm.z2java.lesson1.App . This is our program.
+  * <<-Dexec.mainClass=org.aamm.z2java.lesson1.App>> - Pede ao Maven para executar a classe chamada org.aamm.z2java.lesson1.App . Este é o nosso programa.
   
   []
   
-  So what exactly is a class? For now, all you need to know is that App is the name of our class and org.aamm.z2java.lesson1 is the package where the class is located.
+  Então o que é exatamente uma classe? Por agora, tudo o que nós precisamos saber é que App é o nome da nossa classe e org.aamm.z2java.lesson1 é o pacote onde a classe está localizada.
 
-  A typical Java system may have thousands of classes. So we need to tell Maven which class is our main class. In other words, which class is the entry point, or the one that runs first and will call all the others.
+  Um sistema Java típico pode ter milhares de classe. Então nós precisamos dizer ao Maven qual a classe é nossa classe principal. Em outras palavras, qual a classe é o ponto de entrada ou aquela que roda primeiro e chama todas as outras.
   
-  For now such concept may look abstract and contrived since we only have one class, but those ideas will become more clear as we advance.
+  Por agora tal conceito pode parecer abstrato e artificial uma vez que temos somente uma classe, mas essas ideias se tornarão mais claras conforme avançamos.
 
-* Have fun
+* Divirta-se
 
-  Now that you finished this lesson, you can change the App class the way you want. Sure, by now the only thing you know how to do is to print messages in the console, but you can add more lines to print other things. Even some ASCII art!
+  Agora que você terminou essa aula, você pode mudar a classe App da forma como desejar. É claro que, neste momento, a única coisa que você sabe fazer é imprimir mensagens no console, mas você pode adicionar mais linhas para imprimir outras coisas. Mesmo alguma ASCII art!
 
 +---
 package org.aamm.z2java.lesson1;
@@ -475,10 +475,10 @@ public class App
 
 ===
 
-Bring home lessons
+O que aprendemos
 
-  * Call <<<02j-get-lesson n>>> to retrieve lesson n.
+  * Chamar <<<02j-get-lesson n>>> para fazer o download da lição n.
   
-  * Call <<<mvn>>> to build and test your code.
+  * Chamar <<<mvn>>> para executar o build e testar seu código fonte.
   
-  * Try many times until there are no errors.
+  * Tentar várias vezes até que não haja erros.

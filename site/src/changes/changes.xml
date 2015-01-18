@@ -22,6 +22,10 @@
       <action dev="Akira" date="2014-12-28" type="update">Changed Vagrantfile to start the VM in GUI mode by default, which should make it easier for Windows users</action>
       <action dev="Akira" date="2014-12-28" type="update">Changed Vagrantfile to set the VM name</action>
     </release>
+    <release version="0.1" description="Third release - translation to Portuguese" date="2015-01-17">
+      <action dev="Jana" date="2015-01-17" type="add">Added translation to Portuguese</action>
+      <action dev="Akira" date="2015-01-17" type="add">Minor improvements in enviroment installation scripts</action>
+    </release>
     <release version="backlog" description="Future actions">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
     </release>

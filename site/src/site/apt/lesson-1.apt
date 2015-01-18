@@ -34,7 +34,7 @@ vagrant@vagrant-ubuntu-trusty-32:~$
 
 * Step 3 - Obtain lesson files
   
-  During the setup preparation we installed a script called <<<02j-get-lesson>>>. Running this script with the lesson number will automatically download the lesson to the virtual machine:
+  During the setup preparation we installed a script called <<<02j-get-lesson>>>. Running this script with the lesson number you will automatically download the lesson to the virtual machine:
   
 +---
 vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 1
@@ -209,19 +209,19 @@ public class App
   
   The process that all programmers follow is:
   
-  * write source code
+  [[A]] write source code
   
-  * compile
+  [[A]] compile
   
-  * run the program
+  [[A]] run the program
   
-  * search for errors
+  [[A]] search for errors
   
-  * if there is anything wrong, go back to 1. If you found no errors, you are done!
+  [[A]] if there is anything wrong, go back to <<Step 1>>. If you found no errors, you are done!
   
   []
   
-  Programmers love to do steps 1 and 4, but hate 2 and 3 because they are repetitive and boring. That is why Maven does 2 and 3 for us. So let's run Maven again:
+  Programmers love to do A and D, but hate B and C because they are repetitive and boring. That is why Maven does B and C for us. So let's run Maven again:
 
 +---
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
@@ -373,7 +373,7 @@ expected:<Hello [W]orld
   
   But for beginners, pico, vim or emacs are very decent ones.
   
-  By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type <enter> to run the command again.
+  By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type ENTER to run the command again.
   
   Let's run pico again, and this time pay attention to all details:
 

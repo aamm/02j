@@ -1,10 +1,10 @@
-iii. Settting up the environment - Windows
+iii. Preparando o ambiente – Windows
 
-* Introduction
+* Introdução
   
-  Installing the environment on a Windows machine is more time consuming and tedious than if you are doing that on Linux because you need to manually download and install some pieces of software. The screenshots bellow were a contribution from Priscila.
+  Instalar o ambiente em uma máquina Windows gasta mais tempo e é mais tedioso do que no Linux, pois você precisa baixar e instalar manualmente algumas partes do software.
 
-  This page is still a work in progress. So I am planning to add more details later.
+  As telas abaixo foram uma contribuição de Priscila.
   
 * Install VirtualBox
 
@@ -66,15 +66,15 @@ iii. Settting up the environment - Windows
 
 [./images/Vagrant6.png]
 
-* Download Putty
+* Faça o download do Putty
 
-  There is no actual installation. You simply copy it to your PC and run it.
+  Na verdade, não há instalação. Você precisa simplesmente copiar o endereço no seu computador e rodá-lo no seu PC.
 
   {{http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html}}
 
-* Create your VM
+* Criar seu Máquina Virtual
 
-  On DOS or PowerShell, type the following:
+  No DOS ou no PowerShell, digite o seguinte:
 
 --------------------------------------------
 mkdir JavaClasses
@@ -85,7 +85,7 @@ vagrant halt
 vagrant snapshot take clean
 --------------------------------------------
 
-* Configure Putty to automatically log into your VM
+* Configure o Putty para logar automaticamente na sua máquina virtual.
   
   {{https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Connect-to-Your-Vagrant-Virtual-Machine-with-PuTTY}}
   

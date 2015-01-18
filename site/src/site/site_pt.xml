@@ -14,18 +14,22 @@
   <body>
     <menu name="Navegação">
       <item name="Início" href="index.html" />
-      <item name="Getting started" collapse="true">
-        <item name="i. Introduction" href="i-introduction.html" />
-        <item name="ii. Course Material" href="ii-course-material.html" />
-        <item name="iii. Setting up the Environment - Linux" href="iii-setting-up-the-environment-linux.html" />
-        <item name="iii. Setting up the Environment - Windows" href="iii-setting-up-the-environment-windows.html" />
-        <item name="iv. Vagrant - Mini Tutorial" href="iv-vagrant-mini-tutorial.html" />
+      <item name="Primeiros passos" collapse="true">
+        <item name="i. Introdução" href="i-introduction.html" />
+        <item name="ii. Material do Curso" href="ii-course-material.html" />
+        <item name="iii. Preparando o ambiente – Linux" href="iii-setting-up-the-environment-linux.html" />
+        <item name="iii. Preparando o ambiente - Windows" href="iii-setting-up-the-environment-windows.html" />
+        <item name="iv. Mini tutorial do Vagrant" href="iv-vagrant-mini-tutorial.html" />
       </item>
-      <item name="Lessons" collapse="true">
-        <item name="1. Hello World!" href="lesson-1.html" />
-        <item name="2. Simple calculations" href="lesson-2.html" />
+      <item name="Lições" collapse="true">
+        <item name="1. Olá, mundo!" href="lesson-1.html" />
+        <item name="2. Cálculos básicos" href="lesson-2.html" />
       </item>
       <item name="FAQ" href="faq.html" />
+    </menu>
+    <menu name="Languages">
+      <item name="English" href="../index.html" />
+      <item name="Português do Brasil" href="index.html" />
     </menu>
     <menu ref="reports" />
     <menu ref="modules" />

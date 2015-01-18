@@ -1,62 +1,62 @@
-iii. Settting up the environment - Linux
+iii. Preparando o ambiente – Linux
 
-* For the extremely impatient
+* Para os extremamente impacientes
   
-  If you only have time to type a single in the command line, here it is. But before you run it, make sure you trust the contents of {{{http://aamm.github.io/02j/vagrant/envSetup.sh}envSetup.sh}}. The line bellow is asking your computer to download such script and execute it. If the script contains anything that can harm your computer, do not run it.
+  Se você só tiver tempo para digitar uma simples linha de comando, aqui está. Mas antes de rodá-la, verifique se você confia nos conteúdos de {{{http://aamm.github.io/02j/vagrant/envSetup.sh}envSetup.sh}}. A linha abaixo está pedindo ao computador para baixar tal script e executá-lo. Se o script contém qualquer coisa que pode danificar seu computador, não o execute.
   
 -----------------------------------------------------------------
 wget -q -O - http://aamm.github.io/02j/vagrant/envSetup.sh | bash
 -----------------------------------------------------------------
   
-  If you want to understand the script above (which I strongly recommend), keep reading...
+  Se você quer entender o script acima (o que eu fortemente recomendo), continue lendo...
   
-* Introduction
+* Introdução
   
-  This page explains the process to create your environment if you have Linux on your computer. Everything we do in this course is on a virtual machine. So you need to install support for virtual machines, then create one and configure it.
+  Essa página explica o processo de criar seu ambiente se você tem Linux no seu computador. Tudo o que fazemos nesse curso é em uma máquina virtual. Por isso você precisa instalar o suporte para máquinas virtuais, para então criar uma e configurá-la.
   
-  Why do we need a virtual machine? Why can't I run everything directly on my machine?
+  Por que nós precisamos de máquina virtual? Por que não podemos rodar tudo diretamente na nossa máquina?
 
-  The answer is because we want to avoid "but it works on my machine" at any cost. Take a look:
+  A resposta é: Porque nós queremos evitar a qualquer custo a frase “mas ele funciona na minha máquina”. Dê uma olhada:
 
   {{http://www.cafepress.com/+but-it-works-on-my-machine+hats-caps}}
   
-  This is so recurring in the IT field that it even became an inside joke. When you write your programs you will have the environment influencing the way your programs work. Perhaps your machine has just the right version of Java. Perhaps your machine has just the right amount of memory. etc etc. So when you share your program with other programmers you start to see that things do not run exactly the same way on other platforms.
+  Isso é tão recorrente na áerea de TI, que até se tornou uma piada da área. Quando você escreve seus programas você terá o ambiente influenciando a forma como seu programa funciona. Talvez sua máquina virtual tenha exatamente a versão correta do Java. Talvez sua máquina tenha a quantidade correta de memória etc. Então, quando você partilha seu programa com outros programadores você começa a ver que as coisas não rodam exatamente da mesma forma em outras plataformas.
 
-  We cannot waste precious time trying to check every single thing that can influence program execution. If we all run our programs on the same virtual machine we can almost eliminate such effect. So a solution for an exercise will run precisely the same way on everyone's computer no matter the actual operating system that this computer has.
+  Nós não podemos perder um tempo precioso tentando verificar cada pequena coisa que pode influenciar a execução do programa. Se todos nós rodarmos nossos programas na mesma máquina virtual nós podemos quase eliminar efeito. Assim, uma solução para um exercício rodará exatamente da mesma forma em qualquer computador não importa qual o sistema operacional real deste computador.
 
-  In order to run a virtual machine you need what is called a hypervisor. In a virtualization, you have one computer running inside of another computer. The hypervisor is what makes such a thing possible.
+ Para rodar uma máquina virtual você precisa de algo que se chama hypervisor. Em uma virtualização, você tem um computador rodando dentro de um outro computador. O hypervisor é o que torna isso possível.
 
-  The hypervisor we will use is called Virtual Box, which works pretty well for our needs on this course. The problem about Virtual Box is that it takes time to get started with it. All the boring details about Virtual Box are made much more simple by Vagrant.
+  O hypervisor que nós usamos se chama Virtual Box, que funciona perfeitamente bem para todas as necessidades deste curso. O problema sobre o Virtual Box é que ele demora para iniciar. Todos os detalhes chatos sobre Virtual Box são simplicados pelo Vagrant.
 
-  Vagrant is then a set of procedures to make it easy to use Virtual Box, among other hypervisors. With Vagrant you can type a command like "create a virtual machine with Linux flavor X" and after a couple of minutes you magically have a virtual machine for you to use. It is that simple.
+  O Vagrant é então um conjunto de procedimentos que facilitam o uso do Virtual Box, entre outros hypervisors. Com o Vagrant você pode digitar um comando como “criar uma máquina virtual com o Linux flavor X” e, depois de poucos minutos, você magicamente terá uma máquina virtual para usar. É realmente simples.
 
-  On this guide you will need to use both the guest and the host machines, which are roles in a virtualization. Let us define them:
+ Nesse guia você precisará usar tanto a máquina guest quanto quanto a máquina host, que são papéis em uma virtualização. Vamos defini-las:
 
-  * host - The real machine. This is the operating system that runs the virtualization program, aka. hypervisor.
+  * host - Ou hospedeiro. A máquina real. Esse é o sistema operacional que roda no programa de virtualização, também conhecido como hypervisor.
   
-  * guest - The virtual machine. This is the virtual operating system that runs on top of the hypervisor.
+  * guest - Ou convidado. A máquina virtual. Esse é o sistema operacional que roda em cima do hypervisor.
 
   []
 
-  There are two sorts of command lines you will need to use: one on the host machine and another on the virtual machine.
+  Há dois tipos de linhas de comando que você precisará usar: uma na máquina host e outra na máquina virtual.
   
-  What we will run on the host are just the commands we need to create and connect to the virtual machine. Your command line will most likely be different from this one, especially if you use Windows, but I hope you got the gist.
+  O que nós rodaremos no host são exatamente os comandos que nós precisamos para criar e conectar uma máquina virtual. Sua linha de comando provavelmente será diferente desta, especialmente se você usar Windows, mas eu espero que você tenha entendido a essência.
 
 ---
 user@host:~$
 ---
 
-  Here is how the command line will look like on the virtual machine:
+  Aqui está como a linha de comando aparecerá na máquina virtual:
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$
 ---
 
-  Once we have set the virtual machine, we will only use the guest terminal.
+  Uma vez que nós preparamos a máquina virtual, nós somente usaremos o terminal guest.
 
 * VirtualBox
 
-  The first thing you need to do is to make sure you have VirtualBox installed. On Ubuntu/Debian, you only need to type:
+  A primeira coisa que você deve fazer é se certificar de que o VirtualBox está instalado. No Ubuntu/Debian você precisará somente digitar:
 
 ---
 user@host:~$ sudo apt-get install virtualbox
@@ -64,9 +64,9 @@ user@host:~$ sudo apt-get install virtualbox
 
 * Vagrant
   
-  After VirtualBox, you need to install Vagrant, which, as we said, makes it simpler to use virtualization.
+  Depois do VirtualBox, você precisa instalar Vagrant, que, como dissemos, torna mais simples usar virtualização.
   
-  If you are running Ubuntu or Debian Linux, you need to run:
+  Se você está rodando Ubuntu ou Debian Linux, você necessita rodar:
   
 ---
 user@host:~$ sudo apt-get install vagrant
@@ -75,17 +75,17 @@ user@host:~$ cd JavaClasses
 user@host:~/JavaClasses$
 ---
   
-  Before we continue, we need to introduce a few Linux commands:
+  Antes de continuarmos, precisamos introduzir alguns comando do Linux:
   
-  * <<<mkdir>>> - to make a directory on Linux.
+  * <<<mkdir>>> - para criar um diretório no Linux.
   
-  * <<<ls>>> - to list the contents of the current directory.
+  * <<<ls>>> - para listar os conteúdos do presente diretório no Linux.
   
-  * <<<cd>>> - to change the current directory.
+  * <<<cd>>> - para mudar o diretório atual.
   
   []
   
-  Now copy the following files to the JavaClasses directory:
+  Agora copie os seguintes arquivos para o diretório JavaClasses:
   
   * {{{./vagrant/Vagrantfile}Vagrantfile}}
   
@@ -93,39 +93,39 @@ user@host:~/JavaClasses$
   
   []
   
-  After copying those files to JavaClasses, run the following to install a plugin that allows you to control Vagrant snapshots. You can see more details about virtual machine snapshots on the next lesson: {{{iv-vagrant-mini-tutorial.html}iv. Vagrant mini tutorial}}.
+  Depois de copiar esses arquivos para o JavaClasses, rode o seguinte comando para instalar um plugin que permite que você controle os snapshots do Vagrant. Você pode ver mais detalhes sobre snapshots de máquina virtual na próxima aula: {{{./iv-vagrant-mini-tutorial.html}iv. Vagrant mini tutorial}}.
   
 ---
 user@host:~/JavaClasses$ vagrant plugin install vagrant-vbox-snapshot
 ---
   
-  Next, start the virtual machine using the following command:
+  A seguir, inicie a máquina virtual usando o seguinte comando:
   
 ---
 user@host:~/JavaClasses$ vagrant up
 ---
   
-  This last command will take some time and download a lot of files from the Internet. But, don't worry, if you correctly manage Vagrant you will never need to download all that again. We will take a snapshot called "clean". A snapshot is a virtual machine state. We take a snapshot because we want to go back to that state later.
+  Esse último comando tomará um pouco de tempo e baixará alguns arquivos da Internet. Mas, não se preocupe, se você administrar o Vagrant, você nunca mais precisará baixar todos eles novamente. Nós usaremos um snapshot chamado "clean". Um snapshot é um estado de máquina virtual. Nós usaremos um snapshot porque mais tarde nós voltaremos para aquele estado.
   
-  Now that we have installed everything it is time to take our main snapshot:
+  Agora que nós instalamos tudo, é hora de usar nosso snapshot principal:
   
 ---
 user@host:~/JavaClasses$ vagrant halt
 user@host:~/JavaClasses$ vagrant snapshot take clean
 ---
   
-  That is it. At this point you should have everything you need to start the lessons. But it is worth checking if everything is working fine. So if there was any glitch on the installation you can try to fix it.
+  É isso. Neste ponto você deve ter tudo que precisa para começar as aulas. Mas vale a pena verificar se tudo está funcionando bem. Então se houver qualquer erro na instalação, você pode tentar consertá-lo.
   
-Checking the installation
+Verificando a instalação
   
-  Next we will bring the virtual machine up again and connect to the its console:
+  A seguir, nós chamaremos a máquina virtual novamente e conectaremos ao seu console:
   
 ---
 user@host:~/JavaClasses$ vagrant up
 user@host:~/JavaClasses$ vagrant ssh
 ---
   
-  Depending on your platform, Vagrant will complain on the first command that the virtual machine was already running, but such complaint is harmless. After the second command you will see the following:
+  Dependendo da sua plataforma, o Vagrant reclamará do primeiro comando que a máquina virtual estiver rodando, mas tal reclamação é inofensiva. Depois do segundo comando você verá a seguinte mensagem:
   
 ---
 Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic i686)
@@ -152,11 +152,11 @@ Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic i686)
 vagrant@vagrant-ubuntu-trusty-32:~$ 
 ---
 
-  This means you have successfully installed a new virtual machine and Vagrant is working fine.
+  Isso significa que você instalou corretamente a nova máquina virtual e que o Vagrant está funcionando bem.
 
-Your first Java program
+Seu primeiro programa em Java
 
-  Type the following on the terminal:
+  Digite a mensagem a seguir no seu terminal:
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ echo 'class A { public static void main(String[] args) { System.out.println("Hello World!"); }}' > A.java
@@ -164,17 +164,17 @@ vagrant@vagrant-ubuntu-trusty-32:~$ javac A.java
 vagrant@vagrant-ubuntu-trusty-32:~$ java A
 ----
 
-  You will see 
+  Você verá:
 
 ---
 Hello World!
 ---
 
-  Congratulations! You just created your first Java program, compiled it, and executed it!
+  Parabéns! Você acabou de criar seu primeiro programa Java, compilou-o e executou-o!
 
-  Don't worry about the details. We will see later what each of those commands mean.
+  Não se preocupe sobre os detalhes. Você verá mais tarde o que cada um desses comandos significa.
 
-  Now let's clean everything so you can start anew:
+  Agora vamos limpar tudo para que você possa começar com tudo limpinho:
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ exit
@@ -182,11 +182,11 @@ user@host:~/JavaClasses$ vagrant snapshot go clean
 vagrant@vagrant-ubuntu-trusty-32:~$
 ----
 
-  The following section will introduce the basic concepts of Vagrant. So these commands will start to make more sense.
+  A próxima sessão introduzirá os conceitos básicos do Vagrant. Então esses comandos começarão a fazer mais sentido.
 
 ===
 
-References
+Referências
 
   VirtualBox: {{https://www.virtualbox.org/}}
   

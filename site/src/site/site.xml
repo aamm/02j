@@ -27,6 +27,10 @@
       </item>
       <item name="FAQ" href="faq.html" />
     </menu>
+    <menu name="Languages">
+      <item name="English" href="index.html" />
+      <item name="Português do Brasil" href="./pt/index.html" />
+    </menu>
     <menu ref="reports" />
     <menu ref="modules" />
   </body>

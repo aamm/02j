@@ -1,4 +1,4 @@
-iii. Settting up the environment - Linux
+iii. Setting up the environment - Linux
 
 * For the extremely impatient
   
@@ -93,7 +93,7 @@ user@host:~/JavaClasses$
   
   []
   
-  After copying those files to JavaClasses, run the following to install a plugin that allows you to control Vagrant snapshots. You can see more details about virtual machine snapshots on the next lesson: {{{iv-vagrant-mini-tutorial.html}iv. Vagrant mini tutorial}}.
+  After copying those files to JavaClasses, run the following to install a plugin that allows you to control Vagrant snapshots. You can see more details about virtual machine snapshots on the next lesson: {{{./iv-vagrant-mini-tutorial.html}iv. Vagrant mini tutorial}}.
   
 ---
 user@host:~/JavaClasses$ vagrant plugin install vagrant-vbox-snapshot

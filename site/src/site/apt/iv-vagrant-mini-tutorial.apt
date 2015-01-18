@@ -176,6 +176,16 @@ user@host:~/JavaClasses$ vagrant take clean
 user@host:~/JavaClasses$ vagrant go clean
 ---
 
+* Sharing your Vagrant box
+
+  Once you have configured your virtual machine box, you can use Vagrant to share such a box by typing the following:
+
+---
+vagrant package --base zeroToJava
+---
+
+  This command will create a file called package.box, which can be used to create copies of the same virtual machine on another computer.
+
 ===
 
 More info

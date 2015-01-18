@@ -1,58 +1,58 @@
-iv. Vagrant mini tutorial
+iv. Mini tutorial do Vagrant
 
-  Along this course Vagrant will be used all the time. Although details about Vagrant are completely out of the scope of this course, it is important that the student understands some of the basic concepts about Vagrant to get familiar with the environment.
+  Ao longo desse curso, o Vagrant será usado o tempo todo. Embora os detalhes do Vagrant estejam fora do escopo deste curso, é importante que o estudante entenda alguns conceitos básicos sobre o Vagrant para se familiarizar com o ambiente.
   
-  Perhaps one of the main problems about Vagrant for the beginner is that nothing is graphically visible. The user needs to have a sort of mental image of what is going on in order to navigate. As we saw on the previous part, there are two consoles: the host and the guest, that can be identified by their prefixes:
+  Talvez um dos principais problemas sobre o Vagrant para iniciantes seja que nada é visível graficamente. O usuário precisa ter um tipo de imagem mental do que está acontecendo para poder navegar. Como nós vimos anteriormente, há dois consoles: o host e o guest, que podem ser identificados pelos prefixos:
 
 ---
 user@host:~/JavaClasses$
 vagrant@vagrant-ubuntu-trusty-32:~$ 
 ---
 
-  The first console depends on your computer and is quite different if you are using Windows. This tutorial is divided into topics to serve as a reference but it can also be followed from begin to end if you have Vagrant already configured as presented on the previous part.
+  O primeiro console depende do seu computador e é muito diferente se você estiver usando Windows. Esse tutorial é dividido em tópicos para servir como referência, mas ele pode também ser seguido do início ao fim se você já tiver o Vagrant configurado como apresentado anteriormente.
 
-  It is important that you are always at the JavaClasses directory. Being on that directory is what makes Vagrant know that you are trying to work with a certain virtual machine.
+  É importante que você esteja sempre no diretório JavaClasses. Estar nesse diretório é o que faz o Vagrant saber que você está tentando trabalhar com uma determinada máquina virtual.
 
-* Checking the status
+* Verificando o status
 
 ---
 user@host:~/JavaClasses$ vagrant status
 ---
 
-  This command shows if the virtual machine is running or not.
+  Esse comando mostra se uma máquina virtual está rodando ou não.
 
-* Starting the virtual machine
+* Iniciando uma máquina virtual
 
 ---
 user@host:~/JavaClasses$ vagrant up
 ---
 
-  Now that the virtual machine is running we can check the status again and see that it changed.
+  Agora que a máquina virtual está rodando você pode verificar o status novamente e ver que ele mudou.
 
 ---
 user@host:~/JavaClasses$ vagrant status
 ---
 
-* Stopping the virtual machine
+* Interrompendo uma máquina virtual
 
 ---
 user@host:~/JavaClasses$ vagrant halt
 ---
 
-  Now if we check the status, we will see that it changed to the original one.
+  Agora se verificarmos o status, nós veremos que ele mudou para o status original.
 
 ---
 user@host:~/JavaClasses$ vagrant status
 ---
 
-* Accessing the virtual machine terminal
+* Acessando o terminal da máquina virtual
 
 ---
 user@host:~/JavaClasses$ vagrant ssh
 vagrant@vagrant-ubuntu-trusty-32:~$
 ---
 
-  Now we are inside of the virtual machine. All changes we make, such as creating files or directories, are going to change the virtual machine (guest OS). In order to illustrate such a concept, let us create a simple directory called trash:
+  Agora nós estamos dentro da máquina virtual. Todas as mudanças que nós fazemos, tais como criar arquivos ou diretórios, mudam a máquina virtual (guest OS). Para ilustrar tal conceito, vamos criar um simples diretório chamado trash:
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ mkdir trash
@@ -60,41 +60,40 @@ vagrant@vagrant-ubuntu-trusty-32:~$ ls
 trash
 ---
 
-  We need to go back to the host machine to compare the contents.
+  Nós precisamos voltar à máquina host para comparar os conteúdos.
 
-* Leaving the virtual machine
+* Saindo da máquina virtual
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ exit
 user@host:~/JavaClasses$
 ---
 
-  It is as simple as ending any console session. We can now check the contents of the host machine and we will see that the trash directory is not there:
+  É tão simples quanto finalizar qualquer sessão de console. Nós podemos agora verificar os conteúdos da máquina host e veremos que o diretório trash não está lá:
 
 ---
 user@host:~/JavaClasses$ ls
 install.sh  VagrantFile
 ---
 
-  But now we have the trash directory which is useless for us. What if we want to go back in time when everything was clean?
+  Porém, agora temos o diretório trash que é inútil para nós. E se nós quisermos voltar no tempo quando tudo estava limpo?
 
-* Going back to a snapshot
+* Voltando para um snapshot
   
-  A snapshot is like a frozen picture of the virtual machine. You take that picture and you can order the virtual machine to go back to that state. On the previous section we took the "clean" snapshot. Now, let's go back to that snapshot. WARNING! You are about to erase everything you have done since you took the "clean" snapshot.
+  Um snapshot é como uma foto congelada de uma máquina virtual. Você tira a foto e você pode pedir à máquina virtual para voltar àquele estado. Na sessão anterior, nós tiramos o snapshot "clean". Agora vamos voltar àquele snapshot. ATENÇÃO! Você irá apagar tudo o que você criou desde que você tirou o snapshot "clean".
 
 ---
 user@host:~/JavaClasses$ vagrant go clean
 vagrant@vagrant-ubuntu-trusty-32:~$
 ---
 
-  Vagrant puts you back to the guest console when you go back to a snapshot. Now you can run ls again and see that the trash directory is gone.
+  O Vagrant coloca você de volta para o console guest quando você retorna ao snapshot. Agora você pode rodar ls novamente e ver que o diretório trash se foi.
 
 ---
 user@host:~/JavaClasses$ ls
 ---
 
-  Now you can see nothing. What if you want to do the opposite, going further in time? You can't. In order to go to a certain state, you need to explicitly ask Vagrant to take a snapshot. If you wanted to go back to that state you should have taken a snapshot when you were at that state.
-So let us create another file called trashAgain, which will help us understand the process.
+  Neste momento, você não pode ver nada. E se você quiser fazer o oposto, indo adiante no tempo? Você não pode. Para ir para um certo estado, você precisa solicitar explicitamente ao Vagrant para tirar um snapshot. Se você queria voltar àquele estado você deveria ter tirado um snapshot quando você estava naquele estado. Então vamos criar outro arquivo chamado trashAgain, que nos ajudará a entender o processo.
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ mkdir trashAgain
@@ -102,18 +101,18 @@ vagrant@vagrant-ubuntu-trusty-32:~$ ls
 trashAgain
 ---
 
-* Taking a snapshot
+* Tirando um snapshot
 
-  Now we can take another snapshot and name it x. In order to take a snapshot we need to go back to the host machine. It is interesting to note that the guest machine cannot do anything like that. The guest machine does not know that it is itself a virtual machine.
+  Agora nós podemos tirar outro snapshot e nomeá-lo x. Para tirar um snapshot nós precisamos voltar à máquina host. É interessante notar que a máquina guest não pode fazer nada igual a isso. A máquina guest não sabe que ela mesma é uma máquina virtual.
 
-  Now we can take another snapshot and name it x. In order to take a snapshot we need to go back to the host machine.
+  Agora nós podemos tirar um outro snapshot e nomeá-lo x. Para tirar um snapshot nós precisamos voltar para a máquina host.
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ exit
 user@host:~/JavaClasses$ vagrant take x
 ---
 
-  Now we will go back to the "clean" state, which did not have the directory called "trashAgain".
+  Agora que nós voltamos ao estado "clean", no qual não tínhamos o diretório chamado "trashAgain".
 
 ---
 user@host:~/JavaClasses$ vagrant go clean
@@ -122,7 +121,7 @@ vagrant@vagrant-ubuntu-trusty-32:~$ ls
 vagrant@vagrant-ubuntu-trusty-32:~$ exit
 ---
 
-  Now let's go to the "x" state and see the "trashAgain" directory reappearing:
+  Agora vamos ao estado "x" e vemos que o diretório "trashAgain" reapareceu:
 
 ---
 user@host:~/JavaClasses$ vagrant go x
@@ -130,7 +129,7 @@ vagrant@vagrant-ubuntu-trusty-32:~$ ls
 trashAgain
 ---
 
-  Now let's go back to the clean state.
+  Agora vamos voltar ao estado "clean".
 
 ---
 vagrant@vagrant-ubuntu-trusty-32:~$ exit
@@ -139,18 +138,18 @@ vagrant@vagrant-ubuntu-trusty-32:~$ exit
 user@host:~/JavaClasses$ 
 ---
 
-  We have two snapshots, let's learn how to list them:
+  Nós temos dois snapshots, vamos aprender como listá-los:
 
-* Listing snapshots
+* Listando snapshots
 
 ---
 user@host:~/JavaClasses$ vagrant snapshot list
 clean x
 ---
 
-  We don't need the "x" snapshot, which only contains trash. So we can then remove it:
+  Nós não precisamos do snapshot "x", que contém somente o trash. Então nós podemos removê-lo:
 
-* Removing a snapshot
+* Removendo um snapshot
 
 ---
 user@host:~/JavaClasses$ vagrant snapshot delete x
@@ -158,29 +157,39 @@ user@host:~/JavaClasses$ vagrant snapshot list
 clean
 ---
 
-  As you can see, now you have only the "clean" snapshot.
+  Como você pode ver, agora você tem somente o snapshot "clean".
 
-* Rule of thumb
+* Regra de ouro
 
-  Never type the following command again:
+  Nunca mais digite o seguinte comando:
 
 ---
 user@host:~/JavaClasses$ vagrant take clean
 ---
 
-  If you type this command again you will modify the "clean" state. We don't want this! We want the clean state to be just like we defined on the previous part.
+  Se você digitar este comando de novo, você modificará o estado "clean". Nós não queremos isso! Nós queremos que o estado "clean" seja exatamente como nós o definimos anteriormente.
 
-  Therefore, as long as you do not change the "clean" state, you can always go back to it by typing:
+  Portanto, desde que você não mude o estado "clean", você sempre poderá voltar a ele digitando:
 
 ---
 user@host:~/JavaClasses$ vagrant go clean
 ---
 
+* Compartilhando o seu Vagrant box
+
+  Uma vez configurada a sua máquina virtual, você pode compartilhá-la digitando o seguinte:
+
+---
+vagrant package --base zeroToJava
+---
+
+  Este comando criará um arquivo chamado package.box, que você pode usar para replicar a mesma máquina virtual em outro computador.
+
 ===
 
-More info
+Mais informações
 
-  For more information about Vagrant and snapshot commands please check:
+  Para mais informações sobre o Vagrant e comandos de snapshot acesse:
   
   {{http://docs.vagrantup.com/v2/}}
   
