@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>ZeroToJava - ii. Material do curso</title>
+		<title>ZeroToJava - Frequently Asked Questions</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="pt" />
@@ -33,7 +33,7 @@
 
 	</head>
 
-	<body class="page-ii-course-material project-zerotojava" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-faq project-zerotojava" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -53,7 +53,7 @@
 										<a title="Primeiros passos">Primeiros passos</a>
 										<ul class="dropdown-menu">
 											<li ><a href="i-introduction.html" title="i. Introdução">i. Introdução</a></li>
-											<li class="active"><a href="" title="ii. Material do Curso">ii. Material do Curso</a></li>
+											<li ><a href="ii-course-material.html" title="ii. Material do Curso">ii. Material do Curso</a></li>
 											<li ><a href="iii-setting-up-the-environment-linux.html" title="iii. Preparando o ambiente – Linux">iii. Preparando o ambiente – Linux</a></li>
 											<li ><a href="iii-setting-up-the-environment-windows.html" title="iii. Preparando o ambiente - Windows">iii. Preparando o ambiente - Windows</a></li>
 											<li ><a href="iv-vagrant-mini-tutorial.html" title="iv. Mini tutorial do Vagrant">iv. Mini tutorial do Vagrant</a></li>
@@ -66,7 +66,7 @@
 											<li ><a href="lesson-2.html" title="2. Cálculos básicos">2. Cálculos básicos</a></li>
 										</ul>
 									</li>
-									<li ><a href="faq.html" title="FAQ">FAQ</a></li>
+									<li class="active"><a href="" title="FAQ">FAQ</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -114,24 +114,43 @@
 			<div class="body-content">
 				<div class="section"> 
  <div class="page-header">
-  <h2 id="ii_Material_do_curso">ii. Material do curso</h2>
+  <h2 id="top"><a name="Frequently_Asked_Questions"></a></h2>
  </div> 
- <p>Infelizmente, elaborar um curso com material completo gasta muito tempo. Neste momento, simplesmente n&atilde;o h&aacute; recursos humanos neste projeto para criar tal material; o que seria o ideal. Em vez disso, o estudante poder&aacute; se guiar pelo seguinte livro:</p> 
- <p><a class="externalLink" href="http://www.mindview.net/Books/TIJ/">http://www.mindview.net/Books/TIJ/</a></p> 
- <p>Para baixar esse livro, acesse: <a class="externalLink" href="http://www.planetpdf.com/codecuts/pdfs/eckel/TIJ3.zip">http://www.planetpdf.com/codecuts/pdfs/eckel/TIJ3.zip</a></p> 
- <p>Esse &eacute; talvez o melhor livro gratuito de Java, mas ele foi lan&ccedil;ado h&aacute; 12 anos. A idade do livro n&atilde;o &eacute; por si s&oacute; um problema, pois Java &eacute; compat&iacute;vel com as vers&otilde;es passadas, ou seja, tudo no livro ainda &eacute; verdade para as &uacute;ltimas vers&otilde;es de Java. Mas hoje h&aacute; melhores formas de resolver os mesmos problemas.</p> 
- <p>Embora ter um livro acelere as coisas, h&aacute; alguns perigos que voc&ecirc; deve conhecer. A abordagem tradicional para ensinar uma linguagem de programa&ccedil;&atilde;o como Java tem algumas falhas.</p> 
- <p>A primeira falha &eacute; que esses m&eacute;todos come&ccedil;am pelos detalhes t&eacute;cnicos (e tediosos) apresentados aos estudantes. Por exemplo, algumas das primeiras coisas apresentadas s&atilde;o o que &eacute; um objeto e como usar o compilador de Java (javac). Compilar uma &uacute;nica classe &eacute; t&atilde;o f&aacute;cil como chamar “javac ClassName”, mas as coisas come&ccedil;am a ficar complexas quando precisar compilar uma classe que use uma biblioteca.</p> 
- <p>O problema disso &eacute; que na vida real dos programadores profissionais de verdade absolutamente ningu&eacute;m chama javac manualmente. Ent&atilde;o, por que se preocupar em introduzir algo que ningu&eacute;m precisar saber na vida real? Quanto a isso, os programadores profissionais de Java precisam entender como o javac funciona ainda que alguma ferramenta invoque realmente o compilador. Ent&atilde;o os estudantes precisam saber alguma coisa sobre isso. N&oacute;s n&atilde;o estamos dizendo que n&oacute;s n&atilde;o devemos estudar javac, mas sim que abordar tal t&oacute;pico &eacute; realmente um erro quando as pessoas querem come&ccedil;ar a usar Java. &Eacute; por isso que n&oacute;s usamos Maven.</p> 
- <p>O Maven entende a estrutura do projeto e complica tudo para voc&ecirc;. A complexidade de compila&ccedil;&atilde;o fica oculta dos programadores, e, sim, Maven &eacute; usado todos os dias por programadores profissionais em projetos reais.</p> 
- <p>Outra falha dos m&eacute;todos tradicionais de ensino &eacute; que eles introduzem maus h&aacute;bitos de programa&ccedil;&atilde;o. Aprender a programar &eacute; como treinar um esporte. Pode soar estranho a princ&iacute;pio, mas voc&ecirc; precisa se acostumar com essa ideia.</p> 
- <p>Se voc&ecirc; treina de uma forma errada, voc&ecirc; est&aacute; condicionando o seu c&eacute;rebro a fazer movimentos errados. Quando voc&ecirc; participar de uma partida real, voc&ecirc; se movimentar&aacute; de forma errada.</p> 
- <p>Como isso se traduz em um curso de Java? Na vida real, h&aacute; um campo chamado engenharia de software que se dedica a abordar as melhores pr&aacute;ticas para criar software. Sobre tal pr&aacute;tica destaca-se nesse curso a import&acirc;ncia de primeiro se escrever testes.</p> 
- <p><a class="externalLink" href="http://www.extremeprogramming.org/rules/testfirst.html">http://www.extremeprogramming.org/rules/testfirst.html</a></p> 
- <p>Em termos simples, os programadores s&atilde;o encorajados a escrever o c&oacute;digo fonte somente quando houver um teste para verificar o progresso. Afinal, como saber se voc&ecirc; terminou seu c&oacute;digo fonte se n&atilde;o h&aacute; nada para dizer que seu trabalho foi finalizado?</p> 
- <p>Mas escrever testes tamb&eacute;m &eacute; chato. Por isso os testes s&atilde;o fornecidos aos estudantes nas nossas aulas. Dessa forma, o estudante pode se focar em resolver o problema, e n&atilde;o em como verificar se o problema est&aacute; resolvido. A verifica&ccedil;&atilde;o &eacute; fornecida desde o princ&iacute;pio.</p> 
- <p>H&aacute; um &uacute;ltimo problema. Rodar testes tamb&eacute;m &eacute; chato. Mas adivinhe? O Maven tamb&eacute;m faz isso para n&oacute;s.</p> 
- <p>Ent&atilde;o, em resumo, esse curso usa muito o Maven tanto para compila&ccedil;&atilde;o (entre outras tarefas de rotina que n&oacute;s veremos) quanto para fornecer &quot;testes primeiro&quot;, que &eacute; uma boa pr&aacute;tica de programa&ccedil;&atilde;o.</p> 
+ <p><b>Ambiente de programa&ccedil;&atilde;o</b></p> 
+ <ol style="list-style-type: decimal"> 
+  <li><a href="#eclipse">Eu preciso usar o Maven se eu uso o Eclipse?</a></li> 
+ </ol> 
+ <p><b>Sobre o projeto</b></p> 
+ <ol style="list-style-type: decimal"> 
+  <li><a href="#contribute">Eu adoro esse projeto e eu quero contribuir com ele. Como eu posso fazer?</a></li> 
+ </ol> 
+</div> 
+<div class="section"> 
+ <h2 id="Ambiente_de_programao">Ambiente de programa&ccedil;&atilde;o</h2> 
+ <dl> 
+  <dt> 
+   <a name="eclipse">Eu preciso usar o Maven se eu uso o Eclipse?</a> 
+  </dt> 
+  <dd> 
+   <p> Se voc&ecirc; usa o Eclipse para programar em Java voc&ecirc; precisar&aacute; encontrar os bot&otilde;es para rodar seu programa e test&aacute;-lo. Nossos testes foram escritos usando JUnit, o qual o Eclipse tamb&eacute;m entende. Ent&atilde;o a princ&iacute;pio voc&ecirc; n&atilde;o precisaria do Maven para rodar alguma coisa, se voc&ecirc; usar o Eclipse. </p> 
+   <p> Ent&atilde;o, por que n&oacute;s sugerimos que voc&ecirc; use o Maven? H&aacute; algumas raz&otilde;es. A primeira &eacute; que o Maven &eacute; provavelmente o padr&atilde;o de fato para compilar, testar e rodar Java. Voc&ecirc; precisar&aacute; aprender Maven mais cedo ou mais tarde. O Maven faz muito mais do que simplesmente rodar Java. Uma das principais vantagens de us&aacute;-lo &eacute; que ele gerencia depend&ecirc;ncias para voc&ecirc;, o que o Eclipe n&atilde;o faz na sua configura&ccedil;&atilde;o padr&atilde;o. </p> 
+   <p> De fato, o melhor &eacute; quando voc&ecirc; importa seu projeto no Eclipse como um projeto Maven. Ent&atilde;o o Eclipe usar&aacute; o Maven nos bastidores para gerenciar as depend&ecirc;ncias e executar o build para voc&ecirc;. </p> 
+   <p align="right"><a href="#top">[top]</a></p> 
+  </dd> 
+ </dl> 
+</div> 
+<div class="section"> 
+ <h2 id="Sobre_o_projeto">Sobre o projeto</h2> 
+ <dl> 
+  <dt> 
+   <a name="contribute">Eu adoro esse projeto e eu quero contribuir com ele. Como eu posso fazer?</a> 
+  </dt> 
+  <dd> 
+   <p> H&aacute; muitas formas de contribuir. </p> 
+   <p> A forma mais f&aacute;cil &eacute; criar uma conta no GitHub e criar uma quest&atilde;o (issue) para resolvermos: <a class="externalLink" href="https://github.com/aamm/02j/issues">https://github.com/aamm/02j/issues</a> </p> 
+   <p align="right"><a href="#top">[top]</a></p> 
+  </dd> 
+ </dl> 
 </div>
 			</div>
 		</div>
@@ -152,30 +171,13 @@
 							<a href="index.html" title="Início">Início</a>
 						</li>
 						<li >
-							<a title="Primeiros passos">Primeiros passos <i class="icon-chevron-down"></i></a>
-							<ul class="nav nav-list">
-						<li >
-							<a href="i-introduction.html" title="i. Introdução">i. Introdução</a>
-						</li>
-						<li class="active">
-							<a href="#" title="ii. Material do Curso">ii. Material do Curso</a>
-						</li>
-						<li >
-							<a href="iii-setting-up-the-environment-linux.html" title="iii. Preparando o ambiente – Linux">iii. Preparando o ambiente – Linux</a>
-						</li>
-						<li >
-							<a href="iii-setting-up-the-environment-windows.html" title="iii. Preparando o ambiente - Windows">iii. Preparando o ambiente - Windows</a>
-						</li>
-						<li >
-							<a href="iv-vagrant-mini-tutorial.html" title="iv. Mini tutorial do Vagrant">iv. Mini tutorial do Vagrant</a>
-						</li>
-							</ul>
+							<a title="Primeiros passos">Primeiros passos <i class="icon-chevron-right"></i></a>
 						</li>
 						<li >
 							<a title="Lições">Lições <i class="icon-chevron-right"></i></a>
 						</li>
-						<li >
-							<a href="faq.html" title="FAQ">FAQ</a>
+						<li class="active">
+							<a href="#" title="FAQ">FAQ</a>
 						</li>
 						<li class="nav-header">Languages</li>
 						<li >

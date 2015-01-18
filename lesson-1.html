@@ -70,6 +70,13 @@
 								</ul>
 							</li>
 							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Languages <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li ><a href="index.html" title="English">English</a></li>
+									<li ><a href="pt/index.html" title="Português do Brasil">Português do Brasil</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Documentation <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu ">
@@ -138,7 +145,7 @@ vagrant@vagrant-ubuntu-trusty-32:~$</pre>
  </div> 
  <div class="section"> 
   <h3 id="Step_3_-_Obtain_lesson_files">Step 3 - Obtain lesson files</h3> 
-  <p>During the setup preparation we installed a script called <tt>02j-get-lesson</tt>. Running this script with the lesson number will automatically download the lesson to the virtual machine:</p> 
+  <p>During the setup preparation we installed a script called <tt>02j-get-lesson</tt>. Running this script with the lesson number you will automatically download the lesson to the virtual machine:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 1</pre> 
   </div> 
@@ -294,14 +301,14 @@ public class App
  <div class="section"> 
   <h3 id="Step_7_-_Run_Maven_again">Step 7 - Run Maven again</h3> 
   <p>The process that all programmers follow is:</p> 
-  <ul> 
+  <ol style="list-style-type: upper-alpha"> 
    <li>write source code</li> 
    <li>compile</li> 
    <li>run the program</li> 
    <li>search for errors</li> 
-   <li>if there is anything wrong, go back to 1. If you found no errors, you are done!</li> 
-  </ul> 
-  <p>Programmers love to do steps 1 and 4, but hate 2 and 3 because they are repetitive and boring. That is why Maven does 2 and 3 for us. So let's run Maven again:</p> 
+   <li>if there is anything wrong, go back to <b>Step 1</b>. If you found no errors, you are done!</li> 
+  </ol> 
+  <p>Programmers love to do A and D, but hate B and C because they are repetitive and boring. That is why Maven does B and C for us. So let's run Maven again:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
 [INFO] Scanning for projects...
@@ -440,7 +447,7 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
   <h3 id="Step_10_-_Change_it_again">Step 10 - Change it again</h3> 
   <p>This will be the third time we run pico (or your favorite editor). So the text editor is extremely important to a programmer. It is like the guitar for a guitar player. To be a good programmer you need to know a good editor in depth. For Java, among the best ones are Eclipse, InteliJ Idea, and Netbeans.</p> 
   <p>But for beginners, pico, vim or emacs are very decent ones.</p> 
-  <p>By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type <i>enter</i> to run the command again.</p> 
+  <p>By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type ENTER to run the command again.</p> 
   <p>Let's run pico again, and this time pay attention to all details:</p> 
   <div class="source"> 
    <pre>package org.aamm.z2java.lesson1;
@@ -596,6 +603,13 @@ public class App
 						</li>
 						<li >
 							<a href="faq.html" title="FAQ">FAQ</a>
+						</li>
+						<li class="nav-header">Languages</li>
+						<li >
+							<a href="index.html" title="English">English</a>
+						</li>
+						<li >
+							<a href="pt/index.html" title="Português do Brasil">Português do Brasil</a>
 						</li>
 						<li class="nav-header">Project Documentation</li>
 						<li >

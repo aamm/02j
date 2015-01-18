@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>ZeroToJava - Lesson 1 - Hello world!</title>
+		<title>ZeroToJava - Aula 1 – Olá, mundo!</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="pt" />
@@ -62,11 +62,18 @@
 									<li class="dropdown-submenu disabled">
 										<a title="Lições">Lições</a>
 										<ul class="dropdown-menu">
-											<li class="active"><a href="" title="1. Hello World!">1. Hello World!</a></li>
-											<li ><a href="lesson-2.html" title="2. Simple calculations">2. Simple calculations</a></li>
+											<li class="active"><a href="" title="1. Olá, mundo!">1. Olá, mundo!</a></li>
+											<li ><a href="lesson-2.html" title="2. Cálculos básicos">2. Cálculos básicos</a></li>
 										</ul>
 									</li>
 									<li ><a href="faq.html" title="FAQ">FAQ</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Languages <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li ><a href="../index.html" title="English">English</a></li>
+									<li ><a href="index.html" title="Português do Brasil">Português do Brasil</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -107,45 +114,45 @@
 			<div class="body-content">
 				<div class="section"> 
  <div class="page-header">
-  <h2 id="Lesson_1_-_Hello_world">Lesson 1 - Hello world!</h2>
+  <h2 id="Aula_1__Ol_mundo">Aula 1 – Ol&aacute;, mundo!</h2>
  </div> 
- <p>Time for the first lesson. This one is extremely simple and serves only to present the basic concepts. Without further ado, let's get to work.</p> 
+ <p>Tempo para a primeira aula. Essa aula &eacute; extremamente simples e serve somente para apresentar os conceitos b&aacute;sicos. Sem mais pre&acirc;mbulos, vamos trabalhar.</p> 
  <div class="section"> 
-  <h3 id="What_you_are_going_to_learn">What you are going to learn</h3> 
+  <h3 id="O_que_voc_vai_aprender">O que voc&ecirc; vai aprender</h3> 
   <ol style="list-style-type: decimal"> 
-   <li>How lessons work.</li> 
-   <li>How to run Maven.</li> 
-   <li>How to write your first Java program.</li> 
-   <li>The programming process: test, code, test, code, until all tests pass.</li> 
-   <li>How to print things on the console using Java.</li> 
+   <li>Como as aulas funcionam.</li> 
+   <li>Como rodar o Maven.</li> 
+   <li>Como escrever seu primeiro programa Java.</li> 
+   <li>O processo de programar: teste, c&oacute;digo, teste, c&oacute;digo, at&eacute; todos os testes passarem.</li> 
+   <li>Como imprimir coisas no console usando Java.</li> 
   </ol> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_1_-_start_the_VM">Step 1 - start the VM</h3> 
-  <p>Remember that you have to be in the JavaClasses directory when you bring the VM up.</p> 
+  <h3 id="Passo_1__Iniciar_uma_Mquina_Virtual">Passo 1 – Iniciar uma M&aacute;quina Virtual</h3> 
+  <p>Lembre que voc&ecirc; tem que estar em um diret&oacute;rio JavaClasses quando voc&ecirc; chamar a m&aacute;quina virtual.</p> 
   <div class="source"> 
    <pre>user@host:~$ cd JavaClasses
 user@host:~/JavaClasses$ vagrant up</pre> 
   </div> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_2_-_log_in_to_the_VM">Step 2 - log in to the VM</h3> 
+  <h3 id="Passo_2__Logar_em_uma_mquina_virtual">Passo 2 – Logar em uma m&aacute;quina virtual</h3> 
   <div class="source"> 
    <pre>user@host:~/JavaClasses$ vagrant ssh
 vagrant@vagrant-ubuntu-trusty-32:~$</pre> 
   </div> 
-  <p>From now on we will work only in the VM.</p> 
+  <p>A partir de agora n&oacute;s trabalharemos somente na m&aacute;quina virtual.</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_3_-_Obtain_lesson_files">Step 3 - Obtain lesson files</h3> 
-  <p>During the setup preparation we installed a script called <tt>02j-get-lesson</tt>. Running this script with the lesson number will automatically download the lesson to the virtual machine:</p> 
+  <h3 id="Passo_3__Obter_os_arquivos_das_aulas">Passo 3 – Obter os arquivos das aulas</h3> 
+  <p>Durante a prepara&ccedil;&atilde;o do setup n&oacute;s instalaremos um script chamado <tt>02j-get-lesson</tt>. Rodando esse script com o n&uacute;mero da aula voc&ecirc; automaticamente baixar&aacute; a aula na m&aacute;quina virtual:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 1</pre> 
   </div> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_4_-_Go_to_the_lesson_directory">Step 4 - Go to the lesson directory</h3> 
-  <p>Then go to the lesson directory using the <tt>cd</tt> command. You can also invoke the tree command to list the structure under lesson1:</p> 
+  <h3 id="Passo_4__Ir_para_o_diretrio_da_aula">Passo 4 – Ir para o diret&oacute;rio da aula</h3> 
+  <p>Ent&atilde;o v&aacute; para o diret&oacute;rio da aula usando o comando <tt>cd</tt>. Voc&ecirc; tamb&eacute;m pode invocar os tr&ecirc;s comandos para listar a estrutura do diret&oacute;rio lesson1:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~$ cd lesson-1
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ tree
@@ -170,16 +177,16 @@ vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ tree
 
 13 directories, 4 files</pre> 
   </div> 
-  <p>You don't need to fully understand what each part does. What you need to know is that:</p> 
+  <p>Voc&ecirc; n&atilde;o precisa entender completamente o que cada parte faz. O que voc&ecirc; precisa saber &eacute; que:</p> 
   <ul> 
-   <li><b>pom.xml</b> - The configuration file for Maven. It tells Maven what to do. We will run Maven in a couple of minutes, so you will see it in action.</li> 
-   <li><b>src/main/java</b> - Here is where the main source code should be placed. When we program, what we try to create are the main source code. Our job is to create files inside of such a directory. We will discuss the meaning of org/aamm/z2java/lesson1 later.</li> 
-   <li><b>src/test/java</b> - Here is where tests are placed. When we program it is a good practice to create tests that check if our program is working properly. On these lessons, tests are already provided. So all you need to do is to make them pass.</li> 
+   <li><b>pom.xml</b> - O arquivo de configura&ccedil;&atilde;o para Maven. Isso diz ao Maven o que fazer. N&oacute;s rodaremos o Maven em pouco minutos, ent&atilde;o voc&ecirc; o ver&aacute; em a&ccedil;&atilde;o.</li> 
+   <li><b>src/main/java</b> - Aqui &eacute; onde o principal c&oacute;digo fonte deve ser armazenado. Quando n&oacute;s programamos, o que tentamos criar &eacute; o c&oacute;digo fonte principal. Nosso trabalho &eacute; criar arquivos dentro de cada diret&oacute;rio. Mais tarde, n&oacute;s abordaremos o significado de org/aamm/z2java/lesson1.</li> 
+   <li><b>src/test/java</b> - Aqui &eacute; onde os testes s&atilde;o armazenados. Quando n&oacute;s programamos, &eacute; uma boa pr&aacute;tica criar testes que verifiquem se nosso programa est&aacute; funcionando adequadamente. Nessas aulas, os testes s&atilde;o fornecidos, ent&atilde;o tudo o que voc&ecirc; precisa fazer &eacute; faz&ecirc;-los passar.</li> 
   </ul> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_5_-_Run_Maven_for_the_first_time">Step 5 - Run Maven for the first time</h3> 
-  <p>You simply need to run the <tt>mvn</tt> command and all the magic will happen before your eyes.</p> 
+  <h3 id="Passo_5__Rodar_o_Maven_pela_primeira_vez">Passo 5 – Rodar o Maven pela primeira vez</h3> 
+  <p>Voc&ecirc; precisa simplesmente rodar o comando <tt>mvn</tt> e toda a m&aacute;gica acontecer&aacute; diante de seus olhos.</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
 [INFO] Scanning for projects...
@@ -240,25 +247,25 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException</pre> 
   </div> 
-  <p>As you can see, something is wrong. We wanted to see that! It means there is a test that did not pass. Let's take a look at the failure message:</p> 
+  <p>Como voc&ecirc; pode ver, algo est&aacute; errado. N&oacute;s precisamos ver isso! Isso significa que h&aacute; um teste que n&atilde;o passou. Vamos dar uma olhada na mensagem de erro:</p> 
   <div class="source"> 
    <pre>The main method should call the method System.out.println(String) to print &quot;Hello World&quot;</pre> 
   </div> 
-  <p>This message is telling us what went wrong. We can write tests so that they print those messages to hint for failure causes.</p> 
-  <p>There is something else to notice. Let's check the directory contents once again:</p> 
+  <p>Essa mensagem est&aacute; nos dizendo que algo deu errado. N&oacute;s podemos escrever testes, assim eles imprimem essas mensagens para sugerir a causa do erro.</p> 
+  <p>H&aacute; algo mais a ser notado. Vamos verificar os conte&uacute;dos do diret&oacute;rio mais uma vez:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ ls
 pom.xml  src  target</pre> 
   </div> 
-  <p>Maven created a new directory called target. This is where Maven puts all compiled files. We did not have to manually compile anything, nor run any test. Maven did all the hard work for us.</p> 
+  <p>Maven criou um novo diret&oacute;rio chamado target. Foi neste diret&oacute;rio que o Maven colocou todos os arquivos compilados. N&oacute;s n&atilde;o tivemos que compilar nada manualmente, nem rodar nenhum teste. Maven fez todo o trabalho duro para n&oacute;s.</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_6_-_Lets_program">Step 6 - Let's program!</h3> 
-  <p>Time to program for real. Open the file src/main/java/org/aamm/z2java/lesson1/App.java with any editor. If you don't know any Linux editor, simply use pico (but I recommend learning the editor called vim, which is quite powerful but a bit hard to learn):</p> 
+  <h3 id="Passo_6__Vamos_programar">Passo 6 – Vamos programar!</h3> 
+  <p>&Eacute; hora de programar de verdade. Abra o arquivo src/main/java/org/aamm/z2java/lesson1/App.java com qualquer editor. Se voc&ecirc; n&atilde;o conhece nenhum editor do Linux, simplesmente use pico (mas n&oacute;s recomendamos que voc&ecirc; aprenda o editor chamado vim, que &eacute; muito poderoso, embora um pouco dif&iacute;cil de aprender):</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ pico src/main/java/org/aamm/z2java/lesson1/App.java</pre> 
   </div> 
-  <p>You will see the source code:</p> 
+  <p>Voc&ecirc; ver&aacute; o c&oacute;digo fonte:</p> 
   <div class="source"> 
    <pre>package org.aamm.z2java.lesson1;
 
@@ -273,8 +280,8 @@ public class App
     }
 }</pre> 
   </div> 
-  <p>If you are using pico, you will be happy to know that the words on the bottom of the screen are available commands. The character ^ means the &quot;Control&quot; key. So Control+X is the command to exit the editor.</p> 
-  <p>Go ahead and replace the line // TODO ... so that the file becomes:</p> 
+  <p>Se voc&ecirc; est&aacute; usando pico, voc&ecirc; ficar&aacute; feliz em saber que as palavras na parte inferior da tela s&atilde;o comandos dispon&iacute;veis. O caractere ^ significa a tecla &quot;Control&quot;. Assim, Control+X &eacute; o comando para sair do editor.</p> 
+  <p>V&aacute; adiante e substitua a linha // TODO ... assim o arquivo se transforma em:</p> 
   <div class="source"> 
    <pre>package org.aamm.z2java.lesson1;
 
@@ -289,19 +296,19 @@ public class App
     }
 }</pre> 
   </div> 
-  <p>Then press Control+X to save the file. pico will ask you to confirm saving the file. Just press Y to confirm and then hit ENTER to confirm again.</p> 
+  <p>Ent&atilde;o pressione Control+X para salvar o arquivo. O pico pedir&aacute; confirma&ccedil;&atilde;o para salvar o arquivo. Simplesmente pressione Y para confirmar e ent&atilde;o aperte ENTER para confirmar novamente.</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_7_-_Run_Maven_again">Step 7 - Run Maven again</h3> 
-  <p>The process that all programmers follow is:</p> 
-  <ul> 
-   <li>write source code</li> 
-   <li>compile</li> 
-   <li>run the program</li> 
-   <li>search for errors</li> 
-   <li>if there is anything wrong, go back to 1. If you found no errors, you are done!</li> 
-  </ul> 
-  <p>Programmers love to do steps 1 and 4, but hate 2 and 3 because they are repetitive and boring. That is why Maven does 2 and 3 for us. So let's run Maven again:</p> 
+  <h3 id="Passo_7__Rodar_Maven_novamente">Passo 7 – Rodar Maven novamente</h3> 
+  <p>O processo que todos os programadores seguem &eacute;:</p> 
+  <ol style="list-style-type: upper-alpha"> 
+   <li>escrever c&oacute;digo fonte;</li> 
+   <li>compilar;</li> 
+   <li>rodar o programa;</li> 
+   <li>procurar erros;</li> 
+   <li>se houver algo errado, v&aacute; para A. Se voc&ecirc; n&atilde;o encontrou nenhum erro, voc&ecirc; terminou!</li> 
+  </ol> 
+  <p>Programadores adoram fazer A e D, mas odeiam B e C porque eles s&atilde;o repetitivos e chatos. Esse &eacute; o motivo pelo qual o Maven faz os B e C para n&oacute;s. Ent&atilde;o vamos rodar o Maven de novo:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
 [INFO] Scanning for projects...
@@ -363,16 +370,16 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException</pre> 
   </div> 
-  <p>Ouch! We failed again! Don't panic! Programmers fail all the time! In fact, programming is about making things work. If everything is working, you are not programming. Programming is the process of finding things to improve and to create new things.</p> 
-  <p>Let's see what happened this time! The new error message is:</p> 
+  <p>Putz! N&oacute;s falhamos novamente! N&atilde;o entre em p&acirc;nico! Programadores falham o tempo todo! De fato, programar &eacute; fazer as coisas funcionarem. Se tudo est&aacute; funcionando, voc&ecirc; n&atilde;o est&aacute; trabalhando. Programar &eacute; o processo de achar coisas para melhorar e, assim, criar novas coisas.</p> 
+  <p>Vamos ver o que aconteceu dessa vez! A nova mensagem de erro &eacute;:</p> 
   <div class="source"> 
    <pre>expected:&lt;[Hello World]</pre> 
   </div> 
-  <p>How silly we were. Instead of printing &quot;<tt>Hello World</tt>&quot; like the TODO line asked us to do, we wrote &quot;<tt>bla bla bla</tt>&quot; instead. It looks like we can't easily trick Java.</p> 
+  <p>Como somos ing&ecirc;nuos! Em vez de imprimir &quot;<tt>Hello World</tt>&quot; como a linha do TODO pede para fazer, n&oacute;s escrevemos &quot;bla bla bla&quot;. Parece que n&atilde;o conseguimos enganar o Java t&atilde;o facilmente.</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_8_-_Correct_mistakes">Step 8 - Correct mistakes</h3> 
-  <p>Let's go back to pico and change the file again:</p> 
+  <h3 id="Passo_8__Corrigir_erros">Passo 8 – Corrigir erros</h3> 
+  <p>Vamos voltar para o pico e mudar o arquivo novamente:</p> 
   <div class="source"> 
    <pre>package org.aamm.z2java.lesson1;
 
@@ -387,11 +394,11 @@ public class App
     }
 }</pre> 
   </div> 
-  <p>It looks perfect this time! Save your file (Control+X if you are running pico). Let's run Maven again!</p> 
+  <p>Agora parece que est&aacute; perfeito! Salve seu arquivo (Control+X se voc&ecirc; estiver rodando pico). Vamos rodar o Maven novamente!</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_9_-_Running_Maven_again">Step 9 - Running Maven again</h3> 
-  <p>We have to keep running Maven a thousand times. Now we understand why it is only three letters &quot;mvn&quot;, so we can type it fast and not waste time:</p> 
+  <h3 id="Passo_9__Rodar_o_Maven_novamente">Passo 9 – Rodar o Maven novamente</h3> 
+  <p>N&oacute;s temos que continuar rodando o Maven milhares de vezes. Agora n&oacute;s entendemos porque s&atilde;o apenas tr&ecirc;s letras &quot;mvn&quot;, pois, dessa forma, n&oacute;s podemos digitar r&aacute;pido e n&atilde;o perder tempo:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
 (...)
@@ -429,19 +436,19 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException</pre> 
   </div> 
-  <p>Not again! What can possibly be wrong this time? Now the message says:</p> 
+  <p>De novo n&atilde;o! O que pode ter dado errado dessa vez? Agora a mensagem diz:</p> 
   <div class="source"> 
    <pre>expected:&lt;Hello [W]orld
 &gt; but was:&lt;Hello [w]orld</pre> 
   </div> 
-  <p>So Java is telling us that we printed lowercase w instead of capital W. Let's change that again!</p> 
+  <p>Ent&atilde;o o Java est&aacute; nos dizendo que n&oacute;s imprimimos o w com letra min&uacute;scular em vez de usarmos letra mai&uacute;scula. Vamos mudar isso novamente!</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_10_-_Change_it_again">Step 10 - Change it again</h3> 
-  <p>This will be the third time we run pico (or your favorite editor). So the text editor is extremely important to a programmer. It is like the guitar for a guitar player. To be a good programmer you need to know a good editor in depth. For Java, among the best ones are Eclipse, InteliJ Idea, and Netbeans.</p> 
-  <p>But for beginners, pico, vim or emacs are very decent ones.</p> 
-  <p>By the way, you can run the same command again on Linux by pressing the up arrow several times. Then type <i>enter</i> to run the command again.</p> 
-  <p>Let's run pico again, and this time pay attention to all details:</p> 
+  <h3 id="Passo_10__Mudar_de_novo">Passo 10 – Mudar de novo</h3> 
+  <p>Essa ser&aacute; a terceira vez que n&oacute;s rodamos pico (ou seu editor favorito). Ent&atilde;o o editor de texto &eacute; extremamente importante para o programador. &Eacute; como uma guitarra para o guitarrista. Para ser um bom programador voc&ecirc; precisa conhecer profundamente um bom editor. Para o Java, entre os melhores editores est&atilde;o o Eclipse, o InteliJ Idea e o Netbeans.</p> 
+  <p>Para iniciantes, o pico, o vim ou o emacs s&atilde;o bem razo&aacute;veis.</p> 
+  <p>A prop&oacute;sito, voc&ecirc; pode rodar o mesmo comando de novo no Linux pressionando a seta para cima v&aacute;rias vezes. E ent&atilde;o apertar ENTER para rodar o comando de novo.</p> 
+  <p>Vamos rodar o pico novamente, e desta vez preste aten&ccedil;&atilde;o a todos os detalhes.</p> 
   <div class="source"> 
    <pre>package org.aamm.z2java.lesson1;
 
@@ -458,8 +465,8 @@ public class App
   </div> 
  </div> 
  <div class="section"> 
-  <h3 id="Step_11_-_We_are_the_champions">Step 11 - We are the champions</h3> 
-  <p>Let's run Maven again and see how much we rock:</p> 
+  <h3 id="Passo_11__Ns_somos_os_campees">Passo 11 – N&oacute;s somos os campe&otilde;es</h3> 
+  <p>Vamos rodar o Maven novamente e ver como mandamos bem:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn
 (...)
@@ -482,31 +489,31 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Final Memory: 9M/125M
 [INFO] ------------------------------------------------------------------------</pre> 
   </div> 
-  <p>No failures! BUILD SUCCESS! Our job is done! </p> 
+  <p>Nenhuma falha! BUILD SUCCESS! Nosso trabalho est&aacute; terminado!</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Going_the_extra_mile">Going the extra mile!</h3> 
-  <p>So far we saw how to have our program tested. All it does is to print a single message: &quot;Hello World&quot;. But I can see much more than that on the terminal. Maven is adding a lot of obscure messages, and I really want to see only my program running. If my program is printing &quot;Hello Word&quot;, I wanna see just that. How can I do that?</p> 
-  <p>Maven will help us again:</p> 
+  <h3 id="Indo_alm">Indo al&eacute;m!</h3> 
+  <p>Por enquanto n&oacute;s vimos como testar nosso programa. Tudo o que ele faz &eacute; imprimir a mensagem: &quot;Hello World&quot;. Mas n&oacute;s podemos ver muito mais do que isso no terminal. Maven est&aacute; adicionando um monte de mensagens obscuras, e n&oacute;s realmente queremos ver somente nosso programa rodando. Se nosso programa est&aacute; imprimindo &quot;Hello World&quot;, n&oacute;s queremos ver exatamente isso. Como podemos fazer?</p> 
+  <p>Maven nos ajudar&aacute; novamente:</p> 
   <div class="source"> 
    <pre>vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$ mvn compile exec:java --quiet -Dexec.mainClass=org.aamm.z2java.lesson1.App
 Hello World
 vagrant@vagrant-ubuntu-trusty-32:~/lesson-1$</pre> 
   </div> 
-  <p>So what just happened? We just called maven passing 4 arguments:</p> 
+  <p>Ent&atilde;o, o que aconteceu? N&oacute;s simplesmente chamamos o Maven passando 4 argumentos:</p> 
   <ul> 
-   <li><b>compile</b> - Tells Maven to compile your class.</li> 
-   <li><b>exec:java</b> - Tells Maven to execute a Java program</li> 
-   <li><b>--quiet</b> - Tells Maven to be quiet. So Maven does not print those obscure messages.</li> 
-   <li><b>-Dexec.mainClass=org.aamm.z2java.lesson1.App</b> - Tells Maven to execute the class called org.aamm.z2java.lesson1.App . This is our program.</li> 
+   <li><b>compile</b> - Pede ao Maven que compile sua classe.</li> 
+   <li><b>exec:java</b> - Pede ao Maven que execute um programa Java.</li> 
+   <li><b>--quiet</b> - Pede ao Mavem que fique quieto. Assim o Mavem n&atilde;o imprime aquelas mensagens obscuras.</li> 
+   <li><b>-Dexec.mainClass=org.aamm.z2java.lesson1.App</b> - Pede ao Maven para executar a classe chamada org.aamm.z2java.lesson1.App . Este &eacute; o nosso programa.</li> 
   </ul> 
-  <p>So what exactly is a class? For now, all you need to know is that App is the name of our class and org.aamm.z2java.lesson1 is the package where the class is located.</p> 
-  <p>A typical Java system may have thousands of classes. So we need to tell Maven which class is our main class. In other words, which class is the entry point, or the one that runs first and will call all the others.</p> 
-  <p>For now such concept may look abstract and contrived since we only have one class, but those ideas will become more clear as we advance.</p> 
+  <p>Ent&atilde;o o que &eacute; exatamente uma classe? Por agora, tudo o que n&oacute;s precisamos saber &eacute; que App &eacute; o nome da nossa classe e org.aamm.z2java.lesson1 &eacute; o pacote onde a classe est&aacute; localizada.</p> 
+  <p>Um sistema Java t&iacute;pico pode ter milhares de classe. Ent&atilde;o n&oacute;s precisamos dizer ao Maven qual a classe &eacute; nossa classe principal. Em outras palavras, qual a classe &eacute; o ponto de entrada ou aquela que roda primeiro e chama todas as outras.</p> 
+  <p>Por agora tal conceito pode parecer abstrato e artificial uma vez que temos somente uma classe, mas essas ideias se tornar&atilde;o mais claras conforme avan&ccedil;amos.</p> 
  </div> 
  <div class="section"> 
-  <h3 id="Have_fun">Have fun</h3> 
-  <p>Now that you finished this lesson, you can change the App class the way you want. Sure, by now the only thing you know how to do is to print messages in the console, but you can add more lines to print other things. Even some ASCII art!</p> 
+  <h3 id="Divirta-se">Divirta-se</h3> 
+  <p>Agora que voc&ecirc; terminou essa aula, voc&ecirc; pode mudar a classe App da forma como desejar. &Eacute; claro que, neste momento, a &uacute;nica coisa que voc&ecirc; sabe fazer &eacute; imprimir mensagens no console, mas voc&ecirc; pode adicionar mais linhas para imprimir outras coisas. Mesmo alguma ASCII art!</p> 
   <div class="source"> 
    <pre>package org.aamm.z2java.lesson1;
 
@@ -532,35 +539,35 @@ public class App
 				<div class="well">
 					<ul class="nav nav-list">
 						<li class="nav-header">Table of Contents</li>
-		<li class="dropdown"><a href="#Lesson_1_-_Hello_world" title="Lesson 1 - Hello world!">Lesson 1 - Hello world! <b class="caret"></b></a>
+		<li class="dropdown"><a href="#Aula_1__Ol_mundo" title="Aula 1 – Olá, mundo!">Aula 1 – Olá, mundo! <b class="caret"></b></a>
 			<ul class="nav nav-list">
-		<li><a href="#What_you_are_going_to_learn" title="What you are going to learn">What you are going to learn</a>
-		<li><a href="#Step_1_-_start_the_VM" title="Step 1 - start the VM">Step 1 - start the VM</a>
-		<li><a href="#Step_2_-_log_in_to_the_VM" title="Step 2 - log in to the VM">Step 2 - log in to the VM</a>
-		<li><a href="#Step_3_-_Obtain_lesson_files" title="Step 3 - Obtain lesson files">Step 3 - Obtain lesson files</a>
-		<li><a href="#Step_4_-_Go_to_the_lesson_directory" title="Step 4 - Go to the lesson directory">Step 4 - Go to the lesson directory</a>
-		<li><a href="#Step_5_-_Run_Maven_for_the_first_time" title="Step 5 - Run Maven for the first time">Step 5 - Run Maven for the first time</a>
-		<li><a href="#Step_6_-_Lets_program" title="Step 6 - Let's program!">Step 6 - Let's program!</a>
-		<li><a href="#Step_7_-_Run_Maven_again" title="Step 7 - Run Maven again">Step 7 - Run Maven again</a>
-		<li><a href="#Step_8_-_Correct_mistakes" title="Step 8 - Correct mistakes">Step 8 - Correct mistakes</a>
-		<li><a href="#Step_9_-_Running_Maven_again" title="Step 9 - Running Maven again">Step 9 - Running Maven again</a>
-		<li><a href="#Step_10_-_Change_it_again" title="Step 10 - Change it again">Step 10 - Change it again</a>
-		<li><a href="#Step_11_-_We_are_the_champions" title="Step 11 - We are the champions">Step 11 - We are the champions</a>
-		<li><a href="#Going_the_extra_mile" title="Going the extra mile!">Going the extra mile!</a>
-		<li><a href="#Have_fun" title="Have fun">Have fun</a>
+		<li><a href="#O_que_voc_vai_aprender" title="O que você vai aprender">O que você vai aprender</a>
+		<li><a href="#Passo_1__Iniciar_uma_Mquina_Virtual" title="Passo 1 – Iniciar uma Máquina Virtual">Passo 1 – Iniciar uma Máquina Virtual</a>
+		<li><a href="#Passo_2__Logar_em_uma_mquina_virtual" title="Passo 2 – Logar em uma máquina virtual">Passo 2 – Logar em uma máquina virtual</a>
+		<li><a href="#Passo_3__Obter_os_arquivos_das_aulas" title="Passo 3 – Obter os arquivos das aulas">Passo 3 – Obter os arquivos das aulas</a>
+		<li><a href="#Passo_4__Ir_para_o_diretrio_da_aula" title="Passo 4 – Ir para o diretório da aula">Passo 4 – Ir para o diretório da aula</a>
+		<li><a href="#Passo_5__Rodar_o_Maven_pela_primeira_vez" title="Passo 5 – Rodar o Maven pela primeira vez">Passo 5 – Rodar o Maven pela primeira vez</a>
+		<li><a href="#Passo_6__Vamos_programar" title="Passo 6 – Vamos programar!">Passo 6 – Vamos programar!</a>
+		<li><a href="#Passo_7__Rodar_Maven_novamente" title="Passo 7 – Rodar Maven novamente">Passo 7 – Rodar Maven novamente</a>
+		<li><a href="#Passo_8__Corrigir_erros" title="Passo 8 – Corrigir erros">Passo 8 – Corrigir erros</a>
+		<li><a href="#Passo_9__Rodar_o_Maven_novamente" title="Passo 9 – Rodar o Maven novamente">Passo 9 – Rodar o Maven novamente</a>
+		<li><a href="#Passo_10__Mudar_de_novo" title="Passo 10 – Mudar de novo">Passo 10 – Mudar de novo</a>
+		<li><a href="#Passo_11__Ns_somos_os_campees" title="Passo 11 – Nós somos os campeões">Passo 11 – Nós somos os campeões</a>
+		<li><a href="#Indo_alm" title="Indo além!">Indo além!</a>
+		<li><a href="#Divirta-se" title="Divirta-se">Divirta-se</a>
 				<li class="divider"></li>
 			</ul>
 		</li>
-		<li><a href="#Bring_home_lessons" title="Bring home lessons">Bring home lessons</a>
+		<li><a href="#O_que_aprendemos" title="O que aprendemos">O que aprendemos</a>
 					</ul>
 				</div>
 			</div>
 			<div class="well sidebar">
-	<h2 id="Bring_home_lessons">Bring home lessons</h2>
+	<h2 id="O_que_aprendemos">O que aprendemos</h2>
 <ul> 
- <li>Call <tt>02j-get-lesson n</tt> to retrieve lesson n.</li> 
- <li>Call <tt>mvn</tt> to build and test your code.</li> 
- <li>Try many times until there are no errors.</li> 
+ <li>Chamar <tt>02j-get-lesson n</tt> para fazer o download da li&ccedil;&atilde;o n.</li> 
+ <li>Chamar <tt>mvn</tt> para executar o build e testar seu c&oacute;digo fonte.</li> 
+ <li>Tentar v&aacute;rias vezes at&eacute; que n&atilde;o haja erros.</li> 
 </ul>
 			</div>
 		</div>
@@ -587,15 +594,22 @@ public class App
 							<a title="Lições">Lições <i class="icon-chevron-down"></i></a>
 							<ul class="nav nav-list">
 						<li class="active">
-							<a href="#" title="1. Hello World!">1. Hello World!</a>
+							<a href="#" title="1. Olá, mundo!">1. Olá, mundo!</a>
 						</li>
 						<li >
-							<a href="lesson-2.html" title="2. Simple calculations">2. Simple calculations</a>
+							<a href="lesson-2.html" title="2. Cálculos básicos">2. Cálculos básicos</a>
 						</li>
 							</ul>
 						</li>
 						<li >
 							<a href="faq.html" title="FAQ">FAQ</a>
+						</li>
+						<li class="nav-header">Languages</li>
+						<li >
+							<a href="../index.html" title="English">English</a>
+						</li>
+						<li >
+							<a href="index.html" title="Português do Brasil">Português do Brasil</a>
 						</li>
 						<li class="nav-header">Documentação do Projeto</li>
 						<li >
