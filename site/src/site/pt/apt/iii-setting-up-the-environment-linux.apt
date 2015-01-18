@@ -87,9 +87,9 @@ user@host:~/JavaClasses$
   
   Agora copie os seguintes arquivos para o diretório JavaClasses:
   
-  * {{{./vagrant/Vagrantfile}Vagrantfile}}
+  * {{{../vagrant/Vagrantfile}Vagrantfile}}
   
-  * {{{./vagrant/install.sh}install.sh}}
+  * {{{../vagrant/install.sh}install.sh}}
   
   []
   
