@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Lesson 2 - Basic calculations | ZeroToJava</title>
+		<title>Lesson 3 - Introduction to Methods | ZeroToJava</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -34,7 +34,7 @@
 
 	</head>
 
-	<body class="page-lessons-lesson-2 project-zerotojava" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-lessons-lesson-3 project-zerotojava" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
@@ -74,8 +74,8 @@
 										<a href="index.html" title="Lessons">Lessons</a>
 										<ul class="dropdown-menu">
 											<li ><a href="lesson-1.html" title="1. Hello World!">1. Hello World!</a></li>
-											<li class="active"><a href="" title="2. Simple calculations">2. Simple calculations</a></li>
-											<li ><a href="lesson-3.html" title="3. Introduction to methods">3. Introduction to methods</a></li>
+											<li ><a href="lesson-2.html" title="2. Simple calculations">2. Simple calculations</a></li>
+											<li class="active"><a href="" title="3. Introduction to methods">3. Introduction to methods</a></li>
 										</ul>
 									</li>
 									<li ><a href="../faq.html" title="FAQ">FAQ</a></li>
@@ -133,34 +133,41 @@
 			<div class="body-content">
 				<div class="section"> 
  <div class="page-header">
-  <h2 id="Lesson_2_-_Basic_calculations">Lesson 2 - Basic calculations</h2>
+  <h2 id="Lesson_3_-_Introduction_to_Methods">Lesson 3 - Introduction to Methods</h2>
  </div> 
- <p>On the first lesson we simply printed things on the console. On this lesson we will keep printing things on the console, but this time we will print some calculations. This is a very simple lesson, but your first chance to do it all by yourself.</p> 
+ <p>We have already used methods in Java when we called println:</p> 
+ <div class="source"> 
+  <pre>System.out.println(&quot;Hello world!&quot;);</pre> 
+ </div> 
+ <p>We do not need to know what actually takes place when we call such method. We, as users of a method, should only care about how to call the method. In this lesson we are going to write a method.</p> 
  <div class="section"> 
   <h3 id="What_you_are_going_to_learn">What you are going to learn</h3> 
-  <ol style="list-style-type: decimal"> 
-   <li>How to express simple calculations in Java</li> 
-  </ol> 
+  <p>In this lesson we are going to learn how to write a method and how to call a method.</p> 
  </div> 
  <div class="section"> 
   <h3 id="Instructions">Instructions</h3> 
-  <p>The process is the same:</p> 
-  <ul> 
-   <li>Start the VM (go back to the clean state if needed)</li> 
-   <li>Log into the VM</li> 
-   <li>Download the lesson using <tt>02j-get-lesson</tt></li> 
-   <li>Run Maven using <tt>mvn</tt></li> 
-   <li>Make changes until you get a BUILD SUCCESS</li> 
-  </ul> 
+  <p>There are three TODO marks in the source code. Follow the instructions until you have no test errors.</p> 
  </div> 
  <div class="section"> 
   <h3 id="Theory">Theory</h3> 
-  <p>Doing calculations in Java is straightforward. You just need to type them like:</p> 
+  <p>A method consists of a method signature and a method body.</p> 
   <div class="source"> 
-   <pre>System.out.println(1 + 2);</pre> 
+   <pre>public void m(int a, int b, int c) {
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+}</pre> 
   </div> 
-  <p>It is this simple. Yes, you will complete this lesson in a couple minutes, hopefully. We are actually still learning how to find our way on the environment.</p> 
-  <p>In this lesson you are going to do simple calculations using the variables <tt>x</tt> and <tt>y</tt> that already came declared. Therefore, you don't need to repeat the numbers in each calculation. Instead, use the variable names.</p> 
+  <p>The method signature tells us how a method should be called. In this lesson we only care about what arguments a method requires. In the previous example the method signature is:</p> 
+  <div class="source"> 
+   <pre>public void m(int a, int b, int c)</pre> 
+  </div> 
+  <p>The method body is what the method does. It is inside of the body that we should write imperative statements such as &quot;print this&quot;, or &quot;do a certain calculation.&quot; In the previous example, the method signagture is:</p> 
+  <div class="source"> 
+   <pre>    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);</pre> 
+  </div> 
  </div> 
 </div>
 			</div>
@@ -170,7 +177,7 @@
 				<div class="well">
 					<ul class="nav nav-list">
 						<li class="nav-header">Table of Contents</li>
-		<li class="dropdown"><a href="#Lesson_2_-_Basic_calculations" title="Lesson 2 - Basic calculations">Lesson 2 - Basic calculations <b class="caret"></b></a>
+		<li class="dropdown"><a href="#Lesson_3_-_Introduction_to_Methods" title="Lesson 3 - Introduction to Methods">Lesson 3 - Introduction to Methods <b class="caret"></b></a>
 			<ul class="nav nav-list">
 		<li><a href="#What_you_are_going_to_learn" title="What you are going to learn">What you are going to learn</a>
 		<li><a href="#Instructions" title="Instructions">Instructions</a>
@@ -185,9 +192,8 @@
 			<div class="well sidebar">
 	<h2 id="Bring_home_lessons">Bring home lessons</h2>
 <ul> 
- <li>How to express simple calculations in Java</li> 
- <li>How to complete a lesson without detailed instructions</li> 
- <li>How to make references to variables</li> 
+ <li>Methods are a way to organize your source code while avoiding repeating source code sections.</li> 
+ <li>You can pass arguments to methods.</li> 
 </ul>
 			</div>
 		</div>
@@ -240,17 +246,17 @@
 							<a href="../intro/v-vagrant-mini-tutorial.html" title="v. Vagrant - Mini Tutorial">v. Vagrant - Mini Tutorial</a>
 						</li>
 						<li class="nav-header">Lessons</li>
-						<li >
+						<li class="active">
 							<a href="index.html" title="Lessons">Lessons <i class="icon-chevron-down"></i></a>
 							<ul class="nav nav-list">
 						<li >
 							<a href="lesson-1.html" title="1. Hello World!">1. Hello World!</a>
 						</li>
-						<li class="active">
-							<a href="#" title="2. Simple calculations">2. Simple calculations</a>
-						</li>
 						<li >
-							<a href="lesson-3.html" title="3. Introduction to methods">3. Introduction to methods</a>
+							<a href="lesson-2.html" title="2. Simple calculations">2. Simple calculations</a>
+						</li>
+						<li class="active">
+							<a href="#" title="3. Introduction to methods">3. Introduction to methods</a>
 						</li>
 							</ul>
 						</li>
