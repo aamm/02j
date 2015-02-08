@@ -13,11 +13,12 @@ footer.well {
 }
 
 div.well {
-    border: 1px solid #F80;
+    border: 1px solid #00F;
 }
 
 h2 {
-    color: #E78B24;
+    color: #2c2f33;
+    font-weight: bold;
 }
 
 body {
@@ -25,8 +26,13 @@ body {
 }
 
 .titleTop {
-    color: #E78B24;
+    /* color: #E78B24;*/
+    color: white;
     font-weight: bold;
 }
 
-
+dl {
+    border: 1px solid #008;
+    background-color: #FFFFEE;
+    padding: 10px;
+}
