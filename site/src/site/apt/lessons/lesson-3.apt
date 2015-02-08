@@ -1,0 +1,57 @@
+Lesson 3 - Introduction to Methods
+
+  We have already used methods in Java when we called println:
+
++---------------------------------+
+System.out.println("Hello world!");
++---------------------------------+
+
+  We do not need to know what actually takes place when we call such method. We, as users of a
+  method, should only care about how to call the method. In this lesson we are going to write
+  a method.
+
+* What you are going to learn
+
+  In this lesson we are going to learn how to write a method and how to call a method.
+
+* Instructions
+
+  There are three TODO marks in the source code. Follow the instructions until you have no test
+  errors.
+
+* Theory
+
+  A method consists of a method signature and a method body.
+
++----------------------------------+
+public void m(int a, int b, int c) {
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+}
++----------------------------------+
+
+  The method signature tells us how a method should be called. In this lesson we only care about
+  what arguments a method requires. In the previous example the method signature is:
+
++--------------------------------+
+public void m(int a, int b, int c)
++--------------------------------+
+
+  The method body is what the method does. It is inside of the body that we should write imperative
+  statements such as "print this", or "do a certain calculation." In the previous example, the
+  method signagture is:
+
++--------------------------------+
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
++--------------------------------+
+
+===
+
+Bring home lessons
+
+  * Methods are a way to organize your source code while avoiding repeating source code sections.
+
+  * You can pass arguments to methods.

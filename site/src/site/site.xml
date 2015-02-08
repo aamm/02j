@@ -30,6 +30,7 @@
       <item name="Lessons" href="lessons/index.html" collapse="true">
         <item name="1. Hello World!" href="lessons/lesson-1.html" />
         <item name="2. Simple calculations" href="lessons/lesson-2.html" />
+        <item name="3. Introduction to methods" href="lessons/lesson-3.html" />
       </item>
       <item name="FAQ" href="faq.html" />
     </menu>
