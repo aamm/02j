@@ -31,16 +31,16 @@ public void m(int a, int b, int c) {
 }
 +----------------------------------+
 
-  The method signature tells us how a method should be called. In this lesson we only care about
-  what arguments a method requires. In the previous example the method signature is:
+  A assinatura de um método nos diz como o método deve ser chamado. Nesta lição nós somente nos
+  importamos com quais argumentos um método exige. No exemplo acima a assinatura do método é:
 
 +--------------------------------+
 public void m(int a, int b, int c)
 +--------------------------------+
-
-  The method body is what the method does. It is inside of the body that we should write imperative
-  statements such as "print this", or "do a certain calculation." In the previous example, the
-  method signagture is:
+  
+  O corpo de um método é o que o método faz. É dentro do corpo do método que devemos escrever
+  comandos tais como "imprima isso", ou "efetue um determinado cálculo". No exemplo acima, o corpo
+  do método é:
 
 +--------------------------------+
     System.out.println(a);
@@ -52,6 +52,8 @@ public void m(int a, int b, int c)
 
 Lições
 
-  * Methods are a way to organize your source code while avoiding repeating source code sections.
+  * Métodos são formas de organizarmos nosso código fonte enquanto evitamos repetições de blocos
+    de código fonte.
 
-  * You can pass arguments to methods.
+  * Você pode passar argumentos para métodos.
+

@@ -40,7 +40,7 @@ public void m(int a, int b, int c)
 
   The method body is what the method does. It is inside of the body that we should write imperative
   statements such as "print this", or "do a certain calculation." In the previous example, the
-  method signagture is:
+  method body is:
 
 +--------------------------------+
     System.out.println(a);
