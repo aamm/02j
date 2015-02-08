@@ -1,0 +1,76 @@
+iii. Environment description
+
+* O que é o ambiente?
+  
+  Essa página explica o processo de criar seu ambiente se você tem Linux no seu computador. Tudo o
+  que fazemos nesse curso é em uma máquina virtual. Por isso você precisa instalar o suporte para
+  máquinas virtuais, para então criar uma e configurá-la.
+  
+* Por que nós precisamos de máquina virtual?
+
+  Por que não podemos rodar tudo diretamente na nossa máquina?
+
+  A resposta é: Porque nós queremos evitar a qualquer custo a frase “mas ele funciona na minha
+  máquina”. Dê uma olhada:
+
+  {{http://www.cafepress.com/+but-it-works-on-my-machine+hats-caps}}
+  
+  Isso é tão recorrente na áerea de TI, que até se tornou uma piada da área. Quando você escreve
+  seus programas você terá o ambiente influenciando a forma como seu programa funciona. Talvez sua
+  máquina virtual tenha exatamente a versão correta do Java. Talvez sua máquina tenha a quantidade
+  correta de memória etc. Então, quando você partilha seu programa com outros programadores você
+  começa a ver que as coisas não rodam exatamente da mesma forma em outras plataformas.
+
+  Nós não podemos perder um tempo precioso tentando verificar cada pequena coisa que pode
+  influenciar a execução do programa. Se todos nós rodarmos nossos programas na mesma máquina
+  virtual nós podemos quase eliminar efeito. Assim, uma solução para um exercício rodará exatamente
+  da mesma forma em qualquer computador não importa qual o sistema operacional real deste
+  computador.
+
+* O que eu preciso para rodar uma máquina virtual no meu computador?
+
+  Nesse guia você precisará usar tanto a máquina guest quanto quanto a máquina host, que são papéis
+  em uma virtualização. Vamos defini-las:
+
+  * host - Ou hospedeiro. A máquina real. Esse é o sistema operacional que roda no programa de
+    virtualização, também conhecido como hypervisor.
+  
+  * guest - Ou convidado. A máquina virtual. Esse é o sistema operacional que roda em cima do
+    hypervisor.
+
+  []
+
+  Há dois tipos de linhas de comando que você precisará usar: uma na máquina host e outra na
+  máquina virtual.
+  
+  O que nós rodaremos no host são exatamente os comandos que nós precisamos para criar e conectar
+  uma máquina virtual. Sua linha de comando provavelmente será diferente desta, especialmente se
+  você usar Windows, mas eu espero que você tenha entendido a essência.
+
+---
+user@host:~$
+---
+
+  Aqui está como a linha de comando aparecerá na máquina virtual:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$
+---
+
+  Uma vez que nós preparamos a máquina virtual, nós somente usaremos o terminal guest.
+
+===
+
+Lições
+
+  * Virtualização é uma forma fácil de controlar um ambiente. Nós queremos ter tal controle
+    pois nós náo queremos gastar muito tempo com o ambiente em si.
+
+  * Para executar uma máquina virtual você precisa de um hypervisor. O hypervisor que vamos rodar
+    é o VirtualBox.
+
+  * Vagrant é uma ferramenta para controlar hypervisors facilmente.
+
+  * Neste curso você pode diferenciar um sistema operacional guest de um host olhando o início da
+    linha de comando.
+

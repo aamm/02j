@@ -12,18 +12,24 @@
   </skin>
 
   <body>
-    <menu name="Navigation">
-      <item name="Home" href="index.html" />
-      <item name="Getting started" collapse="true">
-        <item name="i. Introduction" href="i-introduction.html" />
-        <item name="ii. Course Material" href="ii-course-material.html" />
-        <item name="iii. Setting up the Environment - Linux" href="iii-setting-up-the-environment-linux.html" />
-        <item name="iii. Setting up the Environment - Windows" href="iii-setting-up-the-environment-windows.html" />
-        <item name="iv. Vagrant - Mini Tutorial" href="iv-vagrant-mini-tutorial.html" />
+    <menu name="Intro">
+      <item name="Getting started" href="intro/index.html" collapse="true" />
+      <item name="i. Introduction" href="intro/i-introduction.html" />
+      <item name="ii. Course Material" href="intro/ii-course-material.html" />
+      <item name="iii. Environment description" href="intro/iii-env-description.html" />
+      <item name="iv. Setting up the Environment" href="intro/iv-setting-up-the-environment.html">
+        <item name="Step 1 - Setting up the Environment - Linux" href="intro/iv-setting-up-the-environment-linux.html" />
+        <item name="Step 1 - Setting up the Environment - Windows" href="intro/iv-setting-up-the-environment-windows.html" />
+        <item name="Step 2 - Download the Java classes VM" href="intro/iv-setting-up-the-environment-download-vm.html" />
+        <item name="Step 2 - Create Java classes VM from a Ubuntu VM" href="intro/iv-setting-up-the-environment-create-vm.html" />
+        <item name="Steps 1 and 2 - Linux Shortcut" href="intro/iv-setting-up-the-environment-shortcut.html" />
       </item>
-      <item name="Lessons" collapse="true">
-        <item name="1. Hello World!" href="lesson-1.html" />
-        <item name="2. Simple calculations" href="lesson-2.html" />
+      <item name="v. Vagrant - Mini Tutorial" href="intro/v-vagrant-mini-tutorial.html" />
+    </menu>
+    <menu name="Lessons">
+      <item name="Lessons" href="lessons/index.html" collapse="true">
+        <item name="1. Hello World!" href="lessons/lesson-1.html" />
+        <item name="2. Simple calculations" href="lessons/lesson-2.html" />
       </item>
       <item name="FAQ" href="faq.html" />
     </menu>
@@ -41,7 +47,7 @@
   
   <custom>
     <reflowSkin>
-      <theme>bootswatch-readable</theme>
+      <theme>bootswatch-spacelab</theme>
       <highlightJs>true</highlightJs>
       <brand>
       <!-- Brand text in top-left part of the site -->

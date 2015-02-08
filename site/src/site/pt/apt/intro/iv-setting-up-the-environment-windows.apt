@@ -1,0 +1,113 @@
+Passo 1 - Instalando VirtualBox e Vagrant no Windows
+
+[../../images/setup-process-s1-windows.svg]
+
+* Introdução
+  
+  Instalar o ambiente em uma máquina Windows gasta mais tempo e é mais tedioso do que no Linux,
+  pois você precisa baixar e instalar manualmente algumas partes do software. As telas abaixo foram
+  uma contribuição de Priscila.
+  
+  Esta página ainda está em construção. Pretendemos adicionar mais detalhes mais tarde.
+
+* Instalar o VirtualBox
+
+[../../images/VirtualBox0.png]
+
+  \ 
+
+[../../images/VirtualBox1.png]
+
+  \ 
+
+[../../images/VirtualBox2.png]
+
+  \ 
+
+[../../images/VirtualBox3.png]
+
+  \ 
+
+[../../images/VirtualBox4.png]
+
+  \ 
+
+[../../images/VirtualBox5.png]
+
+  \ 
+
+[../../images/VirtualBox6.png]
+
+  \ 
+
+[./../images/VirtualBox7.png]
+
+* Instalar o Vagrant
+
+[../../images/Vagrant0.png]
+
+  \ 
+
+[../../images/Vagrant1.png]
+
+  \ 
+
+[../../images/Vagrant2.png]
+
+  \ 
+
+[../../images/Vagrant3.png]
+
+  \ 
+
+[../../images/Vagrant4.png]
+
+  \ 
+
+[../../images/Vagrant5.png]
+
+  \ 
+
+[../../images/Vagrant6.png]
+
+* Instalar o plugin snapshot no Vagrant
+
+  No DOS ou no PowerShell, digite o seguinte:
+
+--------------------------------------------
+vagrant plugin install vagrant-vbox-snapshot
+--------------------------------------------
+
+* Fazer o download do Putty
+
+  Na verdade, não há instalação. Você precisa simplesmente copiar o endereço no seu computador e
+  rodá-lo no seu PC.
+
+  {{http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html}}
+
+* Configure o Putty para logar automaticamente na sua máquina virtual.
+  
+  {{https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Connect-to-Your-Vagrant-Virtual-Machine-with-PuTTY}}
+
+* A seguir, Passo 2
+
+  Agora você pode ir para o Passo 2 (instalação da VM das aulas). Escolha um dos seguintes:
+
+  * {{{./iv-setting-up-the-environment-download-vm.html}Download da VM das aulas}}
+  
+  * {{{./iv-setting-up-the-environment-create-vm.html}Criando a VM das aulas a partir de uma VM Ubuntu}}
+  
+  []
+
+===
+
+Referências
+
+  VirtualBox: {{https://www.virtualbox.org/}}
+  
+  Vagrant: {{https://www.vagrantup.com/}}
+  
+  Java: {{{http://www.oracle.com/technetwork/java/index.html}http://www.oracle.com/.../index.html}}
+  
+  Maven: {{http://maven.apache.org/}}
+

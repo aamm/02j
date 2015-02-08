@@ -1,0 +1,196 @@
+iv. Mini tutorial do Vagrant
+
+  Ao longo desse curso, o Vagrant será usado o tempo todo. Embora os detalhes do Vagrant estejam fora do escopo deste curso, é importante que o estudante entenda alguns conceitos básicos sobre o Vagrant para se familiarizar com o ambiente.
+  
+  Talvez um dos principais problemas sobre o Vagrant para iniciantes seja que nada é visível graficamente. O usuário precisa ter um tipo de imagem mental do que está acontecendo para poder navegar. Como nós vimos anteriormente, há dois consoles: o host e o guest, que podem ser identificados pelos prefixos:
+
+---
+user@host:~/JavaClasses$
+vagrant@vagrant-ubuntu-trusty-32:~$ 
+---
+
+  O primeiro console depende do seu computador e é muito diferente se você estiver usando Windows. Esse tutorial é dividido em tópicos para servir como referência, mas ele pode também ser seguido do início ao fim se você já tiver o Vagrant configurado como apresentado anteriormente.
+
+  É importante que você esteja sempre no diretório JavaClasses. Estar nesse diretório é o que faz o Vagrant saber que você está tentando trabalhar com uma determinada máquina virtual.
+
+* Verificando o status
+
+---
+user@host:~/JavaClasses$ vagrant status
+---
+
+  Esse comando mostra se uma máquina virtual está rodando ou não.
+
+* Iniciando uma máquina virtual
+
+---
+user@host:~/JavaClasses$ vagrant up
+---
+
+  Agora que a máquina virtual está rodando você pode verificar o status novamente e ver que ele mudou.
+
+---
+user@host:~/JavaClasses$ vagrant status
+---
+
+* Interrompendo uma máquina virtual
+
+---
+user@host:~/JavaClasses$ vagrant halt
+---
+
+  Agora se verificarmos o status, nós veremos que ele mudou para o status original.
+
+---
+user@host:~/JavaClasses$ vagrant status
+---
+
+* Acessando o terminal da máquina virtual
+
+---
+user@host:~/JavaClasses$ vagrant ssh
+vagrant@vagrant-ubuntu-trusty-32:~$
+---
+
+  Agora nós estamos dentro da máquina virtual. Todas as mudanças que nós fazemos, tais como criar arquivos ou diretórios, mudam a máquina virtual (guest OS). Para ilustrar tal conceito, vamos criar um simples diretório chamado trash:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ mkdir trash
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+trash
+---
+
+  Nós precisamos voltar à máquina host para comparar os conteúdos.
+
+* Saindo da máquina virtual
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$
+---
+
+  É tão simples quanto finalizar qualquer sessão de console. Nós podemos agora verificar os conteúdos da máquina host e veremos que o diretório trash não está lá:
+
+---
+user@host:~/JavaClasses$ ls
+install.sh  VagrantFile
+---
+
+  Porém, agora temos o diretório trash que é inútil para nós. E se nós quisermos voltar no tempo quando tudo estava limpo?
+
+* Voltando para um snapshot
+  
+  Um snapshot é como uma foto congelada de uma máquina virtual. Você tira a foto e você pode pedir à máquina virtual para voltar àquele estado. Na sessão anterior, nós tiramos o snapshot "clean". Agora vamos voltar àquele snapshot. ATENÇÃO! Você irá apagar tudo o que você criou desde que você tirou o snapshot "clean".
+
+---
+user@host:~/JavaClasses$ vagrant go clean
+vagrant@vagrant-ubuntu-trusty-32:~$
+---
+
+  O Vagrant coloca você de volta para o console guest quando você retorna ao snapshot. Agora você pode rodar ls novamente e ver que o diretório trash se foi.
+
+---
+user@host:~/JavaClasses$ ls
+---
+
+  Neste momento, você não pode ver nada. E se você quiser fazer o oposto, indo adiante no tempo? Você não pode. Para ir para um certo estado, você precisa solicitar explicitamente ao Vagrant para tirar um snapshot. Se você queria voltar àquele estado você deveria ter tirado um snapshot quando você estava naquele estado. Então vamos criar outro arquivo chamado trashAgain, que nos ajudará a entender o processo.
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ mkdir trashAgain
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+trashAgain
+---
+
+* Tirando um snapshot
+
+  Agora nós podemos tirar outro snapshot e nomeá-lo x. Para tirar um snapshot nós precisamos voltar à máquina host. É interessante notar que a máquina guest não pode fazer nada igual a isso. A máquina guest não sabe que ela mesma é uma máquina virtual.
+
+  Agora nós podemos tirar um outro snapshot e nomeá-lo x. Para tirar um snapshot nós precisamos voltar para a máquina host.
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ vagrant take x
+---
+
+  Agora que nós voltamos ao estado "clean", no qual não tínhamos o diretório chamado "trashAgain".
+
+---
+user@host:~/JavaClasses$ vagrant go clean
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+(nothing)
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+---
+
+  Agora vamos ao estado "x" e vemos que o diretório "trashAgain" reapareceu:
+
+---
+user@host:~/JavaClasses$ vagrant go x
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+trashAgain
+---
+
+  Agora vamos voltar ao estado "clean".
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ vagrant go clean
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ 
+---
+
+  Nós temos dois snapshots, vamos aprender como listá-los:
+
+* Listando snapshots
+
+---
+user@host:~/JavaClasses$ vagrant snapshot list
+clean x
+---
+
+  Nós não precisamos do snapshot "x", que contém somente o trash. Então nós podemos removê-lo:
+
+* Removendo um snapshot
+
+---
+user@host:~/JavaClasses$ vagrant snapshot delete x
+user@host:~/JavaClasses$ vagrant snapshot list
+clean
+---
+
+  Como você pode ver, agora você tem somente o snapshot "clean".
+
+* Regra de ouro
+
+  Nunca mais digite o seguinte comando:
+
+---
+user@host:~/JavaClasses$ vagrant take clean
+---
+
+  Se você digitar este comando de novo, você modificará o estado "clean". Nós não queremos isso! Nós queremos que o estado "clean" seja exatamente como nós o definimos anteriormente.
+
+  Portanto, desde que você não mude o estado "clean", você sempre poderá voltar a ele digitando:
+
+---
+user@host:~/JavaClasses$ vagrant go clean
+---
+
+* Compartilhando o seu Vagrant box
+
+  Uma vez configurada a sua máquina virtual, você pode compartilhá-la digitando o seguinte:
+
+---
+vagrant package --base zeroToJava
+---
+
+  Este comando criará um arquivo chamado package.box, que você pode usar para replicar a mesma máquina virtual em outro computador.
+
+===
+
+Mais informações
+
+  Para mais informações sobre o Vagrant e comandos de snapshot acesse:
+  
+  {{http://docs.vagrantup.com/v2/}}
+  
+  {{{http://priyaaank.tumblr.com/post/50707609769/snapshotting-vagrant}http://priyaaank.tumblr.com/.../snapshotting-vagrant}}

@@ -1,0 +1,27 @@
+Getting started
+  
+  "A journey of a thousand miles begins with a single step." - Laozi (老子)
+  
+  In this series of introductory lessons you will be asked to understand the most basic concepts
+  about the environment you need to set in your computer in order to use the lessons. Here is
+  what we are about to do:
+  
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+|| Lesson                                                                    || Description                                                                                         |
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| {{{./i-introduction.html}i. Introduction}}                                 | What is Java? What do I need to know to get started?                                                 |
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| {{{./ii-course-material.html}ii. Course material}}                         | Where to get the theory from? What are the main                                                      |
+|                                                                            | references?                                                                                          |
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| {{{./iii-env-description.html}iii. Environment description}}               | What does the study environment look like?                                                           |
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| {{{./iv-setting-up-the-environment.html}iii. Setting up the environment}}  | How to prepare my computer for the lessons? \                                                        |
+|                                                                            | - {{{./iv-setting-up-the-environment-linux.html}Setting up the Environment - Linux}} \               |
+|                                                                            | - {{{./iv-setting-up-the-environment-windows.html}Setting up the Environment - Windows}} \           |
+|                                                                            | - {{{./iv-setting-up-the-environment-download-vm.html}Download the Java classes VM}} \               |
+|                                                                            | - {{{./iv-setting-up-the-environment-create-vm.html}Create the Java classes VM from a Ubunbu VM}} \  |
+|                                                                            | - {{{./iv-setting-up-the-environment-shortcut.html}Linux Shortcut}}                                  |
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| {{{./v-vagrant-mini-tutorial.html}v. Vagrant mini tutorial}}               | How to use Vagrant? Basic concepts that you will need to know.                                                 |
+*----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+

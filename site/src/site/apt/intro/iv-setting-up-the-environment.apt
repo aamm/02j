@@ -1,0 +1,63 @@
+iv. Setting up the environment
+
+[../images/setup-process.svg]
+
+* Step 1 - Install VirtualBox and Vagrant
+   
+   First you need to install both VirtualBox and Vagrant on your computer. These two pieces of software
+   are what you need to run virtual machines.
+    
+   [{{{./iv-setting-up-the-environment-linux.html}Install VirtualBox and Vagrant on Linux}}]
+     
+     If your computer has Linux on it. We provide installation instructions for Ubuntu because it is one
+     of the most popular Linux distributions currently in use.
+     
+   [{{{./iv-setting-up-the-environment-windows.html}Install VirtualBox and Vagrant on Windows}}]
+     
+     If your computer has Windows on it. In contrast with Ubuntu installation, in order to install
+     VirtualBox and Vagrant on Windows you will need to manually download and run some installation
+     programs.
+    
+   []
+
+* Step 2 - Install the Java classes VM
+
+   After you have installed VirtualBox and Vagrant, you need to install the Java classes VM
+    
+   [{{{./iv-setting-up-the-environment-download-vm.html}Download the Java classes VM}}]
+     
+     The easiest way to get the Java classes VM running on Vagrant. Use Vagrant to download and install
+     a VM we have set and made available online.
+     
+   [{{{./iv-setting-up-the-environment-create-vm.html}Create Java classes VM from a Ubuntu VM}}]
+     
+     If you want to learn how to create the Java classes VM, this section will teach you all we did
+     from a clean Ubuntu image.
+    
+   []
+
+* Steps 1 and 2 - Linux Shortcut
+
+  You can also take the following shortcut to the lessons, which is a single command line. You can
+  only use this shortcut if you have Ubuntu on your PC.
+
+  [{{{./iv-setting-up-the-environment-shortcut.html}Linux Shortcut}}]
+
+* Step 3 - Do the lessons
+   
+   [{{{../lessons/index.html}Lessons list}}]
+
+===
+
+Subpages
+
+  * {{{./iv-setting-up-the-environment-linux.html}Install VirtualBox and Vagrant on Linux}}
+    
+  * {{{./iv-setting-up-the-environment-windows.html}Install VirtualBox and Vagrant on Windows}}
+    
+  * {{{./iv-setting-up-the-environment-download-vm.html}Download the Java classes VM}}
+    
+  * {{{./iv-setting-up-the-environment-create-vm.html}Create Java classes VM from a Ubuntu VM}}
+    
+  * {{{./iv-setting-up-the-environment-shortcut.html}Linux Shortcut}}
+    

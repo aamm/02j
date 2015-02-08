@@ -1,0 +1,52 @@
+Passo 1 - Instalando VirtualBox e Vagrant no Linux
+
+[../../images/setup-process-s1-linux.svg]
+
+* VirtualBox
+
+  A primeira coisa que você deve fazer é se certificar de que o VirtualBox está instalado. No
+  Ubuntu/Debian você precisará somente digitar:
+
+--------------------------------------------
+user@host:~$ sudo apt-get update
+user@host:~$ sudo apt-get install virtualbox
+--------------------------------------------
+
+  [Nota sobre apt-get]
+  
+    Fazer um update não é sempre necessário. Mas para este tutorial nós recomendamos que voê o
+    faça para evitar problemas caso o seu banco de dados local do apt-get esteja defasado.
+  
+  []
+
+* Vagrant
+  
+  Se você está rodando Ubuntu ou Debian Linux, você necessita rodar:
+  
+---
+user@host:~$ sudo apt-get install vagrant
+user@host:~$ vagrant plugin install vagrant-vbox-snapshot
+---
+
+* A seguir, Passo 2
+
+  Agora você pode ir para o Passo 2 (instalação da VM das aulas). Escolha um dos seguintes:
+
+  * {{{./iv-setting-up-the-environment-download-vm.html}Download da VM das aulas}}
+  
+  * {{{./iv-setting-up-the-environment-create-vm.html}Criando a VM das aulas a partir de uma VM Ubuntu}}
+  
+  []
+
+===
+
+Referências
+
+  VirtualBox: {{https://www.virtualbox.org/}}
+  
+  Vagrant: {{https://www.vagrantup.com/}}
+  
+  Java: {{{http://www.oracle.com/technetwork/java/index.html}http://www.oracle.com/.../index.html}}
+  
+  Maven: {{http://maven.apache.org/}}
+

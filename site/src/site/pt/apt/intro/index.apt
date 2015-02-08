@@ -1,0 +1,26 @@
+Primeiros passos
+  
+  "Uma jornada de mil milhas começa com um único passo." - Laozi (老子)
+  
+  Nesta séries de lições introdutórias nós pediremos que você entenda os conceitos mais básicos
+  sobre o ambiente que você vai precisar no seu computador para fazer as lições. Esta é a lista de
+  lições introdutórias:
+  
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+|| Lição                                                                    || Descrição                                                                                                |
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| {{{./i-introduction.html}i. Introdução}}                                   | O que é Java? O que eu preciso saber para começar?                                                       |
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| {{{./ii-course-material.html}ii. Material do curso}}                       | Onde aprender a teoria? Quais são as principais referências?                                             |
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| {{{./iii-env-description.html}iii. Descrição do ambiente}}                 | Como é o ambiente de estudo?                                                                             |
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| {{{./iv-setting-up-the-environment.html}iii. Preparando o ambiente}}       | Como preparar o ambiente para as lições? \                                                               |
+|                                                                            | - {{{./iv-setting-up-the-environment-linux.html}Preparando o ambiente - Linux}} \                        |
+|                                                                            | - {{{./iv-setting-up-the-environment-windows.html}Preparando o ambiente - Windows}} \                    |
+|                                                                            | - {{{./iv-setting-up-the-environment-download-vm.html}Download da VM das aulas}} \                       |
+|                                                                            | - {{{./iv-setting-up-the-environment-create-vm.html}Criando a VM das aulas a partir de uma VM Ubuntu}} \ |
+|                                                                            | - {{{./iv-setting-up-the-environment-shortcut.html}Atalho em Linux}}                                     |
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| {{{./v-vagrant-mini-tutorial.html}v. Vagrant - Mini tutorial}}             | Como usar o Vagrant? Conceitos básicos que você precisa saber.                                           |
+*----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+

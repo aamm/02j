@@ -1,0 +1,139 @@
+Passo 2 - Criar a VM das aulas a partir de uma VM Ubuntu
+
+[../../images/setup-process-s2-create.svg]
+
+  Estas instruções partem do pressuposto que você está usando Linux. Se vc estiver usando Windows,
+  você terá que fazer algumas pequenas adaptações.
+
+------------------------------
+user@host:~$ mkdir JavaClasses
+user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$
+------------------------------
+
+  Antes de continuarmos, precisamos introduzir alguns comando do Linux:
+  
+  * <<<mkdir>>> - para criar um diretório no Linux.
+  
+  * <<<ls>>> - para listar os conteúdos do presente diretório no Linux.
+  
+  * <<<cd>>> - para mudar o diretório atual.
+  
+  []
+  
+  Agora copie os seguintes arquivos para o diretório JavaClasses:
+  
+  * {{{../vagrant/Vagrantfile}Vagrantfile}}
+  
+  * {{{../vagrant/install.sh}install.sh}}
+  
+  []
+  
+  A seguir, inicie a máquina virtual usando o seguinte comando:
+  
+---
+user@host:~/JavaClasses$ vagrant up
+---
+  
+  Esse último comando tomará um pouco de tempo e baixará alguns arquivos da Internet. Mas, não se
+  preocupe, se você administrar o Vagrant, você nunca mais precisará baixar todos eles novamente.
+  Nós usaremos um snapshot chamado "clean". Um snapshot é um estado de máquina virtual. Nós
+  usaremos um snapshot porque mais tarde nós voltaremos para aquele estado.
+  
+  Agora que nós instalamos tudo, é hora de usar nosso snapshot principal:
+  
+---
+user@host:~/JavaClasses$ vagrant halt
+user@host:~/JavaClasses$ vagrant snapshot take clean
+---
+  
+  É isso. Neste ponto você deve ter tudo que precisa para começar as aulas. Mas vale a pena
+  verificar se tudo está funcionando bem. Então se houver qualquer erro na instalação, você pode
+  tentar consertá-lo.
+  
+* Verificando a instalação
+  
+  A seguir, nós chamaremos a máquina virtual novamente e conectaremos ao seu console:
+  
+---
+user@host:~/JavaClasses$ vagrant up
+user@host:~/JavaClasses$ vagrant ssh
+---
+  
+  Dependendo da sua plataforma, o Vagrant reclamará do primeiro comando que a máquina virtual
+  estiver rodando, mas tal reclamação é inofensiva. Depois do segundo comando você verá a seguinte
+  mensagem:
+  
+---
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic i686)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct  7 14:30:31 UTC 2014
+
+  System load:  0.41              Processes:           78
+  Usage of /:   2.6% of 39.34GB   Users logged in:     0
+  Memory usage: 15%               IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+vagrant@vagrant-ubuntu-trusty-32:~$ 
+---
+
+  Isso significa que você instalou corretamente a nova máquina virtual e que o Vagrant está
+  funcionando bem.
+
+* Seu primeiro programa em Java
+
+  Digite a mensagem a seguir no seu terminal:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ echo 'class A { public static void main(String[] args) { System.out.println("Hello World!"); }}' > A.java
+vagrant@vagrant-ubuntu-trusty-32:~$ javac A.java
+vagrant@vagrant-ubuntu-trusty-32:~$ java A
+----
+
+  Você verá:
+
+---
+Hello World!
+---
+
+  Parabéns! Você acabou de criar seu primeiro programa Java, compilou-o e executou-o!
+
+  Não se preocupe sobre os detalhes. Você verá mais tarde o que cada um desses comandos significa.
+
+  Agora vamos limpar tudo para que você possa começar com tudo limpinho:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ vagrant snapshot go clean
+vagrant@vagrant-ubuntu-trusty-32:~$
+----
+
+  A próxima sessão introduzirá os conceitos básicos do Vagrant. Então esses comandos começarão a
+  fazer mais sentido.
+
+* A seguir, tutorial sobre Vagrant ou Passo 3
+
+  Agora você pode ir para {{{../lessons/lessons.html}Passo 3, as lições}} ou
+  {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}.
+
+===
+
+Próximo passo
+
+  * {{{../lessons/lessons.html}Passo 3, as lições}}
+
+  * {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}
+
+

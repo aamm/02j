@@ -1,0 +1,88 @@
+iii. Environment description
+
+* What is the environment all about?
+  
+  This page explains the process to create the classes environment on your computer. Everything we
+  do in this course is on a virtual machine. So you need to install support for virtual machines,
+  then create one and configure it.
+  
+* Why do we need a virtual machine?
+   
+   Why can't I run everything directly on my real (non-virtual) machine?
+   
+   The answer is because we want to avoid "but it works on my machine" at any cost. Take a look:
+   
+   {{http://www.cafepress.com/+but-it-works-on-my-machine+hats-caps}}
+  
+   This is so recurring in the IT field that it even became an inside joke. When you write your
+   programs you will have the environment influencing the way your programs work. Perhaps your
+   machine has just the right version of Java. Perhaps your machine has just the right amount of
+   memory. etc etc. So when you share your program with other programmers you start to see that
+   things do not run exactly the same way on other platforms.
+   
+   We cannot waste precious time trying to check every single thing that can influence program
+   execution. If we all run our programs on the same virtual machine we can almost eliminate such
+   effect. So a solution for an exercise will run precisely the same way on everyone's computer no
+   matter the actual operating system that this computer has.
+   
+* What do I need to run a virtual machine on my computer?
+   
+   In order to run a virtual machine you need what is called a hypervisor. In a virtualization, you
+   have one computer running inside of another computer. The hypervisor is what makes such a thing
+   possible.
+   
+   The hypervisor we will use is called VirtualBox, which works pretty well for our needs on this
+   course. The problem about VirtualBox is that it takes time to get started with it. All the
+   boring details about VirtualBox are made much more simple by Vagrant.
+   
+   Vagrant is then a set of procedures to make it easy to use VirtualBox, among other hypervisors.
+   With Vagrant you can type a command like "create a virtual machine with Linux flavor X" and
+   after a couple of minutes you magically have a virtual machine for you to use. It is that simple.
+   
+* Virtualization hosts versus virtualization guests
+
+   On this guide you will need to use both the guest and the host machines, which are roles in a
+   virtualization. Let us define them:
+
+   * host - The real machine. This is the operating system that runs the virtualization program, aka.
+     hypervisor.
+   
+   * guest - The virtual machine. This is the virtual operating system that runs on top of the
+     hypervisor.
+
+   []
+   
+   There are two sorts of command lines you will need to use: one on the host machine and another on
+   the virtual machine.
+   
+   What we will run on the host are just the commands we need to create and connect to the virtual
+   machine. Your command line will most likely be different from this one, especially if you use
+   Windows, but I hope you got the gist.
+   
+---
+user@host:~$
+---
+   
+   Here is how the command line will look like on the virtual machine:
+   
+---
+vagrant@vagrant-ubuntu-trusty-32:~$
+---
+   
+   Once we have set the virtual machine, we will only use the guest terminal.
+
+===
+
+Bring home lessons
+
+  * Virtualization is an easy way to control the environment. We want to have such a control
+    because we do not want to spent time with the environment.
+
+  * To run a virtual machine you need a hypervisor. The hypervisor we are going to run is called
+    VirtualBox.
+
+  * Vagrant is a tool to control hypervisors easily.
+
+  * In this course you can easily tell the guest from the host by looking at the beginning of the
+    command line.
+

@@ -1,0 +1,62 @@
+iv. Preparando o ambiente
+
+[../../images/setup-process.svg]
+
+* Passo 1 - Instalar VirtualBox e Vagrant
+   
+   Primeiro você precisa instalar o VirtualBox e o Vagrant no seu computador. Estes dois softwares
+   são aquilo que você vai precisar para executar máquinas virtuais.
+    
+   [{{{./iv-setting-up-the-environment-linux.html}Instalando VirtualBox e Vagrant no Linux}}]
+     
+     Se o seu computador tem o Linux instalado, nós fornecemos instruções para Ubuntu pois é uma
+     as distribuições Linux mais populares atualmente.
+     
+   [{{{./iv-setting-up-the-environment-windows.html}Instalando VirtualBox e Vagrant no Windows}}]
+     
+     No caso do seu computador ter Windows. Diferente da instalação para Ubuntu, será necessário
+     fazer o download e instalar o VirtualBox e o Vagrant manualmente.
+     
+   []
+
+* Passo 2 - Installar a VM das aulas
+
+   Depois de ter instalado o VirtualBox e o Vagrant, você precisa instalar a VM das aulas de Java.
+    
+   [{{{./iv-setting-up-the-environment-download-vm.html}Download da VM das aulas}}]
+     
+     Esta é a forma mais fácil de obter a VM das aulas rodando sobre o Vagrant. Use o Vagrant para
+     fazer o download e instalar a VM que nós disponibilizamos online.
+     
+   [{{{./iv-setting-up-the-environment-create-vm.html}Criar a VM das aulas a partir de uma VM Ubuntu}}]
+     
+     Se você quiser aprender como criar a VM você mesmo, esta seção ensinará tudo que nós fizemos
+     para criar a imagem a partir de uma VM Ubuntu.
+    
+   []
+
+* Passos 1 e 2 - Atalho em Linux
+
+  Você também pode tomar o atalho a seguir, que é simplesmente uma única linha de comando. Você só
+  pode usar este atalho se você tiver um PC rodando Ubuntu.
+  
+  [{{{./iv-setting-up-the-environment-shortcut.html}Atalho no Linux}}]
+
+* Passo 3 - As lições
+   
+   [{{{../lessons/index.html}Lista de lições}}]
+
+===
+
+Subpáginas
+
+  * {{{./iv-setting-up-the-environment-linux.html}Instalando VirtualBox e Vagrant no Linux}}
+    
+  * {{{./iv-setting-up-the-environment-windows.html}Instalando VirtualBox e Vagrant no Windows}}
+    
+  * {{{./iv-setting-up-the-environment-download-vm.html}Download da VM das aulas}}
+    
+  * {{{./iv-setting-up-the-environment-create-vm.html}Criar a VM das aulas a partir de uma VM Ubuntu}}
+    
+  * {{{./iv-setting-up-the-environment-shortcut.html}Atalho no Linux}}
+    

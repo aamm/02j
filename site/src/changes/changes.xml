@@ -5,7 +5,7 @@
     <author email=".">Akira</author>
   </properties>
   <body>
-    <release version="0.1" description="First release - basic contents" date="2014-11-02">
+    <release version="0.1" description="Basic contents" date="2014-11-02">
       <action dev="Akira" date="2014-11-02" type="update">Migrating website to GitHub</action>
       <action dev="Akira" date="2014-11-02" type="fix">Reviewing environment setup</action>
       <action dev="Akira" date="2014-11-02" type="fix">Reviewing install.sh - Adding an "apt-get update" before "apt-get install"</action>
@@ -15,21 +15,29 @@
       <action dev="Akira" date="2014-11-02" type="add">Maven call in install.sh corrected.</action>
       <action dev="Akira" date="2014-11-10" type="update">Rephrasing in index.apt</action>
     </release>
-    <release version="0.1" description="Second release - updated VM setup" date="2014-11-02">
+    <release version="0.1" description="Updated VM setup" date="2014-11-02">
       <action dev="Akira" date="2014-12-23" type="update">Updated Vagrant box location</action>
       <action dev="Akira" date="2014-12-25" type="update">Added environment installation for Windows users</action>
       <action dev="Akira" date="2014-12-28" type="add">Adding envSetup.sh to allow for the enviroment setup in a single line</action>
       <action dev="Akira" date="2014-12-28" type="update">Changed Vagrantfile to start the VM in GUI mode by default, which should make it easier for Windows users</action>
       <action dev="Akira" date="2014-12-28" type="update">Changed Vagrantfile to set the VM name</action>
     </release>
-    <release version="0.1" description="Third release - translation to Portuguese" date="2015-01-17">
+    <release version="0.1" description="Translation to Portuguese" date="2015-01-17">
       <action dev="Jana" date="2015-01-17" type="add">Added translation to Portuguese</action>
       <action dev="Akira" date="2015-01-17" type="add">Minor improvements in enviroment installation scripts</action>
       <action dev="Akira" date="2015-01-18" type="fix">Layout improvements</action>
       <action dev="Akira" date="2015-01-18" type="add">Added About and License information.</action>
     </release>
-    <release version="backlog" description="Future actions">
+    <release version="0.2" description="Finishing introduction" date="2015-02-08">
+      <action dev="Akira" date="2015-02-08" type="add">Download link to the VM image</action>
+      <action dev="Akira" date="2015-02-08" type="update">Rewriting introduction</action>
+      <action dev="Akira" date="2015-02-08" type="add">Added diagrams to explain the many options to set up the environment.</action>
+      <action dev="Akira" date="2015-02-08" type="update">Changed theme to use font without serif</action>
+    </release>
+    <release version="backlog" description="Future tasks">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
+      <action dev="Akira" type="update">Use the /vagrant directory in order to allow for students to use source code editors in the host OS.</action>
+      <action dev="Akira" type="update">Turn environment set up diagrams into clickable maps, or SVGs with links. The later only works if the HTML tag is object, not img.</action>
     </release>
   </body>
 </document>

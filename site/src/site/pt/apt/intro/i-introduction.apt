@@ -1,0 +1,58 @@
+i. Introdução
+
+* Java é....
+
+  Certo, nosso site não pretende ser autossuficiente. Mas não faz mal se definirmos o que é Java. Em outras palavras, o que nós planejamos estudar. Então aí vai:
+
+  Java é uma linguagem de programação. Há milhares de formas de definir uma linguagem de programação. A seguir temos algumas formas que se aplicam ao Java:
+
+  Java é uma linguagem de programação orientada a objeto (a siglas em inglês é OOP que significa Object-oriented programming). Este é um conceito um pouco abstrato para um iniciante, mas de forma simples nós podemos dizer que um objeto é um grupo de dados organizados de forma que permite usar classificadores. Pense em um classificador como um conjunto. Por exemplo, se nós pensarmos sobre um conjunto chamado “países”, os elementos dos países serão objetos. Cada objeto terá certas propriedades tais como nome da capital e a área. OOP nos permite organizar os dados dessa forma.
+
+  Java é uma linguagem com propósito geral – nós podemos fazer qualquer coisa em Java. De uma página web, a um jogo de computador, a uma aplicação de celular. Certas linguagens foram desenhadas para ter propósito geral. Por exemplo, linguagens query como SQL foram desenhadas originalmente para nos permitir buscar e organizar dados em bancos de dados. Tal linguagem não é desenhada para criar outras coisas.
+
+  Java é baseada em uma máquina virtual. Primeiramente, o que é uma máquina virtual? Nós todos sabemos que programas são executados por alguma coisa. Enquanto a forma clássica de executar um programa é ter um hardware executando um programa, nós também podemos ter um hardware executando um programa que executa outro programa. Isso soa uma pouco estranho a princípio, mas há um número de vantagens em fazer isso. A principal vantagem é que o programa intermediário, a máquina virtual, pode isolar o pprograma Java do hardware. Então o mesmo programa Java pode rodar em vários tipos de hardware, desde que haja uma máquina virtual para o hardware.
+
+  Java é uma linguagem de programação imperativa. Em outras palavras, quando você escreve um programa em Java, você está dizendo ao computador para fazer isto e não aquilo. Quando você usa linguagens de programação não-imperativas você pode simplesmente declara o que você quer e deixar o computador determinar como aquilo será feito.
+
+* Fatos simples sobre Java
+
+  Antes de começarmos, há algumas coisas que você precisa saber sobre Java. Há alguns fatos sobre Java que você precisa saber bem do começo:
+
+  Java não é JavaScript e vice-versa. Muitas pessoas confundem que duas linguagens de programação (corrigir em inglês tem um the na frente do two) por causa de seus nomes. Então aqui estão as diferenças:
+
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------------- ------------------------------------------------------------------------+
+|                    | Java                                                                                                                            | Javascript                                                                                         |
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+| Propósito          | Propósito geral                                                                                                                 | Desenhada para ser usada em navegadores web.                                                       |
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+| Modelo de execução | Primeiro você tem que compilar o código fonte e gerar um executável, então você executa o executável usando uma máquina virtual | Você executa os scripts escritos no JavaScript diretamente em um navegador sem nenhuma compilação. |
+*--------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+
+* Java não é a linguagem mais rápida
+
+  Aplicações escritas em Java podem se aproximar da performance de aplicações escritas em C, por exemplo; mas, em geral, o tipo de optimização para performance alta em C não pode ser reproduzida em Java.
+
+  Entretanto, Java é amplamente utilizada em computação de alta performance, ou seja, a linguagem oferece vantagens importantes para solucionar problemas que requerem processamento rápido.
+
+* Java não é a última linguagem que você vai aprender
+
+  Não se engane. Nenhum programador programa em apenas uma linguagem. Mesmo programadores que são especializados em Java, e somente criam sistemas que são baseados em Java, precisam conhecer algum tipo de SQL, que é uma linguagem de interface com um banco de dados.
+
+* Programar em Java de verdade requer sólidos conhecimentos de orientação a objetos
+
+  Não pense que você será capaz de construir programas decentes em Java sem conhecer o que é OOP.
+
+* Java não está finalizado
+
+  Novas versões de Java são lançadas de vez em quando para corrigir bugs, problemas de compatibilidade e mesmo para mudar a forma como os programadores criam seus programas.
+
+===
+
+JDK vs JRE
+
+  Quais são as diferenças entre uma JDK e uma JRE?
+
+  JRE - Java Runtime Environment - uma coleção de programas que permite que aplicações escritas em Java sejam executadas. Qualquer usuário que deseje executar programas em Java precisa ter uma JRE instalada.
+
+  JDK - Java Development Kit - é uma coleção de ferramentas básicas que desenvolvedores precisam para programar em Java. A JDK contém uma JRE, uma vez que programadores precisam executar suas aplicações para testá-las. Tipicamente, somente desenvolvedores de aplicações precisam ter uma JDK instalada.
+

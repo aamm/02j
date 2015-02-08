@@ -12,16 +12,22 @@
   </skin>
 
   <body>
-    <menu name="Navegação">
-      <item name="Início" href="index.html" />
-      <item name="Primeiros passos" collapse="true">
-        <item name="i. Introdução" href="i-introduction.html" />
-        <item name="ii. Material do Curso" href="ii-course-material.html" />
-        <item name="iii. Preparando o ambiente – Linux" href="iii-setting-up-the-environment-linux.html" />
-        <item name="iii. Preparando o ambiente - Windows" href="iii-setting-up-the-environment-windows.html" />
-        <item name="iv. Mini tutorial do Vagrant" href="iv-vagrant-mini-tutorial.html" />
+    <menu name="Início">
+      <item name="Primeiros passos" href="intro/index.html" collapse="true" />
+      <item name="i. Introdução" href="intro/i-introduction.html" />
+      <item name="ii. Material do curso" href="intro/ii-course-material.html" />
+      <item name="iii. Descrição do ambiente" href="intro/iii-env-description.html" />
+      <item name="iv. Preparando o ambiente" href="intro/iv-setting-up-the-environment.html">
+        <item name="Passo 1 - Preparando o ambiente - Linux" href="intro/iv-setting-up-the-environment-linux.html" />
+        <item name="Passo 1 - Preparando o ambiente - Windows" href="intro/iv-setting-up-the-environment-windows.html" />
+        <item name="Passo 2 - Download da VM das aulas" href="intro/iv-setting-up-the-environment-download-vm.html" />
+        <item name="Passo 2 - Criando a VM das aulas a partir de uma VM Ubuntu" href="intro/iv-setting-up-the-environment-create-vm.html" />
+        <item name="Passos 1 e 2 - Atalho em Linux" href="intro/iv-setting-up-the-environment-shortcut.html" />
       </item>
-      <item name="Lições" collapse="true">
+      <item name="v. Vagrant - Mini Tutorial" href="intro/v-vagrant-mini-tutorial.html" />
+    </menu>
+    <menu name="Lições">
+      <item name="Lições" href="lessons/index.html" collapse="true">
         <item name="1. Olá, mundo!" href="lesson-1.html" />
         <item name="2. Cálculos básicos" href="lesson-2.html" />
       </item>
@@ -41,7 +47,7 @@
   
   <custom>
     <reflowSkin>
-      <theme>bootswatch-readable</theme>
+      <theme>bootswatch-spacelab</theme>
       <highlightJs>true</highlightJs>
       <brand>
       <!-- Brand text in top-left part of the site -->

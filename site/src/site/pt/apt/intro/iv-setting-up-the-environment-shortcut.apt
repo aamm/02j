@@ -1,0 +1,31 @@
+Passos 1 e 2 - Atalho no Linux
+
+[../../images/setup-process-shortcut.svg]
+
+  Este método é para os extremamente impacientes ou para os colaboradores do projeto. É assim que
+  nós criamos nossa própria imagem de VM. Aqui assumimos que você está rodando Ubuntu Linux. Então
+  este processo não funcionará se você tiver outra plataforma.
+
+  Se você só tiver tempo para digitar uma simples linha de comando, aqui está. Mas antes de
+  rodá-la, verifique se você confia nos conteúdos de
+  {{{http://aamm.github.io/02j/vagrant/envSetup.sh}envSetup.sh}}. A linha abaixo está pedindo ao
+  computador para baixar tal script e executá-lo. Se o script contém qualquer coisa que pode
+  danificar seu computador, não o execute.
+  
+* Execute isto no terminal
+
+-----------------------------------------------------------------
+wget -q -O - http://aamm.github.io/02j/vagrant/envSetup.sh | bash
+-----------------------------------------------------------------
+  
+* A seguir, tutorial de Vagrant ou Passo 3
+
+  Agora você pode proceguir para o {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}
+  ou {{{../lessons/lessons.html}Passo 3, as lições}}.
+
+===
+
+Atenção
+
+  Sempre verifique os scripts que você executa em seu computador. Eles podem conter código
+  maliciosamente escrito para danificar os seus dados ou roubar informações sigilosas.

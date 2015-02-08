@@ -1,0 +1,58 @@
+i. Introduction
+
+* Java is...
+
+  Right, this website does not intent to be self contained. But it does not hurt if we define what is Java. In other words, what are we planning to study. So here we go:
+
+  Java is a programming language. There are thousands of ways to label a programming languages. Here are some that apply to Java:
+
+  Java is object-oriented - object-oriented programming (OOP) is a somewhat abstract concept for the beginner, but in simple terms we can say that an object is a bunch of data organized in a way that allow us to use classifiers. Think of a classifier as a set. For instance, if we think about a set called "countries", the elements of countries will be objects. Each object will have certain properties such as the name of the capital and the area. OOP allow us to organize data in such a way.
+
+  Java is general purpose - we can do anything with Java. From a webpage, to a computer game, to a mobile phone application. Certain languages were not designed to be general purpose. For instance, query languages such as SQL were designed originally to allow us to search and organize data in a database. Such a language is just not fit to create other things.
+
+  Java is based on a virtual machine - First, what is a virtual machine? We all know that programs are executed by something. While the classic way to execute a program is having a hardware executing the program, we can also have the hardware executing a program that executes another program. Sounds crazy at first, but there is a number of advantages on doing so. The main one is that the intermediate program, the virtual machine, can insulate the Java program from the hardware. So the same Java program can run on multiple kinds of hardware, as long as there is a virtual machine for the hardware.
+
+  Java is an imperative programming language - In other words, when you write a program in Java you are telling the computer to do this, and to do that. When you use non-imperative programming languages, you can simply declare what you want and let the computer figure out how to get that done.
+
+* Simple Facts About Java
+
+  Before we begin, there are simple things you need to know about Java. There are a few facts about Java you need to know from the very beginning:
+
+  Java is not Javascript and vice-versa - Several people confuse these two programming languages because of their names. So here are the differences:
+
+*-----------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------- --------------------------------------------------------------------+
+|                 | Java                                                                                                                           | Javascript                                                                                     |
+*-----------------+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+| purpose         | General purpose                                                                                                                | Designed to be used in web browsers                                                                      |
+*-----------------+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+| execution model | First you have to compile the source code and generate an executable, then you execute the executable using a virtual machine. | You execute the scripts written in Javascript directly in the browser without any compilation. |
+*-----------------+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+
+* Java is not the fastest language
+
+  Applications written in Java can get close to the performance of applications written in C, for example, but in general the kind of optimization to high performance in C cannot be reproduced in Java.
+
+  Nevertheless, Java is in large use in high performance computing, meaning the language offers important advantages to the solution of problems that require fast processing.
+
+* Java is not the last language you will learn
+
+  Don't be fooled. No programmer programs in just one language. Even programmers that are specialized in Java and only create systems that are based on Java need to know some sort of SQL, which is a language to interface with a database.
+
+* Programming in Java for real requires a solid knowledge of object-orientation design
+
+  Don't think you will be able to build decent Java programs without knowing what OOP (Object-Oriented Programming) is.
+
+* Java is not finished
+
+  New versions of Java are released once in a while to correct bugs, compatibility problems and even to change the way programmers should create their programs.
+
+===
+
+JDK vs JRE
+
+  What is the differences between a JDK and a JRE?
+
+  JRE - Java Runtime Environment - a collection of pieces of software that allows for applications written in Java to be executed. Any user who wants to execute Java programs should have a JRE installed.
+
+  JDK - Java Development Kit - is a collection of basic tools the developers need to program in Java. The JDK contains a JRE, since programmers need to execute their applications to test them. Typically, only application developers will need to have a JDK installed.
+

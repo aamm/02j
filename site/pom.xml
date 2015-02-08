@@ -10,7 +10,7 @@
   <description>Zero to Java Site</description>
   <groupId>com.github.aamm</groupId>
   <artifactId>zeroToJava</artifactId>
-  <version>0.1</version>
+  <version>0.2</version>
   <url>https://github.com/aamm/hyphenType</url>
 
   <packaging>jar</packaging>

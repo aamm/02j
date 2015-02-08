@@ -4,13 +4,23 @@ About From Zero to Java
   great importance to his own privacy but wants to make sure that no one will use the material on
   this web site to charge money from others. That is the only reason why he decided to write his
   own name on this page.
+
+* Freedom
   
-  All contents are free (as in "freedom", not as in "free beer"), and will remain free forever.
-  Check our {{{./license.html}license}} for more information.
+  All contents are {{{http://www.gnu.org/philosophy/free-sw.html}free}} (as in
+  "{{{http://www.gnu.org/philosophy/free-sw.html}freedom}}", not as in "free beer"), and will
+  remain free forever. Check our {{{./license.html}license}} for more information.
   
+* Contact us
+
   This site is a work in progress and we would love to hear from you. Please contact us on
 
 [images/x.png]
 
-  The source code of this site is also freely available (again, as in "freedom") at
-  {{https://github.com/aamm/02j}}.
+  (the first character is a zero)
+
+* Source code
+
+  The source code of this site is also freely available (again, as in
+  "{{{http://www.gnu.org/philosophy/free-sw.html}freedom}}") at {{https://github.com/aamm/02j}}.
+

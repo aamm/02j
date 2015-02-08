@@ -1,0 +1,40 @@
+Step 2 - Download the Java classes VM
+
+[../images/setup-process-s2-download.svg]
+
+* Create the JavaClasses directory
+
+------------------------------------
+user@host:~$ mkdir JavaClasses
+user@host:~$ cd JavaClasses
+------------------------------------
+
+* Download the VM image
+
+------------------------------------
+user@host:~/JavaClasses$ vagrant box add javaclasses/02j https://s3-sa-east-1.amazonaws.com/javaclasses/vagrant/package.box
+------------------------------------
+
+* Create the VM
+
+------------------------------------
+user@host:~/JavaClasses$ vagrant init javaclasses/02j
+user@host:~/JavaClasses$ vagrant up
+------------------------------------
+
+  That is it!
+
+* Next, Vagrant tutorial or Step 3
+
+  Now you can proceed to the {{{../lessons/lessons.html}Step 3, the lessons}} or
+  {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}.
+
+===
+
+Next step
+
+  * {{{../lessons/lessons.html}Step 3, the lessons}}
+
+  * {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}
+
+

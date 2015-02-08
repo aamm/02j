@@ -1,0 +1,197 @@
+v. Vagrant mini tutorial
+
+  Along this course Vagrant will be used all the time. Although details about Vagrant are completely out of the scope of this course, it is important that the student understands some of the basic concepts about Vagrant to get familiar with the environment.
+  
+  Perhaps one of the main problems about Vagrant for the beginner is that nothing is graphically visible. The user needs to have a sort of mental image of what is going on in order to navigate. As we saw on the previous part, there are two consoles: the host and the guest, that can be identified by their prefixes:
+
+---
+user@host:~/JavaClasses$
+vagrant@vagrant-ubuntu-trusty-32:~$ 
+---
+
+  The first console depends on your computer and is quite different if you are using Windows. This tutorial is divided into topics to serve as a reference but it can also be followed from begin to end if you have Vagrant already configured as presented on the previous part.
+
+  It is important that you are always at the JavaClasses directory. Being on that directory is what makes Vagrant know that you are trying to work with a certain virtual machine.
+
+* Checking the status
+
+---
+user@host:~/JavaClasses$ vagrant status
+---
+
+  This command shows if the virtual machine is running or not.
+
+* Starting the virtual machine
+
+---
+user@host:~/JavaClasses$ vagrant up
+---
+
+  Now that the virtual machine is running we can check the status again and see that it changed.
+
+---
+user@host:~/JavaClasses$ vagrant status
+---
+
+* Stopping the virtual machine
+
+---
+user@host:~/JavaClasses$ vagrant halt
+---
+
+  Now if we check the status, we will see that it changed to the original one.
+
+---
+user@host:~/JavaClasses$ vagrant status
+---
+
+* Accessing the virtual machine terminal
+
+---
+user@host:~/JavaClasses$ vagrant ssh
+vagrant@vagrant-ubuntu-trusty-32:~$
+---
+
+  Now we are inside of the virtual machine. All changes we make, such as creating files or directories, are going to change the virtual machine (guest OS). In order to illustrate such a concept, let us create a simple directory called trash:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ mkdir trash
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+trash
+---
+
+  We need to go back to the host machine to compare the contents.
+
+* Leaving the virtual machine
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$
+---
+
+  It is as simple as ending any console session. We can now check the contents of the host machine and we will see that the trash directory is not there:
+
+---
+user@host:~/JavaClasses$ ls
+install.sh  VagrantFile
+---
+
+  But now we have the trash directory which is useless for us. What if we want to go back in time when everything was clean?
+
+* Going back to a snapshot
+  
+  A snapshot is like a frozen picture of the virtual machine. You take that picture and you can order the virtual machine to go back to that state. On the previous section we took the "clean" snapshot. Now, let's go back to that snapshot. WARNING! You are about to erase everything you have done since you took the "clean" snapshot.
+
+---
+user@host:~/JavaClasses$ vagrant go clean
+vagrant@vagrant-ubuntu-trusty-32:~$
+---
+
+  Vagrant puts you back to the guest console when you go back to a snapshot. Now you can run ls again and see that the trash directory is gone.
+
+---
+user@host:~/JavaClasses$ ls
+---
+
+  Now you can see nothing. What if you want to do the opposite, going further in time? You can't. In order to go to a certain state, you need to explicitly ask Vagrant to take a snapshot. If you wanted to go back to that state you should have taken a snapshot when you were at that state.
+So let us create another file called trashAgain, which will help us understand the process.
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ mkdir trashAgain
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+trashAgain
+---
+
+* Taking a snapshot
+
+  Now we can take another snapshot and name it x. In order to take a snapshot we need to go back to the host machine. It is interesting to note that the guest machine cannot do anything like that. The guest machine does not know that it is itself a virtual machine.
+
+  Now we can take another snapshot and name it x. In order to take a snapshot we need to go back to the host machine.
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ vagrant take x
+---
+
+  Now we will go back to the "clean" state, which did not have the directory called "trashAgain".
+
+---
+user@host:~/JavaClasses$ vagrant go clean
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+(nothing)
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+---
+
+  Now let's go to the "x" state and see the "trashAgain" directory reappearing:
+
+---
+user@host:~/JavaClasses$ vagrant go x
+vagrant@vagrant-ubuntu-trusty-32:~$ ls
+trashAgain
+---
+
+  Now let's go back to the clean state.
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ vagrant go clean
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ 
+---
+
+  We have two snapshots, let's learn how to list them:
+
+* Listing snapshots
+
+---
+user@host:~/JavaClasses$ vagrant snapshot list
+clean x
+---
+
+  We don't need the "x" snapshot, which only contains trash. So we can then remove it:
+
+* Removing a snapshot
+
+---
+user@host:~/JavaClasses$ vagrant snapshot delete x
+user@host:~/JavaClasses$ vagrant snapshot list
+clean
+---
+
+  As you can see, now you have only the "clean" snapshot.
+
+* Rule of thumb
+
+  Never type the following command again:
+
+---
+user@host:~/JavaClasses$ vagrant take clean
+---
+
+  If you type this command again you will modify the "clean" state. We don't want this! We want the clean state to be just like we defined on the previous part.
+
+  Therefore, as long as you do not change the "clean" state, you can always go back to it by typing:
+
+---
+user@host:~/JavaClasses$ vagrant go clean
+---
+
+* Sharing your Vagrant box
+
+  Once you have configured your virtual machine box, you can use Vagrant to share such a box by typing the following:
+
+---
+vagrant package --base zeroToJava
+---
+
+  This command will create a file called package.box, which can be used to create copies of the same virtual machine on another computer.
+
+===
+
+More info
+
+  For more information about Vagrant and snapshot commands please check:
+  
+  {{http://docs.vagrantup.com/v2/}}
+  
+  {{{http://priyaaank.tumblr.com/post/50707609769/snapshotting-vagrant}http://priyaaank.tumblr.com/.../snapshotting-vagrant}}

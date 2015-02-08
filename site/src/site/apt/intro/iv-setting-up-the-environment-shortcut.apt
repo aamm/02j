@@ -1,0 +1,31 @@
+Step 1 and 2 - Linux shortcut
+
+[../images/setup-process-shortcut.svg]
+
+  This method is either for the extremely impatient or for project contributors. This is how we
+  create our own VM image. Here we assume that you have an Ubuntu Linux. So this process will not
+  work on other platforms.
+  
+  If you only have time to type a single in the command line, here it is. But before you run it,
+  make sure you trust the contents of
+  {{{http://aamm.github.io/02j/vagrant/envSetup.sh}envSetup.sh}}. The line bellow is asking your
+  computer to download such script and execute it. If the script contains anything that can harm
+  your computer, do not run it.
+  
+* Run this on the terminal
+
+-----------------------------------------------------------------
+wget -q -O - http://aamm.github.io/02j/vagrant/envSetup.sh | bash
+-----------------------------------------------------------------
+  
+* Next, Vagrant tutorial or Step 3
+
+  Now you can proceed to the {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}
+  or {{{../lessons/lessons.html}Step 3, the lessons}}.
+
+===
+
+Warning
+
+  Always check the scripts you run in your computer. They might contain code that was maliciously
+  written to damage your data or to steal sensitive information.

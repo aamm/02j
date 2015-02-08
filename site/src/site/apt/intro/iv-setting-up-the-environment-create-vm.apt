@@ -1,0 +1,138 @@
+Step 2 - Create Java classes VM from a Ubuntu VM
+
+[../images/setup-process-s2-create.svg]
+
+  Instructions assume that you are using Linux. If you are using Windows, you need to make some
+  small adaptations.
+
+------------------------------
+user@host:~$ mkdir JavaClasses
+user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$
+------------------------------
+
+  Before we continue, we need to introduce a few Linux commands:
+  
+  * <<<mkdir>>> - to make a directory on Linux.
+  
+  * <<<ls>>> - to list the contents of the current directory.
+  
+  * <<<cd>>> - to change the current directory.
+  
+  []
+  
+  Now copy the following files to the JavaClasses directory:
+  
+  * {{{./vagrant/Vagrantfile}Vagrantfile}}
+  
+  * {{{./vagrant/install.sh}install.sh}}
+  
+  []
+  
+  Next, start the virtual machine using the following command:
+  
+---
+user@host:~/JavaClasses$ vagrant up
+---
+  
+  This last command will take some time and download a lot of files from the Internet. But, don't
+  worry, if you correctly manage Vagrant you will never need to download all that again. We will
+  take a snapshot called "clean". A snapshot is a virtual machine state. We take a snapshot because
+  we want to go back to that state later.
+  
+  Now that we have installed everything it is time to take our main snapshot:
+  
+---
+user@host:~/JavaClasses$ vagrant halt
+user@host:~/JavaClasses$ vagrant snapshot take clean
+---
+  
+  That is it. At this point you should have everything you need to start the lessons. But it is
+  worth checking if everything is working fine. So if there was any glitch on the installation you
+  can try to fix it.
+  
+* Checking the installation
+  
+  Next we will bring the virtual machine up again and connect to the its console:
+  
+---
+user@host:~/JavaClasses$ vagrant up
+user@host:~/JavaClasses$ vagrant ssh
+---
+  
+  Depending on your platform, Vagrant will complain on the first command that the virtual machine
+  was already running, but such complaint is harmless. After the second command you will see the
+  following:
+  
+---
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic i686)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct  7 14:30:31 UTC 2014
+
+  System load:  0.41              Processes:           78
+  Usage of /:   2.6% of 39.34GB   Users logged in:     0
+  Memory usage: 15%               IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+vagrant@vagrant-ubuntu-trusty-32:~$ 
+---
+
+  This means you have successfully installed a new virtual machine and Vagrant is working fine.
+
+* Your first Java program
+
+  Type the following on the terminal:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ echo 'class A { public static void main(String[] args) { System.out.println("Hello World!"); }}' > A.java
+vagrant@vagrant-ubuntu-trusty-32:~$ javac A.java
+vagrant@vagrant-ubuntu-trusty-32:~$ java A
+----
+
+  You will see 
+
+---
+Hello World!
+---
+
+  Congratulations! You just created your first Java program, compiled it, and executed it!
+
+  Don't worry about the details. We will see later what each of those commands mean.
+
+  Now let's clean everything so you can start anew:
+
+---
+vagrant@vagrant-ubuntu-trusty-32:~$ exit
+user@host:~/JavaClasses$ vagrant snapshot go clean
+vagrant@vagrant-ubuntu-trusty-32:~$
+----
+
+  The following section will introduce the basic concepts of Vagrant. So these commands will start
+  to make more sense.
+
+* Next, Vagrant tutorial or Step 3
+
+  Now you can proceed to the {{{../lessons/lessons.html}Step 3, the lessons}} or
+  {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}.
+
+===
+
+Next step
+
+  * {{{../lessons/lessons.html}Step 3, the lessons}}
+
+  * {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}
+
+
