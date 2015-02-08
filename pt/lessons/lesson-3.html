@@ -67,15 +67,15 @@
 									<li ><a href="../intro/v-vagrant-mini-tutorial.html" title="v. Vagrant - Mini Tutorial">v. Vagrant - Mini Tutorial</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
+							<li class="dropdown active">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lições <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu ">
 										<a href="index.html" title="Lições">Lições</a>
 										<ul class="dropdown-menu">
-											<li ><a href="../lesson-1.html" title="1. Olá, mundo!">1. Olá, mundo!</a></li>
-											<li ><a href="../lesson-2.html" title="2. Cálculos básicos">2. Cálculos básicos</a></li>
-											<li ><a href="../lesson-3.html" title="3. Introdução aos métodos">3. Introdução aos métodos</a></li>
+											<li ><a href="lesson-1.html" title="1. Olá, mundo!">1. Olá, mundo!</a></li>
+											<li ><a href="lesson-2.html" title="2. Cálculos básicos">2. Cálculos básicos</a></li>
+											<li class="active"><a href="" title="3. Introdução aos métodos">3. Introdução aos métodos</a></li>
 										</ul>
 									</li>
 									<li ><a href="../faq.html" title="FAQ">FAQ</a></li>
@@ -158,11 +158,11 @@
     System.out.println(c);
 }</pre> 
   </div> 
-  <p>The method signature tells us how a method should be called. In this lesson we only care about what arguments a method requires. In the previous example the method signature is:</p> 
+  <p>A assinatura de um m&eacute;todo nos diz como o m&eacute;todo deve ser chamado. Nesta li&ccedil;&atilde;o n&oacute;s somente nos importamos com quais argumentos um m&eacute;todo exige. No exemplo acima a assinatura do m&eacute;todo &eacute;:</p> 
   <div class="source"> 
    <pre>public void m(int a, int b, int c)</pre> 
   </div> 
-  <p>The method body is what the method does. It is inside of the body that we should write imperative statements such as &quot;print this&quot;, or &quot;do a certain calculation.&quot; In the previous example, the method signagture is:</p> 
+  <p>O corpo de um m&eacute;todo &eacute; o que o m&eacute;todo faz. &Eacute; dentro do corpo do m&eacute;todo que devemos escrever comandos tais como &quot;imprima isso&quot;, ou &quot;efetue um determinado c&aacute;lculo&quot;. No exemplo acima, o corpo do m&eacute;todo &eacute;:</p> 
   <div class="source"> 
    <pre>    System.out.println(a);
     System.out.println(b);
@@ -192,8 +192,8 @@
 			<div class="well sidebar">
 	<h2 id="Lies">Li&ccedil;&otilde;es</h2>
 <ul> 
- <li>Methods are a way to organize your source code while avoiding repeating source code sections.</li> 
- <li>You can pass arguments to methods.</li> 
+ <li>M&eacute;todos s&atilde;o formas de organizarmos nosso c&oacute;digo fonte enquanto evitamos repeti&ccedil;&otilde;es de blocos de c&oacute;digo fonte.</li> 
+ <li>Voc&ecirc; pode passar argumentos para m&eacute;todos.</li> 
 </ul>
 			</div>
 		</div>
@@ -246,8 +246,19 @@
 							<a href="../intro/v-vagrant-mini-tutorial.html" title="v. Vagrant - Mini Tutorial">v. Vagrant - Mini Tutorial</a>
 						</li>
 						<li class="nav-header">Lições</li>
+						<li class="active">
+							<a href="index.html" title="Lições">Lições <i class="icon-chevron-down"></i></a>
+							<ul class="nav nav-list">
 						<li >
-							<a href="index.html" title="Lições">Lições <i class="icon-chevron-right"></i></a>
+							<a href="lesson-1.html" title="1. Olá, mundo!">1. Olá, mundo!</a>
+						</li>
+						<li >
+							<a href="lesson-2.html" title="2. Cálculos básicos">2. Cálculos básicos</a>
+						</li>
+						<li class="active">
+							<a href="#" title="3. Introdução aos métodos">3. Introdução aos métodos</a>
+						</li>
+							</ul>
 						</li>
 						<li >
 							<a href="../faq.html" title="FAQ">FAQ</a>
