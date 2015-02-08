@@ -33,6 +33,7 @@
       <action dev="Akira" date="2015-02-08" type="update">Rewriting introduction</action>
       <action dev="Akira" date="2015-02-08" type="add">Added diagrams to explain the many options to set up the environment.</action>
       <action dev="Akira" date="2015-02-08" type="update">Changed theme to use font without serif</action>
+      <action dev="Akira" date="2015-02-08" type="add">Added lesson 3</action>
     </release>
     <release version="backlog" description="Future tasks">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
