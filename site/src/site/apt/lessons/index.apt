@@ -1,12 +1,16 @@
 Lessons
 
-*---------------------------------------------+-----------------------------+
-|| Lesson                                     || Description                |
-*---------------------------------------------+-----------------------------+
-| {{{./lesson-1.html}1. Hello world}}         | Write messages              |
-|                                             | to the console.             |
-*---------------------------------------------+-----------------------------+
-| {{{./lesson-2.html}2. Simple calculations}} | Use Java to make simple     |
-|                                             | calculations and print the  |
-|                                             | results in the console.     |
-*---------------------------------------------+-----------------------------+
+*-------------------------------------------------+-----------------------------+
+|| Lesson                                         || Description                |
+*-------------------------------------------------+-----------------------------+
+| {{{./lesson-1.html}1. Hello world}}             | Write messages              |
+|                                                 | to the console.             |
+*-------------------------------------------------+-----------------------------+
+| {{{./lesson-2.html}2. Simple calculations}}     | Use Java to make simple     |
+|                                                 | calculations and print the  |
+|                                                 | results in the console.     |
+*-------------------------------------------------+-----------------------------+
+| {{{./lesson-3.html}3. Introduction to methods}} | Learn how to call and       |
+|                                                 | create methods in Java.     |
+*-------------------------------------------------+-----------------------------+
+
