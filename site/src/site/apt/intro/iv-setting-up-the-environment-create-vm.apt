@@ -23,9 +23,9 @@ user@host:~/JavaClasses$
   
   Now copy the following files to the JavaClasses directory:
   
-  * {{{./vagrant/Vagrantfile}Vagrantfile}}
+  * {{{../vagrant/Vagrantfile}Vagrantfile}}
   
-  * {{{./vagrant/install.sh}install.sh}}
+  * {{{../vagrant/install.sh}install.sh}}
   
   []
   
