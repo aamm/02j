@@ -61,7 +61,7 @@
       <question>Eu adoro esse projeto e eu quero contribuir com ele. Como eu posso fazer?</question>
       <answer>
         <p>
-	      Há muitas formas de contribuir.
+	      Há muitas formas de contribuir. Primeiro, leia a <a href="about.html">página sobre nós</a>.
         </p>
         <p>
           A forma mais fácil é criar uma conta no GitHub e criar uma questão (issue) para

@@ -59,7 +59,7 @@
       <question>I love this project and I want to contribute. What should I do?</question>
       <answer>
         <p>
-	      There are several ways to contribute.
+	      There are several ways to contribute. First, read the <a href="about.html">about page</a>.
         </p>
         <p>
           The easiest way is to create a GitHub account and create an issue for us to fix:
