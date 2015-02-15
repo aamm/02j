@@ -161,6 +161,16 @@ vagrant@vagrant-ubuntu-trusty-32:~$ </pre>
   </div> 
  </div> 
  <div class="section"> 
+  <h3 id="Configurar_a_janela_grfica_para_o_VirtualBox">Configurar a janela gr&aacute;fica para o VirtualBox</h3> 
+  <p>Por padr&atilde;o, quando a VM &eacute; ligada, o VirtualBox executa a VM nos &quot;bastidores&quot;. Isto &eacute;, o VirtualBox n&atilde;o mostra qualquer janela gr&aacute;fica. O usu&aacute;rio, ent&atilde;o, precisa digitar <tt>vagrant status</tt> para saber se a VM est&aacute; executando ou n&atilde;o.</p> 
+  <p>Esta janela gr&aacute;fica tamb&eacute;m facilita o uso do terminal da VM para principiantes, pois serve como alternativa para o uso de SSH (console remoto). Infelizmente o sistema operacional Windows vem sem um cliente para SSH. Por isso recomendamos a instala&ccedil;&atilde;o do programa Putty para usu&aacute;rios Windows.</p> 
+  <p>Para configurar o Vagrant para mostrar a janela gr&aacute;fica do VirtualBox, edite o arquivo Vagrantfile e altere o valor da propriedade <tt>v.gui</tt> para <tt>true</tt>:</p> 
+  <div> 
+   <pre>v.gui = true</pre> 
+  </div> 
+  <p>O usu&aacute;rio e a senha s&atilde;o <i>strong</i>vagrant<i>/vagrant</i> e <i>strong</i>vagrant<i>/vagrant</i>, respectivamente.</p> 
+ </div> 
+ <div class="section"> 
   <h3 id="Interrompendo_uma_mquina_virtual">Interrompendo uma m&aacute;quina virtual</h3> 
   <div> 
    <pre>user@host:~/JavaClasses$ vagrant halt</pre> 
@@ -294,6 +304,7 @@ clean</pre>
 			<ul class="nav nav-list">
 		<li><a href="#Verificando_o_status" title="Verificando o status">Verificando o status</a>
 		<li><a href="#Iniciando_uma_mquina_virtual" title="Iniciando uma máquina virtual">Iniciando uma máquina virtual</a>
+		<li><a href="#Configurar_a_janela_grfica_para_o_VirtualBox" title="Configurar a janela gráfica para o VirtualBox">Configurar a janela gráfica para o VirtualBox</a>
 		<li><a href="#Interrompendo_uma_mquina_virtual" title="Interrompendo uma máquina virtual">Interrompendo uma máquina virtual</a>
 		<li><a href="#Acessando_o_terminal_da_mquina_virtual" title="Acessando o terminal da máquina virtual">Acessando o terminal da máquina virtual</a>
 		<li><a href="#Saindo_da_mquina_virtual" title="Saindo da máquina virtual">Saindo da máquina virtual</a>

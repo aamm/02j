@@ -129,7 +129,7 @@
 
 	<div class="main-body">
 	<div class="row">
-		<div class="span8">
+		<div class="span12">
 			<div class="body-content">
 				<div class="section"> 
  <div class="page-header">
@@ -138,6 +138,8 @@
  <p><b>Programming environment</b></p> 
  <ol style="list-style-type: decimal"> 
   <li><a href="#eclipse">Do I need to use Maven if I use Eclipse?</a></li> 
+  <li><a href="#vagrant_window_doesnt_want">When I start the VM using &quot;vagrant up&quot; a window comes out. What is it and how to get rid of it?</a></li> 
+  <li><a href="#vagrant_window_want">How to activate the VirtualBox window? What are the username and password?</a></li> 
  </ol> 
  <p><b>About the project</b></p> 
  <ol style="list-style-type: decimal"> 
@@ -157,7 +159,35 @@
    <p align="right"><a href="#top">[top]</a></p> 
   </dd> 
  </dl> 
-</div> 
+</div>
+			</div>
+		</div>
+	</div>
+	<div class="row columns columns1">
+		<div class="span12">
+			<dt> 
+ <a name="vagrant_window_doesnt_want">When I start the VM using &quot;vagrant up&quot; a window comes out. What is it and how to get rid of it?</a> 
+</dt>
+<dd> 
+ <p> This is the VirtualBox window. VirtualBox show such a window to let users interact directly with the VM. But in this course we encourage students to use SSH instead. So this window is only useful for beginners who are not familiar with SSH yet. </p> 
+ <p> To get rid of this window, edit the <tt>Vagrantfile</tt> and change the value of <tt>v.gui</tt> to <tt>false</tt>. Changes will be effective the next time you turn on the VM. </p> 
+ <p align="right"><a href="#top">[top]</a></p>  
+</dd>
+		</div>
+	</div>
+	<div class="row">
+	</div>
+	<div class="row">
+		<div class="span12">
+			<div class="body-content">
+				<dt> 
+ <a name="vagrant_window_want">How to activate the VirtualBox window? What are the username and password?</a> 
+</dt>
+<dd> 
+ <p> In order to activate the VirtualBox window, edit the <tt>Vagrantfile</tt> and change the value of <tt>v.gui</tt> to <tt>true</tt>. </p> 
+ <p> Username and password are <b>vagrant</b> and <b>vagrant</b>, respectively. </p> 
+ <p align="right"><a href="#top">[top]</a></p> 
+</dd>
 <div class="section"> 
  <h2 id="About_the_project">About the project</h2> 
  <dl> 

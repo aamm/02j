@@ -161,6 +161,16 @@ vagrant@vagrant-ubuntu-trusty-32:~$ </pre>
   </div> 
  </div> 
  <div class="section"> 
+  <h3 id="Configuration_to_show_VirtualBoxs_graphical_window">Configuration to show VirtualBox's graphical window</h3> 
+  <p>By default, when the VM is started, VirtualBox will run it in the background. In other words, VirtualBox does not show any graphical window. The user needs to type <tt>vagrant status</tt> to know if the VM is running or not.</p> 
+  <p>Such a graphical window also makes it easy for the beginners to use the VM terminal, since this window is an alternative to SSH (the remote console). Unfortunately, the Windows operating system does not come with an SSH client. That is why we recommended Windows users to install Putty.</p> 
+  <p>To configure Vagrant to show such a window when the VM is starteed, edit the Vagrantfile and change the value of the <tt>v.gui</tt> to <tt>true</tt>:</p> 
+  <div> 
+   <pre>v.gui = true</pre> 
+  </div> 
+  <p>Username and password are <i>strong</i>vagrant<i>/vagrant</i> and <i>strong</i>vagrant<i>/vagrant</i>, respectively.</p> 
+ </div> 
+ <div class="section"> 
   <h3 id="Stopping_the_virtual_machine">Stopping the virtual machine</h3> 
   <div> 
    <pre>user@host:~/JavaClasses$ vagrant halt</pre> 
@@ -294,6 +304,7 @@ clean</pre>
 			<ul class="nav nav-list">
 		<li><a href="#Checking_the_status" title="Checking the status">Checking the status</a>
 		<li><a href="#Starting_the_virtual_machine" title="Starting the virtual machine">Starting the virtual machine</a>
+		<li><a href="#Configuration_to_show_VirtualBoxs_graphical_window" title="Configuration to show VirtualBox's graphical window">Configuration to show VirtualBox's graphical window</a>
 		<li><a href="#Stopping_the_virtual_machine" title="Stopping the virtual machine">Stopping the virtual machine</a>
 		<li><a href="#Accessing_the_virtual_machine_terminal" title="Accessing the virtual machine terminal">Accessing the virtual machine terminal</a>
 		<li><a href="#Leaving_the_virtual_machine" title="Leaving the virtual machine">Leaving the virtual machine</a>
