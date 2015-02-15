@@ -1,0 +1,25 @@
+Lesson 4 - The return clause in methods
+
+* What you are going to learn
+
+  How to use the return clause in methods.
+
+* Instructions
+
+  Change the contents of App.java. Check the TODO tag for instructions.
+
+* Theory
+
+  So far we have called methods that could do somethings, but did not return any value. Now we are
+  going to learn how to return values to the caller. This is done using the <<<return>>> clause.
+
+===
+
+Bring home lessons
+
+  * Methods can return values to the caller using the return clause.
+
+  * Return values can be the result of calculation, usually based on the arguments passed to the
+    method.
+
+  * Methods that return value are not declared using <<<void>>>.

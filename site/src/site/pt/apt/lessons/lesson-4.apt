@@ -1,0 +1,26 @@
+Lição 4 - A palavra return em métodos
+
+* O que você vai aprender
+
+  Como usar a palavra return em métodos.
+
+* Instruções
+
+  Edite o conteúdo de App.java. Verifique a tag TODO para instruções.
+
+* Teoria
+
+  Até agora nós chamamos métodos que faziam algo, mas que não retornavam nenhum valor. Agora nós
+  vamos aprender como returnar valores para aquele que chamou o método. Isso é feito através da
+  palavra <<<return>>>.
+
+===
+
+O que aprendemos
+
+  * Métodos podem retornar valores para quem os chamou usando a palavra return.
+
+  * Os valores de retorno podem ser o resultado de contas, em geral baseadas nos argumentos
+    passados para o método.
+
+  * Métodos que retornam valor não são declarados usando a palavra <<<void>>>.
