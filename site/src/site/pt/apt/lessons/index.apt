@@ -13,4 +13,7 @@ Lições
 | {{{./lesson-3.html}3. Introdução aos métodos}} | Aprenda como chamar e       |
 |                                                | criar métodos em Java.      |
 *------------------------------------------------+-----------------------------+
+| {{{./lesson-4.html}4. Return em methods}}      | Aprenda como retornar       |
+|                                                | valores em métodos.         |
+*------------------------------------------------+-----------------------------+
 
