@@ -81,6 +81,13 @@
       </sections>
       <pages>
 	<!-- Layout for individual pages -->
+        <faq>
+          <toc>false</toc>
+          <sections>
+            <body />
+            <columns>1</columns>
+          </sections>
+        </faq>
       </pages>
     </reflowSkin>
   </custom>

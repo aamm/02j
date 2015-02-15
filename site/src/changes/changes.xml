@@ -35,10 +35,17 @@
       <action dev="Akira" date="2015-02-08" type="update">Changed theme to use font without serif</action>
       <action dev="Akira" date="2015-02-08" type="add">Added lesson 3</action>
     </release>
+    <release version="0.2" description="Minor improvements" date="2015-02-08">
+      <action dev="Akira" date="2015-02-15" type="fix">Fixed broken links</action>
+      <action dev="Akira" date="2015-02-15" type="fix">VirtualBox Graphical window is now off by default</action>
+      <action dev="Akira" date="2015-02-15" type="add">Added explanation about VirtualBox graphical window</action>
+      <action dev="Akira" date="2015-02-15" type="fix">FAQ format</action>
+    </release>
     <release version="backlog" description="Future tasks">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
       <action dev="Akira" type="update">Use the /vagrant directory in order to allow for students to use source code editors in the host OS.</action>
       <action dev="Akira" type="update">Turn environment set up diagrams into clickable maps, or SVGs with links. The later only works if the HTML tag is object, not img.</action>
+      <action dev="Akira" type="update">Migrate to Markdown</action>
     </release>
   </body>
 </document>

@@ -21,7 +21,7 @@ wget -q -O - http://aamm.github.io/02j/vagrant/envSetup.sh | bash
 * A seguir, tutorial de Vagrant ou Passo 3
 
   Agora você pode proceguir para o {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}
-  ou {{{../lessons/lessons.html}Passo 3, as lições}}.
+  ou {{{../lessons/index.html}Passo 3, as lições}}.
 
 ===
 

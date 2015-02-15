@@ -33,6 +33,27 @@ user@host:~/JavaClasses$ vagrant up
 user@host:~/JavaClasses$ vagrant status
 ---
 
+* Configurar a janela gráfica para o VirtualBox
+
+  Por padrão, quando a VM é ligada, o VirtualBox executa a VM nos "bastidores". Isto é, o
+  VirtualBox não mostra qualquer janela gráfica. O usuário, então, precisa digitar
+  <<<vagrant status>>> para saber se a VM está executando ou não.
+
+  Esta janela gráfica também facilita o uso do terminal da VM para principiantes, pois serve como
+  alternativa para o uso de SSH (console remoto). Infelizmente o sistema operacional Windows vem
+  sem um cliente para SSH. Por isso recomendamos a instalação do programa Putty para usuários
+  Windows.
+
+  Para configurar o Vagrant para mostrar a janela gráfica do VirtualBox, edite o arquivo
+  Vagrantfile e altere o valor da propriedade <<<v.gui>>> para <<<true>>>:
+
+---
+v.gui = true
+---
+
+  O usuário e a senha são <strong>vagrant</vagrant> e <strong>vagrant</vagrant>, respectivamente.
+
+
 * Interrompendo uma máquina virtual
 
 ---

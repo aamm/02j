@@ -33,6 +33,27 @@ user@host:~/JavaClasses$ vagrant up
 user@host:~/JavaClasses$ vagrant status
 ---
 
+* Configuration to show VirtualBox's graphical window
+
+  By default, when the VM is started, VirtualBox will run it in the background. In other words,
+  VirtualBox does not show any graphical window. The user needs to type <<<vagrant status>>> to
+  know if the VM is running or not.
+
+  Such a graphical window also makes it easy for the beginners to use the VM terminal, since this
+  window is an alternative to SSH (the remote console). Unfortunately, the Windows operating system
+  does not come with an SSH client. That is why we recommended Windows users to install Putty.
+  
+  To configure Vagrant to show such a window when the VM is starteed, edit the Vagrantfile and
+  change the value of the <<<v.gui>>> to <<<true>>>:
+
+---
+v.gui = true
+---
+
+  Username and password are <strong>vagrant</vagrant> and <strong>vagrant</vagrant>, respectively.
+
+
+
 * Stopping the virtual machine
 
 ---

@@ -6,13 +6,49 @@
       <question>Do I need to use Maven if I use Eclipse?</question>
       <answer>
         <p>
-          If you use Eclipse to program Java you will find buttons to run your program and test it. Our tests were written using JUnit, which Eclipse also understands. So in principle you would not need Maven to run anything if you use Eclipse.
+          If you use Eclipse to program Java you will find buttons to run your program and test it.
+          Our tests were written using JUnit, which Eclipse also understands. So in principle you
+          would not need Maven to run anything if you use Eclipse.
         </p>
         <p>
-          Then why do I suggest you should run Maven instead? There is a number of reasons. The first one is that Maven is probably the de facto standard to compile, test, and run Java. You will need to learn Maven sooner or later. Maven does much more than simply running Java. One of the main advantages of using Maven is that it manages dependencies for you, which out-of-the-box Eclipse does not.
+          Then why do I suggest you should run Maven instead? There is a number of reasons. The
+          first one is that Maven is probably the de facto standard to compile, test, and run Java.
+          You will need to learn Maven sooner or later. Maven does much more than simply running
+          Java. One of the main advantages of using Maven is that it manages dependencies for you,
+          which out-of-the-box Eclipse does not.
         </p>
         <p>
-          In fact, the best of both worlds can be reached if you import your project in Eclipse as a Maven project. So Eclipse will use Maven behind the scenes to manage dependencies and build everything for you.
+          In fact, the best of both worlds can be reached if you import your project in Eclipse as
+          a Maven project. So Eclipse will use Maven behind the scenes to manage dependencies and
+          build everything for you.
+        </p>
+      </answer>
+    </faq>
+    <faq id="vagrant_window_doesnt_want">
+      <question>When I start the VM using "vagrant up" a window comes out. What is it and how to get rid of it?</question>
+      <answer>
+        <p>
+          This is the VirtualBox window. VirtualBox show such a window to let users interact
+          directly with the VM. But in this course we encourage students to use SSH instead. So
+          this window is only useful for beginners who are not familiar with SSH yet.
+        </p>
+         <p>
+          To get rid of this window, edit the <code>Vagrantfile</code> and change the value of
+          <code>v.gui</code> to <code>false</code>. Changes will be effective the next time you
+          turn on the VM.
+        </p>
+     </answer>
+    </faq>
+    <faq id="vagrant_window_want">
+      <question>How to activate the VirtualBox window? What are the username and password?</question>
+      <answer>
+        <p>
+          In order to activate the VirtualBox window, edit the <code>Vagrantfile</code> and change
+          the value of <code>v.gui</code> to <code>true</code>.
+        </p>
+        <p>
+          Username and password are <strong>vagrant</strong> and <strong>vagrant</strong>,
+          respectively.
         </p>
       </answer>
     </faq>
@@ -23,10 +59,11 @@
       <question>I love this project and I want to contribute. What should I do?</question>
       <answer>
         <p>
-	  There are several ways to contribute.
+	      There are several ways to contribute.
         </p>
         <p>
-          The easiest way is to create a GitHub account and create an issue for us to fix: <a href="https://github.com/aamm/02j/issues">https://github.com/aamm/02j/issues</a>
+          The easiest way is to create a GitHub account and create an issue for us to fix:
+          <a href="https://github.com/aamm/02j/issues">https://github.com/aamm/02j/issues</a>
         </p>
       </answer>
     </faq>

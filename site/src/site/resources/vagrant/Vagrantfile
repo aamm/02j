@@ -23,11 +23,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   # Configures the virtual machine provider (also known as the hypervisor).
   config.vm.provider "virtualbox" do |v|
-    # Starts the provider using a graphical window. Comment the following line if you don't want to
-    # use a graphical user interface and you prefer to use the command line instead.
-    v.gui = true
+
+    # If true, starts the VM using a graphical window.
+    v.gui = false
+
     # The VM name for VirtualBox
     v.name = "zeroToJava"
+
   end
   
 end

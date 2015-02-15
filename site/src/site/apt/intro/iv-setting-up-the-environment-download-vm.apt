@@ -26,7 +26,7 @@ user@host:~/JavaClasses$ vagrant up
 
 * Next, Vagrant tutorial or Step 3
 
-  Now you can proceed to the {{{../lessons/lessons.html}Step 3, the lessons}} or
+  Now you can proceed to the {{{../lessons/index.html}Step 3, the lessons}} or
   {{{./v-vagrant-mini-tutorial.html}Mini Vagrant Tutorial}}.
 
 ===
