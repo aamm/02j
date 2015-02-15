@@ -35,7 +35,7 @@
       <action dev="Akira" date="2015-02-08" type="update">Changed theme to use font without serif</action>
       <action dev="Akira" date="2015-02-08" type="add">Added lesson 3</action>
     </release>
-    <release version="0.2" description="Minor improvements" date="2015-02-08">
+    <release version="0.2" description="Minor improvements and lesson 4" date="2015-02-15">
       <action dev="Akira" date="2015-02-15" type="fix">Fixed broken links</action>
       <action dev="Akira" date="2015-02-15" type="fix">VirtualBox Graphical window is now off by default</action>
       <action dev="Akira" date="2015-02-15" type="add">Added explanation about VirtualBox graphical window</action>
