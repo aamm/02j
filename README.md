@@ -7,7 +7,9 @@ Please check our website: http://aamm.github.io/02j/
 
 
 License
-: From Zero to Java
+-------
+
+  From Zero to Java
   Copyright (C) 2015 Aurelio Akira M. Matsui
    
   This program is free software; you can redistribute it and/or modify
