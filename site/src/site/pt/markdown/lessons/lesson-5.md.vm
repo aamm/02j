@@ -1,0 +1,247 @@
+$H$H Lição 5 - Métodos Main, Maven compile e execute
+
+Nas lições anteriores você foi encorajado a cometer erros e aprender a partir deles. Como dissemos,
+tentativa e erro é parte não apenas do processo de aprendizado para nos tornarmos programadores,
+mas também da rotina diária de escrita de código fonte.
+
+Mas as lições anteriores se concentraram em fazer os testes em Maven passarem. Mas o que o Maven
+está fazendo nos bastidores? Por que a saída do console é tão cheia? Como eu posso ver apenas o que
+o meu programa está imprimindo e não as mensagens que o Maven gera? Como passar parâmetros para um
+programa em Java a partir da linha de comando?
+
+Nós vamos responder essas perguntas nesta lição. Nosso objetivo é dar autonomia para que você possa
+experimentar em Java do jeito que vocẽ quiser. O conteúdo desta lição já foi apresentado de forma
+superficial na [Lição 1](./lesson-1.html#Indo_alm), mas aqui nós explicamos o processo
+em mais detalhes.
+
+$H$H$H O que você vai aprender
+
+* O que é o método main.
+
+* Como usar o Maven para compilar e executar os seus programas.
+
+* Como fazer com que o Maven pare de imprimir tantas mensagens no console, tal que eu possa ver
+  somente o que eu estou programando.
+
+$H$H$H Teoria
+
+$H$H$H$H O que é um método main?
+
+Até agora nós evitamos a palavra "classe" porque ela carrega muito conteúdo em Java. Ao invés de
+apresentar uma definição formal do que é uma classe, nós preferimos fazer com que você comece a
+usar classes e, após você estar acostumado com a ideia, nós a definimos formalmente. Mas a verdade
+é que tudo que nós criamos até agora foram classes Java.
+
+Uma classe é executável como um programa se ela tem o seguinte método:
+
+```
+public static void main(String[] args)
+```
+
+O parâmetro `args` pode ser qualquer coisa, mas as outras palavras devem ser exatamente como acima.
+Aqui estão os significados de cada parte:
+
+* `public` -- Significa que o código fonte de qualquer classe pode chamar este método.
+
+* `static` -- Significa que este método pode ser chamado sem que seja necessário criar uma
+  instância. Esta definição não faz muito sentido agora, já que nós ainda não introduzimos o 
+  conceito de instância. Mas você não precisa se preocupar com isso agora.
+
+* `void` -- Significa que o método não retorna nada quando encerra a sua execução.
+
+* `String[]` -- Significa que o método aceita um array de Stroings como argumento. Vamos falar um
+  pouco sobre arrays.
+
+$H$H$H$H Arrays, uma breve introdução
+
+Pense em um array como um conjunto de variáveis. Aqui está um exemplo:
+
+```
+String[] myArray = new String[2];
+myArray[0] = "First element";
+myArray[1] = "Second element";
+System.out.println(myArray[0]);
+System.out.println(myArray[1]);
+```
+
+Quando executamos o código acima, temos:
+
+```
+First element
+Second element
+```
+
+Note que em  Java o primeiro item é 0, o segundo item é 1, e assim por diante. Lembr que nós
+estamos falando sobre arrays porque é isto que os métodos main recebem da linha de comando. A
+pergunta então é: como pasar tais argumentos?
+
+$H$H$H$H Compilando e rodando o método main no Maven
+
+Ao invés de simplesmente rodar `mvn` na linha de comando, você precisa chamar algo um pouco
+mais complicado. Primeiro você precisa compilar suas classes:
+
+```
+mvn compile
+```
+
+Então você pede para o Maven executar sua classe:
+
+```
+mvn exec:java --quiet -Dexec.mainClass="org.aamm.z2java.lesson5.App" -Dexec.args="argument0 argument1"
+```
+
+* `exec:java` -- Pede para o Maven executar uma classe
+
+* `--quiet` -- Faz com que o Maven pare de imprimir detalhes sobre a execução. Então as coisas que
+  a sua classe imprime não se misturarão com as saídas do Maven.
+
+* `org.aamm.z2java.lesson5.App` -- A classe que você quer executar. Esta classe deve ter o método
+  main, como descrito acima.
+
+* `argument0 argument1` -- Os argumentos que serão passados para o método main.
+
+$H$H$H Instruções
+
+Já que esta lição tem uma estrutura diferente das anteriores, nós fornecemos instruções detalhadas.
+
+Como de costume, vocẽ precisa primeiro ir para o diretório `JavaClasses`, ligar a VM, e se conectar
+ao console dela via SSH.
+
+```
+user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$ vagrant snapshot go clean
+user@host:~/JavaClasses$ vagrant ssh
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-44-generic i686)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 1.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+vagrant@vagrant-ubuntu-trusty-32:~$ 
+```
+
+A seguir, você precisa fazer o download da lição:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 5
+vagrant@vagrant-ubuntu-trusty-32:~$ cd lesson-5
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$
+```
+
+Nós podemos ver que o diretório contém somente o arquivo `pom.xml` e o diretório `src`:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ ls
+pom.xml  src
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+Agora precisamos compilar as classes para gerar os artefatos que o Maven usa:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ mvn compile
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lesson5 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ lesson5 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/vagrant/lesson-5/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ lesson5 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/vagrant/lesson-5/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.577s
+[INFO] Finished at: Tue Feb 17 16:12:32 UTC 2015
+[INFO] Final Memory: 7M/22M
+[INFO] ------------------------------------------------------------------------
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+Agora se listarmos o conteúdo deste diretório nós vemos algo diferente:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ ls
+pom.xml  src  target
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ tree target/
+target/
+├── classes
+│   └── org
+│       └── aamm
+│           └── z2java
+│               └── lesson5
+│                   └── App.class
+├── generated-sources
+│   └── annotations
+└── maven-status
+    └── maven-compiler-plugin
+        └── compile
+            └── default-compile
+                ├── createdFiles.lst
+                └── inputFiles.lst
+
+11 directories, 3 files
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ tree target/
+```
+
+O Maven acabou de criar uma estrutura de diretórios para nós. A parte relevante é o arquivo
+`App.class`, que é o artefato executável. Agora nós podemos rodar tal artefato usando o seguinte:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ mvn exec:java --quiet -Dexec.mainClass="org.aamm.z2java.lesson5.App" -Dexec.args="argument0 argument1"
+Argument one: argument0
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+Nós também podemos limpar o diretório executando:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ mvn clean
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lesson5 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ lesson5 ---
+[INFO] Deleting /home/vagrant/lesson-5/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.806s
+[INFO] Finished at: Tue Feb 17 16:27:32 UTC 2015
+[INFO] Final Memory: 3M/9M
+[INFO] ------------------------------------------------------------------------
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ ls
+pom.xml  src
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+Agora você pode rodar o Maven de novo sem nenhum parâmetro e ele vai rodar os testes para você. Sua
+tarefa é olhar o arquivo `App.java` e fazer as mudanças de acordo com a tag TODO.
+
+
+---------------------------------------------------------------------------------------------------
+
+$H$H O que aprendemos
+
+* Uma classe precisa de um método main para ser executável.
+
+* Métodos main recebem argumentos da linha de comando.
+
+* Estes argumentos são passados como um array.
+
+* Digite `mvn compile` para pedir ao Maven que crie os artefatos executáveis.
+
+* Digite `mvn exec:java` para pedir ao Maven que execute uma classe.
+
+* Digite `mvn clean` para pedir ao Maven que limpe os artefatos gerados.
+

@@ -18,8 +18,12 @@ Lição 1 – Olá, mundo!
   
   Lembre que você tem que estar em um diretório JavaClasses quando você chamar a máquina virtual.
   
+  Vá para o estado "clean" e inicie a VM. Se você estiver usando o Linux como sistema operacional
+  host (aquele que hospeda a VM), ir para o estado "clean" já liga a VM. Então executar
+  <<<vagrant up>>> pode não ser necessário.
 +---
 user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$ vagrant snapshot go clean
 user@host:~/JavaClasses$ vagrant up
 +---
   

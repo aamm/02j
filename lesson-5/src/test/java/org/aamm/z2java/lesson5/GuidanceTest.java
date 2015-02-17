@@ -15,7 +15,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-package org.aamm.z2java.lesson4;
+package org.aamm.z2java.lesson5;
 
 import static org.junit.Assert.*;
 
@@ -31,20 +31,14 @@ public class GuidanceTest {
 		MockPrintStream mockPrintStream = new MockPrintStream( System.out, bos );
 		System.setOut( mockPrintStream );
 		
-		App.main(new String[] {});
+		App.main(new String[] {"ARGUMENT_1", "ARGUMENT_2"});
 		
-		if ( mockPrintStream.callCount() != 1 ) {
-			fail("The main method should call the method System.out.println(String) 1 time.");
+		if ( mockPrintStream.callCount() != 2 ) {
+			fail("The main method should call the method System.out.println(String) 2 times.");
 		}
 		
 		mockPrintStream.flush();
 		String s = bos.toString();
-		assertEquals( "", "10 * 20 = 200\n", s );
-	}
-
-	@Test
-	public void testMultiply() {
-		assertEquals(23 * 44, App.multiply(23, 44));
-		assertEquals(-1 * -5, App.multiply(-1, -5));
+		assertEquals( "", "First argument: ARGUMENT_1\nSecond argument: ARGUMENT_2\n", s );
 	}
 }

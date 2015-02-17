@@ -32,6 +32,7 @@
         <item name="2. Cálculos básicos" href="lessons/lesson-2.html" />
         <item name="3. Introdução aos métodos" href="lessons/lesson-3.html" />
         <item name="4. A palavra return em métodos" href="lessons/lesson-4.html" />
+        <item name="5. Métodos main, Maven compile e execute" href="lessons/lesson-5.html" />
       </item>
       <item name="FAQ" href="faq.html" />
     </menu>

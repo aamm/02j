@@ -17,9 +17,13 @@ Lesson 1 - Hello world!
 * Step 1 - start the VM
   
   Remember that you have to be in the JavaClasses directory when you bring the VM up.
+
+  Go to the "clean" state and then start the VM. If you use Linux as the host OS, going to the
+  "clean" state already brings the VM up. So running <<<vagrant up>>> may be not necessary.
   
 +---
 user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$ vagrant snapshot go clean
 user@host:~/JavaClasses$ vagrant up
 +---
   

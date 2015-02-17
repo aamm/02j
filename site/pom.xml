@@ -62,6 +62,7 @@
     <commons.componentid>ZeroToJava</commons.componentid>
     <commons.release.version>0.1</commons.release.version>
     <github.global.server>github</github.global.server>
+    <H>#</H>
   </properties>
 
 

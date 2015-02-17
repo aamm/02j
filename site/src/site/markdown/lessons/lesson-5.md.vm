@@ -1,0 +1,249 @@
+$H$H Lesson 5 - Main methods, Maven compile and execute
+
+On the previous lessons you were encouraged to make mistakes and learn from them. As we stated,
+trial and error is part not only of the learning process to become a programmer, but also of the
+daily routine of source code writing.
+
+But the previous lessons were all about trying to please a Maven test. But what is Maven doing
+behind the scenes? Why the console output is so full of clutter? How can I see only the program I
+am creating and not all those confusing messages that Maven generates? How to pass parameters to
+a Java program from the command line?
+
+We are going to begin to answer those questions on this lesson. Our goal is to give you enough
+freedom so that you can experiment with Java as much as you want. The contents of this lesson
+were already presented in very little details in [Lesson 1](./lesson-1.html#Going_the_extra_mile),
+but here we explain the process in much more details.
+
+$H$H$H What you are going to learn
+
+* What is a main method.
+
+* How to use Maven to compile and run your programs.
+
+* How to get Maven to stop writing so much on the console, so that I can see only what I am
+  programming.
+
+$H$H$H Theory
+
+$H$H$H$H What is a main method?
+
+Until now we have avoided using the word "class" because it carries a lot of meaning in Java.
+Instead of presenting a formal definition of what a class is, we prefer that you start to use
+classes and, once you are accustomed to the idea, we formally define it. But the truth is that
+all we have created so far are Java classes.
+
+A class is executable as a program when it has the method:
+
+```
+public static void main(String[] args)
+```
+
+The parameter `args` can be anything, but the other words should be exactly as above. Here are the
+meanings of each part:
+
+* `public` -- It means that any source code from any class can call this method.
+
+* `static` -- It means that this method can be called without the need to create an instance. Such
+  definition does not make much sense at this point, since we are yet to introduce the concept
+  of instance. But you don not need to worry about that right now.
+
+* `void` -- It means that the method does not return anything when it finishes executing.
+
+* `String[]` -- It means that the method accepts an array of Strings as an argument. Let us talk a
+  little bit about arrays.
+
+$H$H$H$H Arrays, a brief introduction
+
+Think of an array as a set of variables. Here is an example:
+
+```
+String[] myArray = new String[2];
+myArray[0] = "First element";
+myArray[1] = "Second element";
+System.out.println(myArray[0]);
+System.out.println(myArray[1]);
+```
+
+When we run the code above we will get:
+
+```
+First element
+Second element
+```
+
+Note that in Java the first item is 0, the second item is 1, and so on. Remember that we are
+discussing arrays because this is what a main method receives from the command line. The logical
+question is then: how to pass those arguments?
+
+$H$H$H$H Compiling and running the main method in Maven
+
+Instead of simply running `mvn` on the command line, you need to call something a bit more
+complex. First you need to compile your classes:
+
+```
+mvn compile
+```
+
+Then you ask Maven to execute your class:
+
+```
+mvn exec:java --quiet -Dexec.mainClass="org.aamm.z2java.lesson5.App" -Dexec.args="argument0 argument1"
+```
+
+* `exec:java` -- Tells Maven to execute a class
+
+* `--quiet` -- Tells Maven to stop printing details about the execution. So the things your class
+  prints will not get mixed with Maven output.
+
+* `org.aamm.z2java.lesson5.App` -- The class that you want to run. This class should have a main
+  method as described above.
+
+* `argument0 argument1` -- The arguments that will be passed to the main method.
+
+$H$H$H Instructions
+
+Since this lesson' structure is different from the previous ones, we will provide more detailed
+instructions.
+
+As usual, you should first go to the `JavaClasses` directory, bring the VM, and then connect to
+its console through SSH.
+
+```
+user@host:~$ cd JavaClasses
+user@host:~/JavaClasses$ vagrant snapshot go clean
+user@host:~/JavaClasses$ vagrant ssh
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-44-generic i686)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 1.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+vagrant@vagrant-ubuntu-trusty-32:~$ 
+```
+
+Next, we need to download this lesson:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~$ 02j-get-lesson 5
+vagrant@vagrant-ubuntu-trusty-32:~$ cd lesson-5
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$
+```
+
+We can see that the directory contains only the `pom.xml` file and the `src` directory:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ ls
+pom.xml  src
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+So now we need to compile the classes to generate the executable artifacts that Maven will
+use:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ mvn compile
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lesson5 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ lesson5 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/vagrant/lesson-5/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ lesson5 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/vagrant/lesson-5/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.577s
+[INFO] Finished at: Tue Feb 17 16:12:32 UTC 2015
+[INFO] Final Memory: 7M/22M
+[INFO] ------------------------------------------------------------------------
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+Now if we list the contents of this directory we will see something different:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ ls
+pom.xml  src  target
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ tree target/
+target/
+├── classes
+│   └── org
+│       └── aamm
+│           └── z2java
+│               └── lesson5
+│                   └── App.class
+├── generated-sources
+│   └── annotations
+└── maven-status
+    └── maven-compiler-plugin
+        └── compile
+            └── default-compile
+                ├── createdFiles.lst
+                └── inputFiles.lst
+
+11 directories, 3 files
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ tree target/
+```
+
+Maven just created a directory structure for us. The relevant part here is the `App.class` file,
+which is the executable artifact. Now we can run such artifact using the following:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ mvn exec:java --quiet -Dexec.mainClass="org.aamm.z2java.lesson5.App" -Dexec.args="argument0 argument1"
+Argument one: argument0
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+You can also clean the compiled artifacts by running:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ mvn clean
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lesson5 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ lesson5 ---
+[INFO] Deleting /home/vagrant/lesson-5/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.806s
+[INFO] Finished at: Tue Feb 17 16:27:32 UTC 2015
+[INFO] Final Memory: 3M/9M
+[INFO] ------------------------------------------------------------------------
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ ls
+pom.xml  src
+vagrant@vagrant-ubuntu-trusty-32:~/lesson-5$ 
+```
+
+Now you can run Maven again without any parameter. It will run the tests for you. Your task is to
+check the `App.java` file and make the changes according to the TODO task.
+
+
+---------------------------------------------------------------------------------------------------
+
+$H$H Bring home lessons
+
+* A class needs a main method to be executable.
+
+* Main methods receive arguments from the command line.
+
+* These arguments are passed as an array.
+
+* Type `mvn compile` to ask Maven to create the executable artifacts.
+
+* Type `mvn exec:java` to ask Maven to execute a class.
+
+* Type `mvn clean` to ask Maven to clean the artifacts it generated.
+

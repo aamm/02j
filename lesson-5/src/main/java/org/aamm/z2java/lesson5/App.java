@@ -15,36 +15,13 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-package org.aamm.z2java.lesson4;
+package org.aamm.z2java.lesson5;
 
-import static org.junit.Assert.*;
+public class App {
 
-import java.io.ByteArrayOutputStream;
-
-import org.junit.Test;
-
-public class GuidanceTest {
-
-	@Test
-	public void testMain() {
-		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		MockPrintStream mockPrintStream = new MockPrintStream( System.out, bos );
-		System.setOut( mockPrintStream );
-		
-		App.main(new String[] {});
-		
-		if ( mockPrintStream.callCount() != 1 ) {
-			fail("The main method should call the method System.out.println(String) 1 time.");
-		}
-		
-		mockPrintStream.flush();
-		String s = bos.toString();
-		assertEquals( "", "10 * 20 = 200\n", s );
+	public static void main(String[] args) {
+		System.out.println("Argument one: " + args[0]);
+		// TODO Print "Argument two: " followed by the value of the second argument
 	}
 
-	@Test
-	public void testMultiply() {
-		assertEquals(23 * 44, App.multiply(23, 44));
-		assertEquals(-1 * -5, App.multiply(-1, -5));
-	}
 }

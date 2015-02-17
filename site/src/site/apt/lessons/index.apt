@@ -1,19 +1,22 @@
 Lessons
 
-*-------------------------------------------------+-----------------------------+
-|| Lesson                                         || Description                |
-*-------------------------------------------------+-----------------------------+
-| {{{./lesson-1.html}1. Hello world}}             | Write messages              |
-|                                                 | to the console.             |
-*-------------------------------------------------+-----------------------------+
-| {{{./lesson-2.html}2. Simple calculations}}     | Use Java to make simple     |
-|                                                 | calculations and print the  |
-|                                                 | results in the console.     |
-*-------------------------------------------------+-----------------------------+
-| {{{./lesson-3.html}3. Introduction to methods}} | Learn how to call and       |
-|                                                 | create methods in Java.     |
-*-------------------------------------------------+-----------------------------+
-| {{{./lesson-4.html}4. Return in methods}}       | Learn how to return values  |
-|                                                 | from methods.               |
-*-------------------------------------------------+-----------------------------+
+*-----------------------------------------------------------------+-------------------------------+
+|| Lesson                                                         || Description                  |
+*-----------------------------------------------------------------+-------------------------------+
+| {{{./lesson-1.html}1. Hello world}}                             | Write messages                |
+|                                                                 | to the console.               |
+*-----------------------------------------------------------------+-------------------------------+
+| {{{./lesson-2.html}2. Simple calculations}}                     | Use Java to make simple       |
+|                                                                 | calculations and print the    |
+|                                                                 | results in the console.       |
+*-----------------------------------------------------------------+-------------------------------+
+| {{{./lesson-3.html}3. Introduction to methods}}                 | Learn how to call and         |
+|                                                                 | create methods in Java.       |
+*-----------------------------------------------------------------+-------------------------------+
+| {{{./lesson-4.html}4. Return in methods}}                       | Learn how to return values    |
+|                                                                 | from methods.                 |
+*-----------------------------------------------------------------+-------------------------------+
+| {{{./lesson-5.html}5. Main methods, Maven compile and execute}} | Learn how to use Maven to     |
+|                                                                 | compile and execute your code.|
+*-----------------------------------------------------------------+-------------------------------+
 

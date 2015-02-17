@@ -43,6 +43,9 @@
       <action dev="Akira" date="2015-02-15" type="fix">Added lesson 4</action>
       <action dev="Akira" date="2015-02-16" type="fix">Added GPL info to source files</action>
     </release>
+    <release version="0.2" description="Lesson 5" date="2015-02-15">
+      <action dev="Akira" date="2015-02-15" type="fix">Added lesson 5</action>
+    </release>
     <release version="backlog" description="Future tasks">
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
       <action dev="Akira" type="update">Use the /vagrant directory in order to allow for students to use source code editors in the host OS.</action>
