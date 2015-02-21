@@ -50,7 +50,8 @@
       <action dev="Akira" type="update">Provide script to download lessons from Git for users who do not use Vagrant.</action>
       <action dev="Akira" type="update">Use the /vagrant directory in order to allow for students to use source code editors in the host OS.</action>
       <action dev="Akira" type="update">Turn environment set up diagrams into clickable maps, or SVGs with links. The later only works if the HTML tag is object, not img.</action>
-      <action dev="Akira" type="update">Migrate to Markdown</action>
+      <action dev="Akira" type="update">Migrate all pages to Markdown</action>
+      <action dev="Akira" type="update">Fix syntax highlight. Now it is all messy. We can't control when it is applied or based on which language.</action>
     </release>
   </body>
 </document>
