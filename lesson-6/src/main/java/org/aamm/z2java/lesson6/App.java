@@ -23,7 +23,7 @@ public class App {
 		System.out.println("1 + 2 + 3 + ... + 1000 = " + sum(1, 1000));
 	}
 
-  public static int sum(int a, int b) {
+	public static int sum(int a, int b) {
 		// TODO Calculate the sum of numbers between a and b, inclusive.
 		// If b > a, then return zero.
 		return 0;
