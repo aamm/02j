@@ -29,6 +29,6 @@ public class GuidanceTest {
 	public void testMain() {
 		assertEquals((1 + 5) * 5 / 2, App.sum(1, 5));
 		assertEquals((1 + 1000) * 1000 / 2, App.sum(1, 1000));
-		assertEquals(42, App.sum(42, 13));
+		assertEquals(0, App.sum(42, 13));
 	}
 }
