@@ -33,6 +33,7 @@
         <item name="3. Introduction to methods" href="lessons/lesson-3.html" />
         <item name="4. The return clause in methods" href="lessons/lesson-4.html" />
         <item name="5. Main methods, Maven compile and execute" href="lessons/lesson-5.html" />
+				<item name="6. For-loops" href="lessons/lesson-6.html" />
       </item>
       <item name="FAQ" href="faq.html" />
     </menu>
@@ -47,7 +48,7 @@
       <item name="License" href="license.html" />
     </menu>
   </body>
-  
+
   <custom>
     <reflowSkin>
       <theme>bootswatch-spacelab</theme>

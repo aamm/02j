@@ -19,4 +19,6 @@ Lições
 | {{{./lesson-5.html}5. Métodos main, Maven compile e execute}} | Aprenda a usar o Maven para       |
 |                                                               | compilar e executar o seu código. |
 *---------------------------------------------------------------+-----------------------------------+
-
+| {{{./lesson-6.html}6. For-loops}}                             | Aprenda a repetir blocos de       |
+|                                                               | código usando loops for.          |
+*---------------------------------------------------------------+-----------------------------------+

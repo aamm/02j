@@ -24,7 +24,7 @@ double x, y;
 for (int x = 10; x< 12; x++) {
 	String x = "literal";
 	// Single line comment for x
-} 
+}
 ```
 
 Another paragraph.
@@ -46,9 +46,10 @@ while [ true ]; do sleep 1; done
 
 Bla bla bla again
 
-```console
+```shell
 cd xx
 cd xx
+jota@brasa:~/Downloads$ ls -la
 ```
 
 bla bla bla
