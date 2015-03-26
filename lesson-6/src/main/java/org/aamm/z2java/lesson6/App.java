@@ -20,12 +20,13 @@ package org.aamm.z2java.lesson6;
 public class App {
 
 	public static void main(String[] args) {
-    System.out.println("1 + 2 + 3 + ... + 1000 = " + sum(int a, b));
+    System.out.println("1 + 2 + 3 + ... + 1000 = " + sum(1, 1000));
 	}
 
   public static int sum(int a, b) {
 		// TODO Calculate the sum of numbers between a and b, inclusive.
 		// If b > a, then return the value of a.
+		return 0;
 	}
 
 }
